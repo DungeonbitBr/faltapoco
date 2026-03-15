@@ -1,0 +1,38 @@
+{
+  "slug": "atomic-heart-2",
+  "name": "Atomic Heart 2",
+  "release": "",
+  "release_display": "Sem data confirmada",
+  "status": "unknown",
+  "confidence_date": "media",
+  "developer": "",
+  "publisher": "",
+  "platforms": [
+    "PS5",
+    "Xbox Series X|S",
+    "PC"
+  ],
+  "background_image": "bg.jpg",
+  "description": "Acompanhe a data de lançamento, trailer e atualizações de Atomic Heart 2.",
+  "video": {
+    "video_id": "syDwTgJqSZo",
+    "title": "Trailer Oficial",
+    "channel_title": "",
+    "published_at": "",
+    "url": "https://www.youtube.com/watch?v=syDwTgJqSZo",
+    "embed_url": "https://www.youtube.com/embed/syDwTgJqSZo",
+    "duration_seconds": null,
+    "view_count": 0,
+    "confidence": "manual",
+    "search_query": "manual"
+  },
+  "news": [],
+  "reviews": [],
+  "source": {
+    "type": "manual"
+  },
+  "days_left": null,
+  "api_url": "https://faltapoco.com.br/api/v1/games/atomic-heart-2.json",
+  "page_url": "https://faltapoco.com.br/jogos/atomic-heart-2/",
+  "updated_at": "2026-03-15T15:39:14.830056+00:00"
+}

@@ -1,0 +1,36 @@
+{
+  "slug": "hordes-of-hunger",
+  "name": "Hordes of Hunger",
+  "release": "2026-02-12",
+  "release_display": "12 de fevereiro de 2026",
+  "status": "released",
+  "confidence_date": "media",
+  "developer": "",
+  "publisher": "",
+  "platforms": [
+    "PC"
+  ],
+  "background_image": "bg.jpg",
+  "description": "Acompanhe a data de lançamento, trailer e atualizações de Hordes of Hunger.",
+  "video": {
+    "video_id": "uwhvctNNwtY",
+    "title": "Trailer Oficial",
+    "channel_title": "",
+    "published_at": "",
+    "url": "https://www.youtube.com/watch?v=uwhvctNNwtY",
+    "embed_url": "https://www.youtube.com/embed/uwhvctNNwtY",
+    "duration_seconds": null,
+    "view_count": 0,
+    "confidence": "manual",
+    "search_query": "manual"
+  },
+  "news": [],
+  "reviews": [],
+  "source": {
+    "type": "manual"
+  },
+  "days_left": 0,
+  "api_url": "https://faltapoco.com.br/api/v1/games/hordes-of-hunger.json",
+  "page_url": "https://faltapoco.com.br/jogos/hordes-of-hunger/",
+  "updated_at": "2026-03-15T15:39:14.800858+00:00"
+}

@@ -1,0 +1,38 @@
+{
+  "slug": "marathon-2026",
+  "name": "Marathon",
+  "release": "2026-03-05",
+  "release_display": "5 de março de 2026",
+  "status": "released",
+  "confidence_date": "media",
+  "developer": "",
+  "publisher": "",
+  "platforms": [
+    "PS5",
+    "Xbox Series X|S",
+    "PC"
+  ],
+  "background_image": "bg.jpg",
+  "description": "Acompanhe a data de lançamento, trailer e atualizações de Marathon.",
+  "video": {
+    "video_id": "hWwXSb7dlnQ",
+    "title": "Trailer Oficial",
+    "channel_title": "",
+    "published_at": "",
+    "url": "https://www.youtube.com/watch?v=hWwXSb7dlnQ",
+    "embed_url": "https://www.youtube.com/embed/hWwXSb7dlnQ",
+    "duration_seconds": null,
+    "view_count": 0,
+    "confidence": "manual",
+    "search_query": "manual"
+  },
+  "news": [],
+  "reviews": [],
+  "source": {
+    "type": "manual"
+  },
+  "days_left": 0,
+  "api_url": "https://faltapoco.com.br/api/v1/games/marathon-2026.json",
+  "page_url": "https://faltapoco.com.br/jogos/marathon-2026/",
+  "updated_at": "2026-03-15T15:39:14.804812+00:00"
+}

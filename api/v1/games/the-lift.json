@@ -1,0 +1,23 @@
+{
+  "slug": "the-lift",
+  "name": "The Lift",
+  "release": "",
+  "release_display": "Sem data confirmada",
+  "status": "unknown",
+  "confidence_date": "baixa",
+  "developer": "",
+  "publisher": "",
+  "platforms": [],
+  "background_image": "",
+  "description": "Acompanhe a data de lançamento, trailer e atualizações de The Lift.",
+  "video": null,
+  "news": [],
+  "reviews": [],
+  "source": {
+    "type": "manual_list"
+  },
+  "days_left": null,
+  "api_url": "https://faltapoco.com.br/api/v1/games/the-lift.json",
+  "page_url": "https://faltapoco.com.br/jogos/the-lift/",
+  "updated_at": "2026-03-15T14:14:35.518396+00:00"
+}

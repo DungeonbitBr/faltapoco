@@ -1,0 +1,36 @@
+{
+  "slug": "ill",
+  "name": "ILL",
+  "release": "",
+  "release_display": "Sem data confirmada",
+  "status": "unknown",
+  "confidence_date": "media",
+  "developer": "",
+  "publisher": "",
+  "platforms": [
+    "PC"
+  ],
+  "background_image": "bg.jpg",
+  "description": "Acompanhe a data de lançamento, trailer e atualizações de ILL.",
+  "video": {
+    "video_id": "9dBzQfoU_eA",
+    "title": "Trailer Oficial",
+    "channel_title": "",
+    "published_at": "",
+    "url": "https://www.youtube.com/watch?v=9dBzQfoU_eA",
+    "embed_url": "https://www.youtube.com/embed/9dBzQfoU_eA",
+    "duration_seconds": null,
+    "view_count": 0,
+    "confidence": "manual",
+    "search_query": "manual"
+  },
+  "news": [],
+  "reviews": [],
+  "source": {
+    "type": "manual"
+  },
+  "days_left": null,
+  "api_url": "https://faltapoco.com.br/api/v1/games/ill.json",
+  "page_url": "https://faltapoco.com.br/jogos/ill/",
+  "updated_at": "2026-03-15T15:39:14.832638+00:00"
+}

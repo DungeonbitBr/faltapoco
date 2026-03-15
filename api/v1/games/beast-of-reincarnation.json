@@ -1,0 +1,38 @@
+{
+  "slug": "beast-of-reincarnation",
+  "name": "Beast of Reincarnation",
+  "release": "2026-08-04",
+  "release_display": "4 de agosto de 2026",
+  "status": "confirmed",
+  "confidence_date": "media",
+  "developer": "",
+  "publisher": "",
+  "platforms": [
+    "PS5",
+    "Xbox Series X|S",
+    "PC"
+  ],
+  "background_image": "bg.jpg",
+  "description": "Acompanhe a data de lançamento, trailer e atualizações de Beast of Reincarnation.",
+  "video": {
+    "video_id": "5v_4nnrBqSo",
+    "title": "Trailer Oficial",
+    "channel_title": "",
+    "published_at": "",
+    "url": "https://www.youtube.com/watch?v=5v_4nnrBqSo",
+    "embed_url": "https://www.youtube.com/embed/5v_4nnrBqSo",
+    "duration_seconds": null,
+    "view_count": 0,
+    "confidence": "manual",
+    "search_query": "manual"
+  },
+  "news": [],
+  "reviews": [],
+  "source": {
+    "type": "manual"
+  },
+  "days_left": 142,
+  "api_url": "https://faltapoco.com.br/api/v1/games/beast-of-reincarnation.json",
+  "page_url": "https://faltapoco.com.br/jogos/beast-of-reincarnation/",
+  "updated_at": "2026-03-15T15:39:14.816777+00:00"
+}

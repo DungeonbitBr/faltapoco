@@ -1,0 +1,39 @@
+{
+  "slug": "crimson-desert",
+  "name": "Crimson Desert",
+  "release": "2026-03-19",
+  "release_display": "19 de março de 2026",
+  "status": "confirmed",
+  "confidence_date": "media",
+  "developer": "",
+  "publisher": "",
+  "platforms": [
+    "PS5",
+    "Xbox Series X|S",
+    "PC",
+    "Mac"
+  ],
+  "background_image": "bg.jpg",
+  "description": "Acompanhe a data de lançamento, trailer e atualizações de Crimson Desert.",
+  "video": {
+    "video_id": "VWIw_f8e9Pg",
+    "title": "Trailer Oficial",
+    "channel_title": "",
+    "published_at": "",
+    "url": "https://www.youtube.com/watch?v=VWIw_f8e9Pg",
+    "embed_url": "https://www.youtube.com/embed/VWIw_f8e9Pg",
+    "duration_seconds": null,
+    "view_count": 0,
+    "confidence": "manual",
+    "search_query": "manual"
+  },
+  "news": [],
+  "reviews": [],
+  "source": {
+    "type": "manual"
+  },
+  "days_left": 4,
+  "api_url": "https://faltapoco.com.br/api/v1/games/crimson-desert.json",
+  "page_url": "https://faltapoco.com.br/jogos/crimson-desert/",
+  "updated_at": "2026-03-15T15:39:14.807515+00:00"
+}

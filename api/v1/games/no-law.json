@@ -1,0 +1,27 @@
+{
+  "slug": "no-law",
+  "name": "No Law",
+  "release": "",
+  "release_display": "Sem data confirmada",
+  "status": "unknown",
+  "confidence_date": "media",
+  "developer": "",
+  "publisher": "",
+  "platforms": [
+    "PS5",
+    "Xbox Series X|S",
+    "PC"
+  ],
+  "background_image": "bg.jpg",
+  "description": "Acompanhe a data de lançamento, trailer e atualizações de No Law.",
+  "video": null,
+  "news": [],
+  "reviews": [],
+  "source": {
+    "type": "manual"
+  },
+  "days_left": null,
+  "api_url": "https://faltapoco.com.br/api/v1/games/no-law.json",
+  "page_url": "https://faltapoco.com.br/jogos/no-law/",
+  "updated_at": "2026-03-15T15:39:14.840713+00:00"
+}

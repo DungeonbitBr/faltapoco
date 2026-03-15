@@ -1,0 +1,39 @@
+{
+  "slug": "007-first-light",
+  "name": "007 First Light",
+  "release": "2026-05-27",
+  "release_display": "27 de maio de 2026",
+  "status": "confirmed",
+  "confidence_date": "media",
+  "developer": "",
+  "publisher": "",
+  "platforms": [
+    "PS5",
+    "Xbox Series X|S",
+    "PC",
+    "Switch 2"
+  ],
+  "background_image": "bg.jpg",
+  "description": "Acompanhe a data de lançamento, trailer e atualizações de 007 First Light.",
+  "video": {
+    "video_id": "03dh9Y0wtnY",
+    "title": "Trailer Oficial",
+    "channel_title": "",
+    "published_at": "",
+    "url": "https://www.youtube.com/watch?v=03dh9Y0wtnY",
+    "embed_url": "https://www.youtube.com/embed/03dh9Y0wtnY",
+    "duration_seconds": null,
+    "view_count": 0,
+    "confidence": "manual",
+    "search_query": "manual"
+  },
+  "news": [],
+  "reviews": [],
+  "source": {
+    "type": "manual"
+  },
+  "days_left": 73,
+  "api_url": "https://faltapoco.com.br/api/v1/games/007-first-light.json",
+  "page_url": "https://faltapoco.com.br/jogos/007-first-light/",
+  "updated_at": "2026-03-15T15:39:14.815512+00:00"
+}

@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>The God Slayer — FaltaPouco</title>
+<meta name="description" content="Acompanhe a data de lançamento, trailer e atualizações de The God Slayer.">
+<link rel="canonical" href="https://faltapoco.com.br/jogos/the-god-slayer/">
+<meta property="og:title" content="The God Slayer — FaltaPouco">
+<meta property="og:description" content="Acompanhe a data de lançamento, trailer e atualizações de The God Slayer.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://faltapoco.com.br/jogos/the-god-slayer/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" type="application/json" href="https://faltapoco.com.br/api/v1/games/the-god-slayer.json">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoGame", "name": "The God Slayer", "description": "Acompanhe a data de lançamento, trailer e atualizações de The God Slayer.", "gamePlatform": ["PS5", "Xbox Series X|S", "PC"], "url": "https://faltapoco.com.br/jogos/the-god-slayer/", "trailer": "https://www.youtube.com/watch?v=KKzVxkTCsmI"}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;0,700;1,300&family=Sora:wght@300;400;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:        #080809;
+    --surface:   #111114;
+    --surface2:  #18181c;
+    --border:    rgba(255,255,255,0.07);
+    --border2:   rgba(255,255,255,0.13);
+    --text:      #f0efe8;
+    --muted:     rgba(240,239,232,0.48);
+    --muted2:    rgba(240,239,232,0.24);
+    --accent:    #c9a84c;
+    --accent2:   #e8d5a3;
+    --accent-bg: rgba(201,168,76,0.08);
+    --accent-bd: rgba(201,168,76,0.22);
+    --green:     #22c55e;
+    --purple:    #a855f7;
+    --blue:      #3b82f6;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg); color: var(--text);
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 400; line-height: 1.65;
+    min-height: 100vh; -webkit-font-smoothing: antialiased;
+  }
+
+  /* NAV */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(8,8,9,0.92); backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 2rem; height: 58px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-logo {
+    font-family: 'Sora', sans-serif; font-weight: 800;
+    font-size: 1rem; letter-spacing: -0.02em;
+    color: var(--text); text-decoration: none;
+  }
+  .nav-logo span { color: var(--accent); }
+  .nav-logo small { color: var(--muted); font-weight: 400; font-size: 0.82em; }
+  .nav-back {
+    font-size: 0.8rem; font-weight: 500;
+    color: var(--muted); text-decoration: none;
+    letter-spacing: 0.04em; transition: color 0.2s;
+    display: flex; align-items: center; gap: 0.35rem;
+  }
+  .nav-back:hover { color: var(--text); }
+
+  /* HERO */
+  .hero {
+    position: relative; overflow: hidden; min-height: 460px;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: flex-end;
+    padding: 5rem 2rem 3.5rem; text-align: center;
+  }
+  .hero-bg {
+    position: absolute; inset: 0; z-index: 0; background: var(--bg);
+  }
+  .hero-bg img {
+    width: 100%; height: 100%;
+    object-fit: cover; object-position: center top; opacity: 0.5;
+  }
+  .hero-vignette {
+    position: absolute; inset: 0; z-index: 1;
+    background:
+      radial-gradient(ellipse at 50% 30%, transparent 15%, rgba(8,8,9,0.6) 65%, rgba(8,8,9,0.97) 100%),
+      linear-gradient(to bottom, rgba(8,8,9,0.35) 0%, transparent 25%, transparent 50%, rgba(8,8,9,1) 100%);
+  }
+  .hero > * { position: relative; z-index: 2; }
+
+  /* HERO STATUS BADGE */
+  .hero-badge {
+    display: inline-flex; align-items: center;
+    font-size: 0.65rem; font-weight: 700; letter-spacing: 0.18em;
+    text-transform: uppercase; padding: 5px 16px;
+    border-top: 1px solid rgba(201,168,76,0.45);
+    border-bottom: 1px solid rgba(201,168,76,0.45);
+    color: var(--accent); margin-bottom: 1.2rem;
+  }
+  .hero-badge.status-released  { border-color: rgba(168,85,247,.45); color: var(--purple); }
+  .hero-badge.status-confirmed { border-color: rgba(34,197,94,.45);  color: var(--green); }
+  .hero-badge.status-window    { border-color: rgba(59,130,246,.45);  color: var(--blue); }
+  .hero-badge.status-unknown   { border-color: rgba(255,255,255,.15); color: var(--muted); }
+
+  .hero-eyebrow {
+    font-size: 0.68rem; font-weight: 600; letter-spacing: 0.45em;
+    text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem;
+  }
+  .hero-title {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(3rem, 9vw, 7.5rem);
+    font-weight: 300; line-height: 0.92;
+    letter-spacing: 0.1em; text-transform: uppercase; color: var(--text);
+    filter: drop-shadow(0 0 50px rgba(201,168,76,0.15)); margin-bottom: 1.1rem;
+  }
+  .meta-label { color: var(--muted2); font-size: 0.65rem; margin-right: 0.3em; }
+  .dev-pub {
+    display: flex; align-items: center; justify-content: center;
+    gap: 1.2rem; flex-wrap: wrap; margin-bottom: 1.4rem;
+    font-size: 0.76rem; color: var(--muted);
+  }
+
+  /* PLATFORM BADGES in HERO */
+  .hero-platforms {
+    display: flex; flex-wrap: wrap; justify-content: center;
+    gap: 8px; margin-bottom: 2rem;
+  }
+
+  /* GOLD DIVIDER */
+  .gold-line {
+    width: 160px; height: 1px;
+    background: linear-gradient(to right, transparent, var(--accent), transparent);
+    margin: 0 auto 2.5rem;
+  }
+
+  /* COUNTDOWN */
+  .countdown-wrap { margin-bottom: 1.8rem; }
+  .countdown {
+    display: flex; align-items: flex-end; justify-content: center; gap: 0;
+  }
+  .days-block {
+    display: flex; flex-direction: column; align-items: center;
+    padding-right: 28px; margin-right: 10px;
+    border-right: 1px solid rgba(201,168,76,0.18);
+  }
+  .days-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(5rem, 14vw, 11rem);
+    font-weight: 600; line-height: 0.9; color: var(--accent);
+    text-shadow: 0 0 60px rgba(201,168,76,0.25), 0 2px 4px rgba(0,0,0,0.7);
+  }
+  /* dias: flip somente quando mudar */
+  .days-number.flip { animation: flipDays 0.4s ease; }
+  @keyframes flipDays {
+    0%   { transform: scaleY(1); opacity: 1 }
+    45%  { transform: scaleY(0); opacity: 0.1 }
+    100% { transform: scaleY(1); opacity: 1 }
+  }
+  .unit-label {
+    font-size: 0.52rem; font-weight: 700;
+    letter-spacing: 0.3em; text-transform: uppercase;
+    color: var(--muted); margin-top: 6px;
+  }
+
+  /* HMS — cada unidade animada de forma independente */
+  .hms-block {
+    display: flex; flex-direction: column; align-items: center; padding-left: 28px;
+  }
+  .hms-inner {
+    display: flex; align-items: baseline; gap: 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.2rem, 5.5vw, 5rem);
+    font-weight: 300; line-height: 1;
+    color: var(--text); opacity: 0.72; letter-spacing: 0.04em;
+  }
+  /* separador ':' fixo, nunca anima */
+  .hms-sep { padding: 0 2px; opacity: 0.35; }
+  /* cada unidade tem overflow hidden para conter o slide */
+  .hms-unit { display: inline-block; min-width: 2ch; text-align: center; overflow: hidden; position: relative; }
+  /* roll: slide suave apenas na unidade que mudou */
+  .hms-unit.roll { animation: rollUnit 0.22s cubic-bezier(0.4,0,0.2,1); }
+  @keyframes rollUnit {
+    0%   { transform: translateY(0);    opacity: 1 }
+    40%  { transform: translateY(-30%); opacity: 0.15 }
+    41%  { transform: translateY(30%);  opacity: 0.15 }
+    100% { transform: translateY(0);    opacity: 0.72 }
+  }
+
+  /* LAUNCH DATE + PROGRESS */
+  .launch-date-label {
+    font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 1.8rem;
+  }
+  .launch-date-label strong { color: var(--accent2); font-weight: 500; }
+
+  .progress-wrap { width: 100%; max-width: 420px; margin: 0 auto 2.8rem; }
+  .progress-header {
+    display: flex; justify-content: space-between;
+    font-size: 0.56rem; letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 8px;
+  }
+  .progress-track { width: 100%; height: 2px; background: rgba(255,255,255,0.05); position: relative; }
+  .progress-fill {
+    height: 100%; width: 0%;
+    background: linear-gradient(to right, rgba(201,168,76,0.3), var(--accent), #f0d878);
+    transition: width 1.8s cubic-bezier(0.4,0,0.2,1); position: relative;
+  }
+  .progress-fill::after {
+    content: '◆'; position: absolute; right: -5px; top: -7px;
+    font-size: 7px; color: var(--accent); filter: drop-shadow(0 0 5px var(--accent));
+  }
+  .progress-pct {
+    font-size: 0.58rem; letter-spacing: 0.1em;
+    color: var(--accent); margin-top: 6px; text-align: right; font-weight: 500;
+  }
+
+  /* LAUNCHED STATE */
+  .launched-box {
+    display: none; flex-direction: column; align-items: center; gap: 12px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 5vw, 5rem); font-weight: 600; color: var(--accent);
+    text-shadow: 0 0 40px rgba(201,168,76,0.5); margin-bottom: 2rem;
+  }
+  .launched-box span {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(0.8rem, 2vw, 1.1rem);
+    color: var(--text); letter-spacing: 0.15em; font-weight: 300;
+  }
+
+  /* CONTENT */
+  .page-wrap { max-width: 860px; margin: 0 auto; padding: 0 1.5rem 5rem; }
+  .content-section {
+    margin-top: 3rem; padding-top: 2.8rem; border-top: 1px solid var(--border);
+  }
+  .content-section:first-child { border-top: none; margin-top: 0; }
+  .section-eyebrow {
+    font-size: 0.62rem; font-weight: 700; letter-spacing: 0.22em;
+    text-transform: uppercase; color: var(--accent); margin-bottom: 1.2rem;
+  }
+
+  /* INFO GRID */
+  .info-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 1rem;
+  }
+  .info-item {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 8px; padding: 0.9rem 1rem;
+  }
+  .info-label {
+    font-size: 0.58rem; font-weight: 600; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--muted2); margin-bottom: 0.35rem;
+  }
+  .info-value {
+    font-family: 'Sora', sans-serif; font-weight: 600; font-size: 0.88rem; color: var(--text);
+  }
+  .info-value a { color: var(--muted); font-size: 0.76rem; font-weight: 400; text-decoration: none; }
+  .info-value a:hover { color: var(--accent); }
+
+  /* SYNOPSIS */
+  .synopsis-text {
+    font-size: 0.96rem; color: rgba(240,239,232,0.75);
+    line-height: 1.85; max-width: 720px;
+  }
+
+  /* VIDEO */
+  .video-wrap {
+    position: relative; padding-top: 56.25%;
+    border-radius: 10px; overflow: hidden;
+    border: 1px solid var(--border2); background: #000;
+  }
+  .video-wrap iframe {
+    position: absolute; inset: 0; width: 100%; height: 100%; border: 0;
+  }
+  .video-meta {
+    font-size: 0.7rem; color: var(--muted2); margin-top: 0.65rem; letter-spacing: 0.04em;
+  }
+  .video-meta a { color: var(--muted); text-decoration: none; transition: color 0.15s; }
+  .video-meta a:hover { color: var(--accent); }
+
+  /* NEWS with THUMB */
+  .news-list { display: flex; flex-direction: column; gap: 0.7rem; }
+  .news-card {
+    display: flex; align-items: center; gap: 1rem;
+    padding: 0.9rem 1.1rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent-bd);
+    border-radius: 8px;
+    text-decoration: none; color: inherit;
+    transition: border-left-color 0.2s, background 0.15s;
+    overflow: hidden;
+  }
+  .news-card:hover { border-left-color: var(--accent); background: var(--surface2); }
+  .news-thumb {
+    width: 80px; height: 52px; object-fit: cover;
+    border-radius: 5px; flex-shrink: 0; background: var(--surface2);
+  }
+  .news-body { flex: 1; min-width: 0; }
+  .news-title {
+    font-family: 'Sora', sans-serif; font-weight: 600;
+    font-size: 0.87rem; letter-spacing: -0.01em;
+    margin-bottom: 0.28rem; color: var(--text);
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .news-meta { font-size: 0.68rem; color: var(--muted2); letter-spacing: 0.04em; }
+
+  /* REVIEWS */
+  .reviews-list { display: flex; flex-direction: column; gap: 0.6rem; }
+  .review-card {
+    display: flex; align-items: center; gap: 1.2rem; padding: 1rem 1.2rem;
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 8px; text-decoration: none; color: inherit; transition: border-color 0.15s;
+  }
+  .review-card:hover { border-color: var(--border2); }
+  .review-score {
+    font-family: 'Cormorant Garamond', serif; font-weight: 700;
+    font-size: 1.6rem; color: var(--accent); white-space: nowrap; min-width: 48px; text-align: center;
+  }
+  .review-vehicle { font-family: 'Sora', sans-serif; font-weight: 600; font-size: 0.84rem; margin-bottom: 0.2rem; }
+  .review-excerpt { font-size: 0.76rem; color: var(--muted); line-height: 1.5; }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--border); padding: 2rem 1.5rem; text-align: center;
+    font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase;
+    color: rgba(240,239,232,0.18); max-width: 860px; margin: 0 auto;
+  }
+
+  @keyframes pulse {
+    0%,100% { opacity:1; transform:scale(1) }
+    50%      { opacity:0.3; transform:scale(0.6) }
+  }
+  @media (max-width: 600px) {
+    .countdown { flex-direction: column; align-items: center; gap: 16px; }
+    .days-block { border-right: none; border-bottom: 1px solid rgba(201,168,76,0.18); padding-right: 0; padding-bottom: 16px; margin-right: 0; }
+    .hms-block { padding-left: 0; }
+    nav { padding: 0 1rem; }
+    .hero { padding: 4rem 1.2rem 3rem; }
+    .page-wrap { padding: 0 1rem 4rem; }
+    .news-thumb { width: 64px; height: 42px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">falta<span>pouco</span><small>.com.br</small></a>
+  <a href="/" class="nav-back">← Todos os jogos</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-bg"><img src="bg.jpg" alt="" onerror="this.style.display='none'"></div>
+  <div class="hero-vignette"></div>
+
+  <div class="hero-badge status-unknown">Sem data confirmada</div>
+  <div class="hero-eyebrow"></div>
+  <h1 class="hero-title">The God Slayer</h1>
+
+  
+
+  <div class="hero-platforms">
+    <span style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px"><span style="display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:999px;background:#003791;color:#ffffff;font-size:12px;font-weight:700;letter-spacing:.03em;line-height:1"><svg viewBox="0 0 48 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="height:14px;vertical-align:middle"><text x="0" y="18" font-size="18" font-weight="900" font-family="Arial,sans-serif" fill="#ffffff">PS5</text></svg>PS5</span><span style="display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:999px;background:#107C10;color:#ffffff;font-size:12px;font-weight:700;letter-spacing:.03em;line-height:1"><svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" style="height:14px;vertical-align:middle"><circle cx="10" cy="10" r="9" fill="#107C10" stroke="#fff" stroke-width="1"/><path d="M5 7c1.5-1.8 4-1.8 5 0l-2.5 3.5L5 7zm10 0c-1.5-1.8-4-1.8-5 0l2.5 3.5L15 7zm-5 3.5L7.5 15h5L10 10.5z" fill="#ffffff"/></svg>Xbox</span><span style="display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:999px;background:#c8a400;color:#000000;font-size:12px;font-weight:700;letter-spacing:.03em;line-height:1"><svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" style="height:14px;vertical-align:middle"><rect x="2" y="3" width="16" height="11" rx="1.5" fill="none" stroke="#000" stroke-width="1.5"/><path d="M7 14v2M13 14v2M5 16h10" stroke="#000" stroke-width="1.5" stroke-linecap="round"/><path d="M5 6l3 2.5L5 11M10 11h5" stroke="#000" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>PC</span></span>
+  </div>
+
+  <div class="gold-line"></div>
+
+  <div class="countdown-wrap">
+    <div id="countdownWrap">
+      <div class="countdown">
+        <div class="days-block">
+          <div class="days-number" id="cd-days">--</div>
+          <div class="unit-label">Dias</div>
+        </div>
+        <div class="hms-block">
+          <div class="hms-inner">
+            <span class="hms-unit" id="cd-h">--</span>
+            <span class="hms-sep">:</span>
+            <span class="hms-unit" id="cd-m">--</span>
+            <span class="hms-sep">:</span>
+            <span class="hms-unit" id="cd-s">--</span>
+          </div>
+          <div class="unit-label">Horas · Min · Seg</div>
+        </div>
+      </div>
+    </div>
+    <div class="launched-box" id="launchedBox">
+      🎮 The God Slayer Chegou!
+      <span>Disponível agora para PS5, Xbox Series X|S, PC</span>
+    </div>
+  </div>
+
+  <div class="launch-date-label">
+    Lançamento: <strong>Sem data confirmada</strong>
+  </div>
+
+  <div class="progress-wrap">
+    <div class="progress-header"><span>Anúncio</span><span>Lançamento</span></div>
+    <div class="progress-track">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+    <div class="progress-pct" id="progressPct">—</div>
+  </div>
+</section>
+
+<div class="page-wrap">
+
+  <section class="content-section">
+    <div class="section-eyebrow">📋 Detalhes</div>
+    <div class="info-grid">
+      <div class="info-item">
+        <div class="info-label">Status</div>
+        <div class="info-value">Sem data confirmada</div>
+      </div>
+      <div class="info-item">
+        <div class="info-label">Data de Lançamento</div>
+        <div class="info-value">Sem data confirmada</div>
+      </div>
+      <div class="info-item">
+        <div class="info-label">Desenvolvedor</div>
+        <div class="info-value">—</div>
+      </div>
+      <div class="info-item">
+        <div class="info-label">Publisher</div>
+        <div class="info-value">—</div>
+      </div>
+      <div class="info-item">
+        <div class="info-label">Plataformas</div>
+        <div class="info-value">PS5, Xbox Series X|S, PC</div>
+      </div>
+      <div class="info-item">
+        <div class="info-label">API</div>
+        <div class="info-value"><a href="https://faltapoco.com.br/api/v1/games/the-god-slayer.json">JSON deste jogo ↗</a></div>
+      </div>
+    </div>
+  </section>
+
+  
+<section class="content-section" id="sobre">
+  <div class="section-eyebrow">📖 Sobre o Jogo</div>
+  <p class="synopsis-text">Acompanhe a data de lançamento, trailer e atualizações de The God Slayer.</p>
+</section>
+  
+<section class="content-section" id="trailer">
+  <div class="section-eyebrow">🎬 Trailer Oficial</div>
+  <div class="video-wrap">
+    <iframe
+      src="https://www.youtube.com/embed/KKzVxkTCsmI?rel=0&modestbranding=1&color=white"
+      title="Trailer de The God Slayer"
+      loading="lazy"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+  </div>
+  <p class="video-meta">
+    <a href="https://www.youtube.com/watch?v=KKzVxkTCsmI" target="_blank" rel="noopener">▶ Ver no YouTube</a>
+  </p>
+</section>
+  
+  
+
+  <footer>Fan site independente · Não afiliado a qualquer publisher</footer>
+</div>
+
+<script>
+  const launch    = null;
+  const announced = null;
+  const gameName  = "The God Slayer";
+
+  const elDays   = document.getElementById('cd-days');
+  const elH      = document.getElementById('cd-h');
+  const elM      = document.getElementById('cd-m');
+  const elS      = document.getElementById('cd-s');
+  const cwrap    = document.getElementById('countdownWrap');
+  const lbox     = document.getElementById('launchedBox');
+  const progFill = document.getElementById('progressFill');
+  const progPct  = document.getElementById('progressPct');
+
+  function pad(n) { return String(n).padStart(2, '0'); }
+
+  // Anima SOMENTE o elemento que mudou — zero flicker nos demais
+  function rollUpdate(el, newVal) {
+    if (el.textContent === newVal) return;   // nada mudou, não toca
+    el.textContent = newVal;
+    el.classList.remove('roll');
+    void el.offsetWidth;                     // reflow para reiniciar animation
+    el.classList.add('roll');
+  }
+
+  let prevDays = null, prevH = null, prevM = null;
+
+  function tick() {
+    if (!launch) {
+      elDays.textContent = '—'; elH.textContent = '--';
+      elM.textContent = '--';   elS.textContent = '--';
+      return;
+    }
+    const diff = launch - new Date();
+    if (diff <= 0) {
+      cwrap.style.display = 'none';
+      lbox.style.display  = 'flex';
+      document.title = '🎮 ' + gameName + ' — disponível!';
+      updateProgress();
+      return;
+    }
+    const totalSecs = Math.floor(diff / 1000);
+    const d = Math.floor(totalSecs / 86400);
+    const h = Math.floor((totalSecs % 86400) / 3600);
+    const m = Math.floor((totalSecs % 3600) / 60);
+    const s = totalSecs % 60;
+
+    // Dias: flip animation, só quando o valor muda (uma vez por dia)
+    if (d !== prevDays) {
+      elDays.textContent = d;
+      elDays.classList.remove('flip');
+      void elDays.offsetWidth;
+      elDays.classList.add('flip');
+      prevDays = d;
+    }
+
+    // Horas: roll só quando mudar (uma vez por hora)
+    if (h !== prevH) { rollUpdate(elH, pad(h)); prevH = h; }
+
+    // Minutos: roll só quando mudar (uma vez por minuto)
+    if (m !== prevM) { rollUpdate(elM, pad(m)); prevM = m; }
+
+    // Segundos: atualiza todo segundo, roll suave — é o único que anima constantemente
+    rollUpdate(elS, pad(s));
+
+    document.title = 'Faltam ' + d + ' dias — ' + gameName;
+    updateProgress();
+  }
+
+  function updateProgress() {
+    if (!launch || !announced) return;
+    const now   = new Date();
+    const total   = launch - announced;
+    const elapsed = now - announced;
+    const pct = Math.min(100, Math.max(0, (elapsed / total) * 100));
+    progFill.style.width = pct.toFixed(1) + '%';
+    progPct.textContent  = pct.toFixed(1) + '%';
+  }
+
+  tick();
+  setInterval(tick, 1000);
+  setTimeout(updateProgress, 300);
+</script>
+</body>
+</html>

@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="FaltaPouco — Countdowns e datas de lançamento dos jogos mais aguardados. Base de dados pública para o mercado gamer brasileiro.">
+<title>FaltaPouco — Countdowns de Jogos</title>
+<link rel="canonical" href="https://faltapoco.com.br/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:        #0f0f10;
+    --surface:   #18181b;
+    --surface2:  #1f1f23;
+    --border:    rgba(255,255,255,0.07);
+    --border2:   rgba(255,255,255,0.12);
+    --text:      #f4f4f5;
+    --muted:     rgba(244,244,245,0.42);
+    --muted2:    rgba(244,244,245,0.22);
+    --accent:    #ff3b3b;
+    --accent-h:  #ff5c5c;
+    --accent-bg: rgba(255,59,59,0.08);
+    --accent-bd: rgba(255,59,59,0.22);
+    --green:     #22c55e;
+    --green-bg:  rgba(34,197,94,0.08);
+    --green-bd:  rgba(34,197,94,0.2);
+    --blue:      #3b82f6;
+    --blue-bg:   rgba(59,130,246,0.08);
+    --blue-bd:   rgba(59,130,246,0.2);
+    --yellow:    #f59e0b;
+    --yellow-bg: rgba(245,158,11,0.08);
+    --yellow-bd: rgba(245,158,11,0.2);
+    --purple:    #a855f7;
+    --purple-bg: rgba(168,85,247,0.08);
+    --purple-bd: rgba(168,85,247,0.2);
+    --hype:      #ff6b00;
+    --hype-bg:   rgba(255,107,0,0.08);
+    --hype-bd:   rgba(255,107,0,0.22);
+    --radius:    10px;
+    --radius-lg: 14px;
+  }
+  *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+  }
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(15,15,16,0.92);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 2rem; height: 60px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-logo {
+    font-family: 'Sora', sans-serif; font-weight: 800;
+    font-size: 1.1rem; letter-spacing: -0.03em;
+    color: var(--text); text-decoration: none;
+  }
+  .nav-logo span { color: var(--accent); }
+  .nav-logo small { color: var(--muted); font-weight: 400; font-size: 0.85em; }
+  .nav-right { display: flex; align-items: center; gap: 1.5rem; }
+  .nav-links { display: flex; gap: 1.5rem; list-style: none; }
+  .nav-links a {
+    font-size: 0.84rem; font-weight: 500;
+    color: var(--muted); text-decoration: none; transition: color 0.15s;
+  }
+  .nav-links a:hover { color: var(--text); }
+  .nav-pill {
+    font-size: 0.72rem; font-weight: 600; letter-spacing: 0.05em;
+    color: var(--accent); background: var(--accent-bg);
+    border: 1px solid var(--accent-bd); padding: 0.3rem 0.8rem;
+    border-radius: 100px; text-decoration: none; transition: background 0.15s;
+  }
+  .nav-pill:hover { background: rgba(255,59,59,0.14); }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 2rem; }
+  .hero { padding: 4.5rem 0 3rem; text-align: center; }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    font-size: 0.7rem; font-weight: 600; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--accent);
+    background: var(--accent-bg); border: 1px solid var(--accent-bd);
+    padding: 0.28rem 0.8rem; border-radius: 100px; margin-bottom: 1.4rem;
+  }
+  .hero-badge::before {
+    content: ''; width: 6px; height: 6px; border-radius: 50%;
+    background: var(--accent); animation: pulse-dot 2s ease-in-out infinite;
+  }
+  @keyframes pulse-dot { 0%,100%{transform:scale(1);opacity:1} 50%{transform:scale(0.6);opacity:0.4} }
+  .hero h1 {
+    font-family: 'Sora', sans-serif; font-weight: 800;
+    font-size: clamp(2.2rem, 5.5vw, 3.8rem);
+    letter-spacing: -0.04em; line-height: 1.08; margin-bottom: 1rem;
+  }
+  .hero h1 em { font-style: normal; color: var(--accent); }
+  .hero-sub {
+    font-size: 0.97rem; color: var(--muted);
+    max-width: 500px; margin: 0 auto 2.5rem; line-height: 1.7;
+  }
+  .hero-stats { display: flex; justify-content: center; gap: 2.5rem; flex-wrap: wrap; }
+  .hero-stat { text-align: center; }
+  .hero-stat-num {
+    font-family: 'Sora', sans-serif; font-weight: 800;
+    font-size: 1.9rem; letter-spacing: -0.04em;
+  }
+  .n-red { color: var(--accent); }
+  .n-green { color: var(--green); }
+  .n-blue { color: var(--blue); }
+  .n-orange { color: var(--hype); }
+  .hero-stat-label { font-size: 0.72rem; color: var(--muted); letter-spacing: 0.05em; text-transform: uppercase; font-weight: 500; margin-top: 0.1rem; }
+  .hero-div { width: 1px; height: 36px; background: var(--border2); align-self: center; }
+  .search-section { padding: 2.5rem 0 0; }
+  .search-box { position: relative; max-width: 620px; margin: 0 auto 0.9rem; }
+  .search-box svg {
+    position: absolute; left: 1.1rem; top: 50%; transform: translateY(-50%);
+    color: var(--muted); pointer-events: none; width: 17px; height: 17px;
+  }
+  .search-input {
+    width: 100%; background: var(--surface); border: 1px solid var(--border2);
+    border-radius: var(--radius); padding: 0.88rem 1rem 0.88rem 2.85rem;
+    color: var(--text); font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.93rem; outline: none; transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  .search-input::placeholder { color: var(--muted2); }
+  .search-input:focus {
+    border-color: rgba(255,59,59,0.4);
+    box-shadow: 0 0 0 3px rgba(255,59,59,0.07);
+  }
+  .filter-row { display: flex; justify-content: center; gap: 0.45rem; flex-wrap: wrap; }
+  .filter-btn {
+    font-family: 'Space Grotesk', sans-serif; font-size: 0.76rem; font-weight: 500;
+    color: var(--muted); background: var(--surface); border: 1px solid var(--border);
+    padding: 0.32rem 0.82rem; border-radius: 100px; cursor: pointer; transition: all 0.15s;
+  }
+  .filter-btn:hover { color: var(--text); border-color: var(--border2); background: var(--surface2); }
+  .filter-btn.active { color: var(--accent); border-color: var(--accent-bd); background: var(--accent-bg); }
+  .section-label {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 1.1rem; padding-top: 3.2rem;
+  }
+  .section-title {
+    font-family: 'Sora', sans-serif; font-weight: 700;
+    font-size: 1.02rem; letter-spacing: -0.02em;
+    display: flex; align-items: center; gap: 0.45rem;
+  }
+  .section-count {
+    font-size: 0.73rem; font-weight: 500; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 0.18rem 0.58rem; border-radius: 100px;
+  }
+  .featured-card {
+    background: var(--surface); border: 1px solid var(--border2);
+    border-radius: var(--radius-lg); padding: 1.8rem 2rem;
+    display: grid; grid-template-columns: 1fr auto;
+    gap: 2rem; align-items: center; position: relative;
+    overflow: hidden; margin-bottom: 0.85rem; transition: border-color 0.2s;
+  }
+  .featured-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, var(--accent), #ff8080);
+  }
+  .featured-card:hover { border-color: rgba(255,59,59,0.28); }
+  .badge {
+    display: inline-flex; align-items: center; gap: 0.32rem;
+    font-size: 0.67rem; font-weight: 600; letter-spacing: 0.08em;
+    text-transform: uppercase; padding: 0.2rem 0.58rem;
+    border-radius: 100px; margin-bottom: 0.65rem;
+  }
+  .badge-confirmed { color: var(--green);  background: var(--green-bg);  border: 1px solid var(--green-bd); }
+  .badge-window    { color: var(--blue);   background: var(--blue-bg);   border: 1px solid var(--blue-bd); }
+  .badge-rumor     { color: var(--yellow); background: var(--yellow-bg); border: 1px solid var(--yellow-bd); }
+  .badge-released  { color: var(--purple); background: var(--purple-bg); border: 1px solid var(--purple-bd); }
+  .badge-unknown   { color: var(--muted);  background: var(--surface2);  border: 1px solid var(--border); }
+  .badge-confirmed::before, .badge-released::before {
+    content: ''; width: 5px; height: 5px; border-radius: 50%;
+    animation: pulse-dot 2s ease-in-out infinite;
+  }
+  .badge-confirmed::before { background: var(--green); }
+  .badge-released::before  { background: var(--purple); }
+  .fc-name {
+    font-family: 'Sora', sans-serif; font-weight: 800;
+    font-size: 1.65rem; letter-spacing: -0.04em; margin-bottom: 0.35rem;
+  }
+  .fc-meta {
+    font-size: 0.8rem; color: var(--muted);
+    display: flex; align-items: center; gap: 0.9rem; flex-wrap: wrap;
+  }
+  .platform-tag {
+    font-size: 0.67rem; font-weight: 500;
+    background: var(--surface2); border: 1px solid var(--border);
+    padding: 0.17rem 0.48rem; border-radius: 4px; color: var(--muted);
+  }
+  .mini-cd { display: flex; align-items: flex-end; gap: 0.38rem; }
+  .mini-block {
+    background: var(--surface2); border: 1px solid var(--border);
+    border-radius: 8px; padding: 0.6rem 0.8rem;
+    text-align: center; min-width: 56px;
+  }
+  .mini-num {
+    font-family: 'Sora', sans-serif; font-weight: 700;
+    font-size: 1.45rem; letter-spacing: -0.03em;
+    color: var(--accent); line-height: 1; display: block;
+  }
+  .mini-lbl {
+    font-size: 0.48rem; font-weight: 600; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--muted);
+    margin-top: 0.22rem; display: block;
+  }
+  .mini-sep {
+    font-family: 'Sora', sans-serif; font-weight: 700;
+    font-size: 1.1rem; color: var(--border2); padding-bottom: 0.95rem;
+    animation: blink 1s step-end infinite;
+  }
+  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.1} }
+  .released-box {
+    background: var(--purple-bg); border: 1px solid var(--purple-bd);
+    border-radius: 10px; padding: 0.8rem 1.2rem; text-align: center;
+  }
+  .released-box .rb-label {
+    font-size: 0.65rem; font-weight: 600; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--purple); margin-bottom: 0.2rem;
+  }
+  .released-box .rb-date {
+    font-family: 'Sora', sans-serif; font-weight: 700;
+    font-size: 0.9rem; color: var(--text);
+  }
+  .games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 0.8rem;
+  }
+  .game-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 1.15rem;
+    display: flex; flex-direction: column; gap: 0.65rem;
+    text-decoration: none; color: inherit;
+    transition: border-color 0.15s, transform 0.15s;
+    animation: fade-up 0.3s ease both; position: relative;
+  }
+  .game-card:hover { border-color: var(--border2); transform: translateY(-2px); }
+  @keyframes fade-up { from{opacity:0;transform:translateY(8px)} to{opacity:1;transform:none} }
+  .gc-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 0.7rem; }
+  .gc-name {
+    font-family: 'Sora', sans-serif; font-weight: 700;
+    font-size: 0.9rem; letter-spacing: -0.02em; line-height: 1.3;
+  }
+  .status-pill {
+    font-size: 0.6rem; font-weight: 600; letter-spacing: 0.06em;
+    text-transform: uppercase; padding: 0.18rem 0.52rem;
+    border-radius: 100px; white-space: nowrap; flex-shrink: 0;
+  }
+  .pill-confirmed { background: var(--green-bg);  color: var(--green);  border: 1px solid var(--green-bd); }
+  .pill-window    { background: var(--blue-bg);   color: var(--blue);   border: 1px solid var(--blue-bd); }
+  .pill-rumor     { background: var(--yellow-bg); color: var(--yellow); border: 1px solid var(--yellow-bd); }
+  .pill-released  { background: var(--purple-bg); color: var(--purple); border: 1px solid var(--purple-bd); }
+  .pill-unknown   { background: var(--surface2);  color: var(--muted);  border: 1px solid var(--border); }
+  .gc-date { font-size: 0.77rem; color: var(--muted); display: flex; align-items: center; gap: 0.32rem; }
+  .gc-platforms { display: flex; gap: 0.28rem; flex-wrap: wrap; }
+  .gc-countdown {
+    font-family: 'Sora', sans-serif; font-size: 0.8rem;
+    font-weight: 700; color: var(--accent); letter-spacing: -0.01em;
+  }
+  .gc-countdown.released { color: var(--purple); font-weight: 600; font-size: 0.77rem; }
+  .gc-countdown.none { font-family: 'Space Grotesk', sans-serif; font-weight: 400; color: var(--muted2); font-size: 0.76rem; }
+  .gc-footer {
+    display: flex; align-items: center; justify-content: space-between;
+    padding-top: 0.5rem; border-top: 1px solid var(--border); margin-top: auto;
+  }
+  .hype-btn {
+    display: inline-flex; align-items: center; gap: 0.35rem;
+    font-family: 'Space Grotesk', sans-serif; font-size: 0.78rem; font-weight: 600;
+    color: var(--muted); background: transparent;
+    border: 1px solid var(--border); border-radius: 100px;
+    padding: 0.28rem 0.75rem; cursor: pointer;
+    transition: all 0.15s; user-select: none;
+  }
+  .hype-btn:hover { border-color: var(--hype-bd); color: var(--hype); background: var(--hype-bg); }
+  .hype-btn.voted { border-color: var(--hype-bd); color: var(--hype); background: var(--hype-bg); }
+  .hype-btn .fire { font-size: 0.9rem; transition: transform 0.2s; }
+  .hype-btn:hover .fire, .hype-btn.voted .fire { transform: scale(1.25); }
+  .hype-btn.bump { animation: hype-bump 0.3s ease; }
+  @keyframes hype-bump { 0%{transform:scale(1)} 50%{transform:scale(1.12)} 100%{transform:scale(1)} }
+  .hype-list { display: flex; flex-direction: column; gap: 0.55rem; }
+  .hype-item {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 0.9rem 1.3rem;
+    display: grid; grid-template-columns: 2rem 1fr auto auto;
+    align-items: center; gap: 1rem; transition: border-color 0.15s;
+  }
+  .hype-item:hover { border-color: var(--border2); }
+  .hype-item.top1 { border-color: rgba(255,59,59,0.3); background: rgba(255,59,59,0.04); }
+  .hype-item.top2 { border-color: rgba(255,150,50,0.2); }
+  .hype-item.top3 { border-color: rgba(255,200,50,0.15); }
+  .hype-rank {
+    font-family: 'Sora', sans-serif; font-weight: 800;
+    font-size: 1rem; color: var(--muted2); text-align: center;
+  }
+  .hype-rank.r1 { color: var(--accent); }
+  .hype-rank.r2 { color: #ff9632; }
+  .hype-rank.r3 { color: #fbbf24; }
+  .hype-name {
+    font-family: 'Sora', sans-serif; font-weight: 700;
+    font-size: 0.9rem; letter-spacing: -0.02em;
+  }
+  .hype-platforms { font-size: 0.72rem; color: var(--muted); margin-top: 0.1rem; }
+  .hype-bar-wrap { width: 120px; }
+  .hype-bar-track { height: 4px; background: rgba(255,255,255,0.06); border-radius: 2px; overflow: hidden; }
+  .hype-bar-fill { height: 100%; background: var(--accent); border-radius: 2px; transition: width 0.4s ease; }
+  .hype-count { font-size: 0.7rem; color: var(--muted); margin-top: 0.25rem; font-weight: 500; }
+  .hype-vote-btn {
+    font-family: 'Space Grotesk', sans-serif; font-size: 0.72rem; font-weight: 600;
+    background: transparent; border: 1px solid var(--border2);
+    color: var(--muted); border-radius: 100px; padding: 0.3rem 0.7rem;
+    cursor: pointer; transition: all 0.15s; white-space: nowrap;
+  }
+  .hype-vote-btn:hover, .hype-vote-btn.voted {
+    border-color: var(--accent-bd); color: var(--accent); background: var(--accent-bg);
+  }
+  .upcoming-list { display: flex; flex-direction: column; gap: 0.55rem; }
+  .upcoming-item {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 0.95rem 1.25rem;
+    display: grid; grid-template-columns: 1fr auto auto;
+    align-items: center; gap: 1rem;
+    text-decoration: none; color: inherit; transition: border-color 0.15s;
+  }
+  .upcoming-item:hover { border-color: var(--border2); }
+  .up-name { font-family: 'Sora', sans-serif; font-weight: 600; font-size: 0.88rem; letter-spacing: -0.02em; }
+  .up-platforms { font-size: 0.73rem; color: var(--muted); margin-top: 0.08rem; }
+  .up-date { font-size: 0.78rem; color: var(--muted); text-align: right; white-space: nowrap; }
+  .up-days {
+    font-family: 'Sora', sans-serif; font-weight: 700;
+    font-size: 0.86rem; color: var(--accent); white-space: nowrap;
+    min-width: 76px; text-align: right;
+  }
+  .launched-section { padding-top: 3.5rem; }
+  .launched-list { display: flex; flex-direction: column; gap: 0.5rem; }
+  .launched-item {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 0.9rem 1.3rem;
+    display: grid; grid-template-columns: 1fr auto auto;
+    align-items: center; gap: 1rem; opacity: 0.6;
+    text-decoration: none; color: inherit;
+    transition: opacity 0.15s, border-color 0.15s;
+  }
+  .launched-item:hover { opacity: 0.85; border-color: var(--border2); }
+  .li-name { font-family: 'Sora', sans-serif; font-weight: 700; font-size: 0.88rem; letter-spacing: -0.02em; }
+  .li-plat { font-size: 0.72rem; color: var(--muted); margin-top: 0.1rem; }
+  .li-date { font-size: 0.78rem; color: var(--muted); white-space: nowrap; }
+  .li-badge {
+    font-size: 0.62rem; font-weight: 600; letter-spacing: 0.06em;
+    text-transform: uppercase; padding: 0.2rem 0.55rem; border-radius: 100px;
+    background: rgba(255,255,255,0.05); color: rgba(255,255,255,0.3);
+    border: 1px solid rgba(255,255,255,0.08); white-space: nowrap;
+  }
+  .api-section {
+    margin-top: 3.5rem; background: var(--surface);
+    border: 1px solid var(--border2); border-radius: var(--radius-lg);
+    padding: 2.4rem; display: grid; grid-template-columns: 1fr 1fr;
+    gap: 3rem; align-items: start; position: relative; overflow: hidden;
+  }
+  .api-section::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, var(--blue), #818cf8);
+  }
+  .api-eyebrow { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--blue); margin-bottom: 0.55rem; }
+  .api-title { font-family: 'Sora', sans-serif; font-weight: 800; font-size: 1.55rem; letter-spacing: -0.04em; line-height: 1.15; margin-bottom: 0.7rem; }
+  .api-desc { font-size: 0.85rem; color: var(--muted); line-height: 1.7; margin-bottom: 1.2rem; }
+  .api-features { list-style: none; display: flex; flex-direction: column; gap: 0.42rem; margin-bottom: 1.4rem; }
+  .api-features li { font-size: 0.82rem; color: var(--muted); display: flex; align-items: center; gap: 0.45rem; }
+  .api-features li::before { content: '✓'; color: var(--green); font-weight: 700; font-size: 0.75rem; flex-shrink: 0; }
+  .code-block {
+    background: #0c0c0e; border: 1px solid var(--border);
+    border-radius: 10px; padding: 1.35rem;
+    font-family: 'Fira Code', 'Cascadia Code', 'Courier New', monospace;
+    font-size: 0.77rem; line-height: 1.9; overflow-x: auto;
+  }
+  .c-comment { color: rgba(255,255,255,0.2); }
+  .c-key { color: #7dd3fc; }
+  .c-str { color: #86efac; }
+  .c-num { color: #fbbf24; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    font-family: 'Space Grotesk', sans-serif; font-size: 0.84rem; font-weight: 600;
+    padding: 0.68rem 1.25rem; border-radius: var(--radius);
+    border: none; cursor: pointer; text-decoration: none; transition: all 0.15s;
+  }
+  .btn-ghost { background: transparent; color: var(--muted); border: 1px solid var(--border2); }
+  .btn-ghost:hover { color: var(--text); background: var(--surface2); }
+  footer { border-top: 1px solid var(--border); margin-top: 5rem; padding: 2.5rem 2rem; text-align: center; }
+  .footer-logo { font-family: 'Sora', sans-serif; font-weight: 800; font-size: 1rem; letter-spacing: -0.03em; margin-bottom: 0.45rem; }
+  .footer-logo span { color: var(--accent); }
+  .footer-text { font-size: 0.76rem; color: var(--muted2); max-width: 460px; margin: 0 auto; line-height: 1.6; }
+  .footer-links { display: flex; justify-content: center; gap: 1.5rem; margin-top: 1rem; list-style: none; }
+  .footer-links a { font-size: 0.76rem; color: var(--muted); text-decoration: none; transition: color 0.15s; }
+  .footer-links a:hover { color: var(--text); }
+  .empty-state { grid-column: 1/-1; text-align: center; padding: 2.5rem; color: var(--muted); font-size: 0.88rem; }
+  @media (max-width: 768px) {
+    .featured-card { grid-template-columns: 1fr; }
+    .mini-cd { flex-wrap: wrap; }
+    .api-section { grid-template-columns: 1fr; gap: 1.5rem; }
+    .upcoming-item { grid-template-columns: 1fr auto; }
+    .up-date { display: none; }
+    .nav-links { display: none; }
+    .hero { padding: 3rem 0 2rem; }
+    .hero-div { display: none; }
+    .hype-item { grid-template-columns: 2rem 1fr auto; }
+    .hype-bar-wrap { display: none; }
+  }
+  @media (max-width: 480px) {
+    .games-grid { grid-template-columns: 1fr; }
+    .wrap { padding: 0 1.1rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">falta<span>pouco</span><small>.com.br</small></a>
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a href="#jogos">Jogos</a></li>
+      <li><a href="#hype">Hype</a></li>
+      <li><a href="#proximos">Próximos</a></li>
+      <li><a href="#api">API</a></li>
+    </ul>
+    <a href="#api" class="nav-pill">API Pública →</a>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <section class="hero">
+    <div class="hero-badge">Base de dados gamer brasileira</div>
+    <h1>Quanto falta pro<br>próximo <em>grande jogo?</em></h1>
+    <p class="hero-sub">Countdowns em tempo real, datas confirmadas e API pública gratuita para todo o mercado gamer.</p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-stat-num n-red" id="stat-total">52</div>
+        <div class="hero-stat-label">Jogos monitorados</div>
+      </div>
+      <div class="hero-div"></div>
+      <div class="hero-stat">
+        <div class="hero-stat-num n-green" id="stat-confirmed">11</div>
+        <div class="hero-stat-label">Confirmados</div>
+      </div>
+      <div class="hero-div"></div>
+      <div class="hero-stat">
+        <div class="hero-stat-num" id="stat-released" style="color:var(--purple)">10</div>
+        <div class="hero-stat-label">Já lançados</div>
+      </div>
+      <div class="hero-div"></div>
+      <div class="hero-stat">
+        <div class="hero-stat-num n-orange" id="stat-hype">—</div>
+        <div class="hero-stat-label">Votos de hype</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="search-section" id="busca">
+    <div class="search-box">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+      </svg>
+      <input class="search-input" id="searchInput" type="text" placeholder="Buscar jogo, plataforma...">
+    </div>
+    <div class="filter-row">
+      <button class="filter-btn active" onclick="setFilter(this,'')">Todos</button>
+      <button class="filter-btn" onclick="setFilter(this,'confirmed')">✅ Confirmados</button>
+      <button class="filter-btn" onclick="setFilter(this,'released')">🟣 Lançados</button>
+      <button class="filter-btn" onclick="setFilter(this,'window')">📅 Janela</button>
+      <button class="filter-btn" onclick="setFilter(this,'unknown')">❓ Sem data</button>
+      <button class="filter-btn" onclick="setFilter(this,'PS5')">PS5</button>
+      <button class="filter-btn" onclick="setFilter(this,'Xbox')">Xbox</button>
+      <button class="filter-btn" onclick="setFilter(this,'PC')">PC</button>
+    </div>
+  </section>
+
+  <section id="jogos">
+    <div class="section-label">
+      <div class="section-title">🔥 Jogos mais aguardados</div>
+      <span class="section-count" id="grid-count">—</span>
+    </div>
+
+    <div class="featured-card">
+      <div>
+        <div class="badge badge-confirmed">Data confirmada</div>
+        <div class="fc-name">Grand Theft Auto VI</div>
+        <div class="fc-meta">
+          <span>📅 19 de novembro de 2026</span>
+          <span><span class="platform-tag">PS5</span><span class="platform-tag">Xbox Series X|S</span></span>
+        </div>
+      </div>
+      <div class="mini-cd">
+        <div class="mini-block"><span class="mini-num" id="f-d">—</span><span class="mini-lbl">Dias</span></div>
+        <div class="mini-sep">:</div>
+        <div class="mini-block"><span class="mini-num" id="f-h">—</span><span class="mini-lbl">Horas</span></div>
+        <div class="mini-sep">:</div>
+        <div class="mini-block"><span class="mini-num" id="f-m">—</span><span class="mini-lbl">Min</span></div>
+        <div class="mini-sep">:</div>
+        <div class="mini-block"><span class="mini-num" id="f-s">—</span><span class="mini-lbl">Seg</span></div>
+      </div>
+    </div>
+
+    <div class="games-grid" id="gamesGrid"></div>
+  </section>
+
+  <section id="hype">
+    <div class="section-label">
+      <div class="section-title">🔥 Ranking de Hype</div>
+      <span class="section-count" id="hype-count">—</span>
+    </div>
+    <div class="hype-list" id="hypeList"></div>
+  </section>
+
+  <section id="proximos">
+    <div class="section-label">
+      <div class="section-title">📅 Próximos lançamentos</div>
+    </div>
+    <div class="upcoming-list" id="upcomingList"></div>
+  </section>
+
+  <div class="launched-section" id="lancados">
+    <div class="section-label">
+      <div class="section-title">✅ Já lançados</div>
+      <span class="section-count" id="launched-count">—</span>
+    </div>
+    <div class="launched-list" id="launchedList"></div>
+  </div>
+
+  <section id="api">
+    <div class="api-section">
+      <div>
+        <div class="api-eyebrow">Para desenvolvedores</div>
+        <div class="api-title">API Pública<br>&amp; Gratuita</div>
+        <p class="api-desc">Acesse nossa base de dados diretamente. JSON estático com rate limit via Cloudflare. Sem cadastro, sem chave de API.</p>
+        <ul class="api-features">
+          <li>Sem autenticação necessária</li>
+          <li>Rate limit via Cloudflare</li>
+          <li>Atualizado semanalmente</li>
+          <li>Schema padronizado e documentado</li>
+          <li>CORS habilitado</li>
+          <li>Endpoint por jogo individual</li>
+        </ul>
+        <div style="display:flex;gap:0.6rem;flex-wrap:wrap">
+          <a href="/api/v1/games.json" class="btn btn-ghost">Ver games.json →</a>
+        </div>
+      </div>
+      <div class="code-block">
+<span class="c-comment">// GET https://faltapoco.com.br/api/v1/games.json</span>
+
+{
+  <span class="c-key">"games"</span>: [
+    {
+      <span class="c-key">"id"</span>:          <span class="c-str">"gta-6"</span>,
+      <span class="c-key">"name"</span>:        <span class="c-str">"Grand Theft Auto VI"</span>,
+      <span class="c-key">"releaseDate"</span>: <span class="c-str">"2026-11-19"</span>,
+      <span class="c-key">"status"</span>:      <span class="c-str">"confirmed"</span>,
+      <span class="c-key">"platforms"</span>:   [<span class="c-str">"PS5"</span>, <span class="c-str">"Xbox"</span>, <span class="c-str">"PC"</span>],
+      <span class="c-key">"daysLeft"</span>:    <span class="c-num" id="apiDays">249</span>,
+      <span class="c-key">"hype"</span>:        <span class="c-num" id="apiHype">...</span>
+    }
+  ],
+  <span class="c-key">"meta"</span>: {
+    <span class="c-key">"total"</span>:     <span class="c-num" id="apiTotal">52</span>,
+    <span class="c-key">"version"</span>:   <span class="c-str">"1.0"</span>,
+    <span class="c-key">"updatedAt"</span>: <span class="c-str">"2026-03-15"</span>
+  }
+}
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <div class="footer-logo">falta<span>pouco</span>.com.br</div>
+  <p class="footer-text">Base de dados independente de lançamentos de jogos. Não afiliado a nenhuma publisher ou desenvolvedora. Dados atualizados semanalmente.</p>
+  <ul class="footer-links">
+    <li><a href="#api">API</a></li>
+    <li><a href="#jogos">Jogos</a></li>
+    <li><a href="#hype">Hype</a></li>
+    <li><a href="#">Sobre</a></li>
+  </ul>
+</footer>
+
+<script>
+  const games = [
+    { id:"gta-6", name:"Grand Theft Auto VI", date:"2026-11-19", status:"confirmed", platforms:["PS5", "Xbox Series X|S"], featured:true, launched:false },
+    { id:"crimson-desert", name:"Crimson Desert", date:"2026-03-19", status:"confirmed", platforms:["PS5", "Xbox Series X|S", "PC", "Mac"], featured:false, launched:false },
+    { id:"samson", name:"Samson", date:"2026-04-08", status:"confirmed", platforms:["PC"], featured:false, launched:false },
+    { id:"replaced", name:"Replaced", date:"2026-04-14", status:"confirmed", platforms:["Xbox Series X|S", "PC"], featured:false, launched:false },
+    { id:"mouse-pi-for-hire", name:"Mouse: PI for Hire", date:"2026-04-16", status:"confirmed", platforms:["PS5", "Xbox Series X|S", "PC", "Switch 1", "Switch 2"], featured:false, launched:false },
+    { id:"pragmata", name:"Pragmata", date:"2026-04-17", status:"confirmed", platforms:["PS5", "Xbox Series X|S", "PC", "Switch 2"], featured:false, launched:false },
+    { id:"saros", name:"Saros", date:"2026-04-30", status:"confirmed", platforms:["PS5"], featured:false, launched:false },
+    { id:"007-first-light", name:"007 First Light", date:"2026-05-27", status:"confirmed", platforms:["PS5", "Xbox Series X|S", "PC", "Switch 2"], featured:false, launched:false },
+    { id:"beast-of-reincarnation", name:"Beast of Reincarnation", date:"2026-08-04", status:"confirmed", platforms:["PS5", "Xbox Series X|S", "PC"], featured:false, launched:false },
+    { id:"phantom-blade-zero", name:"Phantom Blade Zero", date:"2026-09-09", status:"confirmed", platforms:["PS5", "PC"], featured:false, launched:false },
+    { id:"marvel-wolverine", name:"Marvel's Wolverine", date:"2026-09-15", status:"confirmed", platforms:["PS5"], featured:false, launched:false },
+    { id:"i-hate-this-place", name:"I Hate This Place", date:"2026-01-29", status:"released", platforms:["PS5", "Xbox Series X|S", "PC"], featured:false, launched:true },
+    { id:"nioh-3", name:"Nioh 3", date:"2026-02-06", status:"released", platforms:["PS5", "PC"], featured:false, launched:true },
+    { id:"hordes-of-hunger", name:"Hordes of Hunger", date:"2026-02-12", status:"released", platforms:["PC"], featured:false, launched:true },
+    { id:"reanimal", name:"Reanimal", date:"2026-02-13", status:"released", platforms:["PS5", "Xbox Series X|S", "PC", "Switch 2"], featured:false, launched:true },
+    { id:"resident-evil-requiem", name:"Resident Evil Requiem", date:"2026-02-27", status:"released", platforms:["PS5", "Xbox Series X|S", "PC", "Switch 2"], featured:false, launched:true },
+    { id:"legend-of-khiimori", name:"The Legend of Khiimori", date:"2026-03-03", status:"released", platforms:["PC"], featured:false, launched:true },
+    { id:"marathon-2026", name:"Marathon", date:"2026-03-05", status:"released", platforms:["PS5", "Xbox Series X|S", "PC"], featured:false, launched:true },
+    { id:"fatal-frame-2-remake", name:"Fatal Frame II Remake", date:"2026-03-12", status:"released", platforms:["PS5", "Xbox Series X|S", "PC", "Switch 2"], featured:false, launched:true },
+    { id:"solasta-2", name:"Solasta 2", date:"2026-03-12", status:"released", platforms:["PC"], featured:false, launched:true },
+    { id:"toxic-commando", name:"Toxic Commando", date:"2026-03-12", status:"released", platforms:["PS5", "Xbox Series X|S", "PC"], featured:false, launched:true },
+    { id:"fable-4", name:"Fable 4", date:null, status:"window", platforms:["PS5", "Xbox Series X|S", "PC"], featured:false, launched:false },
+    { id:"ace-combat-8", name:"Ace Combat 8: Wings of the Raven", date:null, status:"unknown", platforms:["PS5", "Xbox Series X|S", "PC"], featured:false, launched:false },
+    { id:"animal-use-protocol", name:"Animal Use Protocol", date:null, status:"unknown", platforms:["PC"], featured:false, launched:false },
+    { id:"atomic-heart-2", name:"Atomic Heart 2", date:null, status:"unknown", platforms:["PS5", "Xbox Series X|S", "PC"], featured:false, launched:false },
+    { id:"blood-message", name:"Blood Message", date:null, status:"unknown", platforms:["PS5", "Xbox Series X|S", "PC"], featured:false, launched:false },
+    { id:"chronicles-medieval", name:"Chronicles: Medieval", date:null, status:"unknown", platforms:["PC"], featured:false, launched:false },
+    { id:"control-resonant", name:"Control Resonant", date:null, status:"unknown", platforms:["PS5", "Xbox Series X|S", "PC"], featured:false, launched:false },
+    { id:"decapolice", name:"Decapolice", date:null, status:"unknown", platforms:["PS5", "Xbox Series X|S", "PC"], featured:false, launched:false },
+    { id:"divinity-new", name:"Divinity", date:null, status:"unknown", platforms:["PS5", "Xbox Series X|S", "PC"], featured:false, launched:false },
+    { id:"fatekeeper", name:"Fatekeeper", date:null, status:"unknown", platforms:["PC"], featured:false, launched:false },
+    { id:"gang-of-dragon", name:"Gang of Dragon", date:null, status:"unknown", platforms:["PS5", "Xbox Series X|S", "PC"], featured:false, launched:false },
+    { id:"gears-of-war-eday", name:"Gears of War: E-Day", date:null, status:"unknown", platforms:["Xbox Series X|S", "PC"], featured:false, launched:false },
+    { id:"halo-campaign-evolved", name:"Halo Campaign Evolved", date:null, status:"unknown", platforms:["PS5", "Xbox Series X|S", "PC"], featured:false, launched:false },
+    { id:"hell-let-loose-vietnam", name:"Hell Let Loose: Vietnam", date:null, status:"unknown", platforms:["PS5", "Xbox Series X|S", "PC"], featured:false, launched:false },
+    { id:"ill", name:"ILL", date:null, status:"unknown", platforms:["PC"], featured:false, launched:false },
+    { id:"lords-of-the-fallen-2", name:"Lords of the Fallen 2", date:null, status:"unknown", platforms:["PS5", "Xbox Series X|S", "PC"], featured:false, launched:false },
+    { id:"mudang-two-hearts", name:"Mudang: Two Hearts", date:null, status:"unknown", platforms:["PS5", "Xbox Series X|S", "PC"], featured:false, launched:false },
+    { id:"no-law", name:"No Law", date:null, status:"unknown", platforms:["PS5", "Xbox Series X|S", "PC"], featured:false, launched:false },
+    { id:"onimusha-way-of-the-sword", name:"Onimusha: Way of the Sword", date:null, status:"unknown", platforms:["PS5", "Xbox Series X|S", "PC"], featured:false, launched:false },
+    { id:"ontos", name:"Ontos", date:null, status:"unknown", platforms:["PS5", "Xbox Series X|S", "PC"], featured:false, launched:false },
+    { id:"orbitals", name:"Orbitals", date:null, status:"unknown", platforms:["PS5", "Xbox Series X|S", "PC"], featured:false, launched:false },
+    { id:"persona-4-revival", name:"Persona 4 Revival", date:null, status:"unknown", platforms:["PS5", "Xbox Series X|S", "PC"], featured:false, launched:false },
+    { id:"plague-tale-resonance", name:"Resonance: A Plague Tale Legacy", date:null, status:"unknown", platforms:["PS5", "Xbox Series X|S", "PC"], featured:false, launched:false },
+    { id:"star-wars-fate-old-republic", name:"Star Wars: Fate of the Old Republic", date:null, status:"unknown", platforms:["PS5", "Xbox Series X|S", "PC"], featured:false, launched:false },
+    { id:"stranger-than-heaven", name:"Stranger Than Heaven", date:null, status:"unknown", platforms:["PS5", "Xbox Series X|S", "PC"], featured:false, launched:false },
+    { id:"blood-of-dawnwalker", name:"The Blood of Dawnwalker", date:null, status:"unknown", platforms:["PS5", "Xbox Series X|S", "PC"], featured:false, launched:false },
+    { id:"the-god-slayer", name:"The God Slayer", date:null, status:"unknown", platforms:["PS5", "Xbox Series X|S", "PC"], featured:false, launched:false },
+    { id:"sinking-city-2", name:"The Sinking City 2", date:null, status:"unknown", platforms:["PS5", "Xbox Series X|S", "PC"], featured:false, launched:false },
+    { id:"tides-of-annihilation", name:"Tides of Annihilation", date:null, status:"unknown", platforms:["PS5", "Xbox Series X|S", "PC"], featured:false, launched:false },
+    { id:"tomb-raider-legend-of-atlantis", name:"Tomb Raider: Legend of Atlantis", date:null, status:"unknown", platforms:["PS5", "Xbox Series X|S", "PC"], featured:false, launched:false },
+    { id:"valor-mortis", name:"Valor Mortis", date:null, status:"unknown", platforms:["PS5", "Xbox Series X|S", "PC"], featured:false, launched:false }
+  ];
+
+  const statusLabel = { confirmed:'Confirmado', window:'Janela', rumor:'Rumor', released:'Lançado', unknown:'Sem data' };
+  const pillClass   = { confirmed:'pill-confirmed', window:'pill-window', rumor:'pill-rumor', released:'pill-released', unknown:'pill-unknown' };
+  const pad = (n, l=2) => String(n).padStart(l,'0');
+
+  function getHypeData() {
+    try { return JSON.parse(localStorage.getItem('fp_hype') || '{}'); } catch(e) { return {}; }
+  }
+  function saveHype(data) {
+    try { localStorage.setItem('fp_hype', JSON.stringify(data)); } catch(e) {}
+  }
+  function getVoted() {
+    try { return JSON.parse(localStorage.getItem('fp_voted') || '[]'); } catch(e) { return []; }
+  }
+  function saveVoted(arr) {
+    try { localStorage.setItem('fp_voted', JSON.stringify(arr)); } catch(e) {}
+  }
+
+  function voteHype(gameId) {
+    const voted = getVoted();
+    const hype  = getHypeData();
+    const isVoted = voted.includes(gameId);
+    if (isVoted) {
+      voted.splice(voted.indexOf(gameId), 1);
+      hype[gameId] = Math.max(0, (hype[gameId] || 0) - 1);
+    } else {
+      voted.push(gameId);
+      hype[gameId] = (hype[gameId] || 0) + 1;
+    }
+    saveVoted(voted);
+    saveHype(hype);
+    return { count: hype[gameId], voted: !isVoted };
+  }
+
+  function getTotalHype() {
+    const hype = getHypeData();
+    return Object.values(hype).reduce((a,b) => a+b, 0);
+  }
+
+  function daysLeft(dateStr) {
+    if (!dateStr) return null;
+    const diff = new Date(dateStr + 'T00:00:00') - new Date();
+    return Math.floor(diff / 86400000);
+  }
+
+  function isReleased(g) {
+    return g.launched || g.status === 'released' || (g.date && daysLeft(g.date) !== null && daysLeft(g.date) < 0);
+  }
+
+  // Seed hype for first-time visitors
+  const hypeSeeds = {
+    "gta-6": 142,
+    "crimson-desert": 64,
+    "007-first-light": 9,
+    "phantom-blade-zero": 43,
+    "marvel-wolverine": 87,
+    "resident-evil-requiem": 39,
+    "marathon-2026": 15,
+    "fatal-frame-2-remake": 18,
+    "fable-4": 58,
+    "atomic-heart-2": 12,
+    "control-resonant": 28,
+    "gears-of-war-eday": 51
+  };
+  const votes = getHypeData();
+  Object.keys(hypeSeeds).forEach(id => { if (votes[id] === undefined) votes[id] = hypeSeeds[id]; });
+  saveHype(votes);
+
+  // Stats
+  document.getElementById('stat-hype').textContent = getTotalHype().toLocaleString('pt-BR');
+  document.getElementById('apiHype').textContent = votes["gta-6"] || 0;
+
+  // Featured countdown
+  const featDate = new Date(2026, 10, 19, 0, 0, 0);
+  function tick() {
+    if (!featDate) return;
+    const diff = featDate - new Date();
+    if (diff <= 0) { ['f-d','f-h','f-m','f-s'].forEach(id => document.getElementById(id).textContent = '00'); return; }
+    const d = Math.floor(diff / 86400000);
+    const h = Math.floor((diff % 86400000) / 3600000);
+    const m = Math.floor((diff % 3600000) / 60000);
+    const s = Math.floor((diff % 60000) / 1000);
+    document.getElementById('f-d').textContent = pad(d,3);
+    document.getElementById('f-h').textContent = pad(h);
+    document.getElementById('f-m').textContent = pad(m);
+    document.getElementById('f-s').textContent = pad(s);
+    document.getElementById('apiDays').textContent = d;
+  }
+  tick(); setInterval(tick, 1000);
+
+  // Filter state
+  let activeFilter = '';
+  let searchQuery  = '';
+
+  function setFilter(btn, val) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeFilter = val;
+    renderGrid();
+  }
+
+  document.getElementById('searchInput').addEventListener('input', function() {
+    searchQuery = this.value.toLowerCase();
+    renderGrid();
+  });
+
+  function renderGrid() {
+    const grid = document.getElementById('gamesGrid');
+    const nonFeatured = games.filter(g => !g.featured);
+    const filtered = nonFeatured.filter(g => {
+      const matchSearch = !searchQuery ||
+        g.name.toLowerCase().includes(searchQuery) ||
+        g.platforms.some(p => p.toLowerCase().includes(searchQuery));
+      const matchFilter = !activeFilter || (
+        ['confirmed','released','window','rumor','unknown'].includes(activeFilter)
+          ? g.status === activeFilter || (activeFilter === 'released' && isReleased(g))
+          : g.platforms.some(p => p.toLowerCase().includes(activeFilter.toLowerCase()))
+      );
+      return matchSearch && matchFilter;
+    });
+
+    document.getElementById('grid-count').textContent = filtered.length + ' jogos';
+    grid.innerHTML = '';
+
+    if (filtered.length === 0) {
+      grid.innerHTML = '<div class="empty-state">Nenhum jogo encontrado com esses filtros.</div>';
+      return;
+    }
+
+    const hype = getHypeData();
+    const voted = getVoted();
+
+    filtered.forEach((g, i) => {
+      const released = isReleased(g);
+      const dl = g.date ? daysLeft(g.date) : null;
+      const statusKey = released ? 'released' : g.status;
+      const pill = pillClass[statusKey] || 'pill-unknown';
+      const label = statusLabel[statusKey] || g.status;
+
+      let dateStr = '—';
+      if (g.date) {
+        dateStr = new Date(g.date + 'T00:00:00').toLocaleDateString('pt-BR', {day:'2-digit', month:'long', year:'numeric'});
+      }
+
+      let countdownHtml = '';
+      if (released) {
+        countdownHtml = `<div class="gc-countdown released">✅ Disponível agora</div>`;
+      } else if (dl !== null && dl >= 0) {
+        countdownHtml = `<div class="gc-countdown">⏳ ${dl} dia${dl !== 1 ? 's' : ''}</div>`;
+      } else {
+        countdownHtml = `<div class="gc-countdown none">Sem data confirmada</div>`;
+      }
+
+      const platformsHtml = g.platforms.slice(0,4).map(p =>
+        `<span class="platform-tag">${p}</span>`).join('');
+
+      const hypeCount = hype[g.id] || 0;
+      const isVoted = voted.includes(g.id);
+
+      const card = document.createElement('div');
+      card.className = 'game-card';
+      card.style.animationDelay = (i * 0.03) + 's';
+      card.innerHTML = `
+        <a href="/jogos/${g.id}/" class="gc-link" style="display:contents">
+          <div class="gc-top">
+            <div class="gc-name">${g.name}</div>
+            <span class="status-pill ${pill}">${label}</span>
+          </div>
+          <div class="gc-date">📅 ${dateStr}</div>
+          <div class="gc-platforms">${platformsHtml}</div>
+          ${countdownHtml}
+        </a>
+        <div class="gc-footer">
+          <span style="font-size:0.72rem;color:var(--muted2)">${g.platforms.length} plataforma${g.platforms.length !== 1 ? 's' : ''}</span>
+          <button class="hype-btn ${isVoted ? 'voted' : ''}" data-id="${g.id}" onclick="handleHype(this,'${g.id}')">
+            <span class="fire">🔥</span> <span class="hype-count-inline">${hypeCount}</span>
+          </button>
+        </div>
+      `;
+      grid.appendChild(card);
+    });
+  }
+
+  function handleHype(btn, id) {
+    const result = voteHype(id);
+    btn.querySelector('.hype-count-inline').textContent = result.count;
+    btn.classList.toggle('voted', result.voted);
+    btn.classList.add('bump');
+    btn.addEventListener('animationend', () => btn.classList.remove('bump'), { once: true });
+    document.getElementById('stat-hype').textContent = getTotalHype().toLocaleString('pt-BR');
+    renderHype();
+  }
+
+  function renderHype() {
+    const hype = getHypeData();
+    const voted = getVoted();
+    const rankable = games.filter(g => !g.featured);
+    const sorted = [...rankable].sort((a,b) => (hype[b.id]||0) - (hype[a.id]||0)).slice(0,8);
+    const maxVotes = hype[sorted[0]?.id] || 1;
+    const totalVotes = Object.values(hype).reduce((a,b) => a+b, 0);
+
+    document.getElementById('hype-count').textContent = totalVotes.toLocaleString('pt-BR') + ' votos';
+
+    const list = document.getElementById('hypeList');
+    list.innerHTML = '';
+    sorted.forEach((g, i) => {
+      const v = hype[g.id] || 0;
+      const pct = Math.round((v / maxVotes) * 100);
+      const rankClass = i === 0 ? 'top1' : i === 1 ? 'top2' : i === 2 ? 'top3' : '';
+      const rClass = i === 0 ? 'r1' : i === 1 ? 'r2' : i === 2 ? 'r3' : '';
+      const isVoted = voted.includes(g.id);
+      const item = document.createElement('div');
+      item.className = `hype-item ${rankClass}`;
+      item.innerHTML = `
+        <div class="hype-rank ${rClass}">${i === 0 ? '🔥' : '#' + (i+1)}</div>
+        <div>
+          <div class="hype-name">${g.name}</div>
+          <div class="hype-platforms">${g.platforms.join(' · ')}</div>
+        </div>
+        <div class="hype-bar-wrap">
+          <div class="hype-bar-track"><div class="hype-bar-fill" style="width:${pct}%"></div></div>
+          <div class="hype-count">${v.toLocaleString('pt-BR')} votos</div>
+        </div>
+        <button class="hype-vote-btn ${isVoted ? 'voted' : ''}" onclick="handleHype(this,'${g.id}');this.classList.toggle('voted')">
+          ${isVoted ? '🔥 Votado' : '🔥 Hype!'}
+        </button>
+      `;
+      list.appendChild(item);
+    });
+  }
+
+  // Upcoming list
+  const upcoming = games
+    .filter(g => g.date && !isReleased(g) && daysLeft(g.date) > 0)
+    .sort((a,b) => new Date(a.date) - new Date(b.date))
+    .slice(0, 8);
+
+  const upList = document.getElementById('upcomingList');
+  upcoming.forEach(g => {
+    const dl = daysLeft(g.date);
+    const dateStr = new Date(g.date + 'T00:00:00').toLocaleDateString('pt-BR', {day:'2-digit', month:'long', year:'numeric'});
+    const item = document.createElement('a');
+    item.className = 'upcoming-item';
+    item.href = '/jogos/' + g.id + '/';
+    item.innerHTML = `
+      <div>
+        <div class="up-name">${g.name}</div>
+        <div class="up-platforms">${g.platforms.join(' · ')}</div>
+      </div>
+      <div class="up-date">${dateStr}</div>
+      <div class="up-days">${dl} dias</div>
+    `;
+    upList.appendChild(item);
+  });
+
+  // Launched list
+  const launchedGames = games.filter(g => isReleased(g));
+  document.getElementById('launched-count').textContent = launchedGames.length + ' jogos';
+  const launchedList = document.getElementById('launchedList');
+  launchedGames.forEach(g => {
+    const dateStr = g.date
+      ? new Date(g.date + 'T00:00:00').toLocaleDateString('pt-BR', {day:'2-digit', month:'long', year:'numeric'})
+      : '—';
+    const item = document.createElement('a');
+    item.className = 'launched-item';
+    item.href = '/jogos/' + g.id + '/';
+    item.innerHTML = `
+      <div>
+        <div class="li-name">${g.name}</div>
+        <div class="li-plat">${g.platforms.join(' · ')}</div>
+      </div>
+      <div class="li-date">📅 ${dateStr}</div>
+      <div class="li-badge">Lançado</div>
+    `;
+    launchedList.appendChild(item);
+  });
+
+  renderGrid();
+  renderHype();
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+{
+  "slug": "solasta-2",
+  "name": "Solasta 2",
+  "release": "2026-03-12",
+  "release_display": "12 de março de 2026",
+  "status": "released",
+  "confidence_date": "media",
+  "developer": "",
+  "publisher": "",
+  "platforms": [
+    "PC"
+  ],
+  "background_image": "bg.jpg",
+  "description": "Acompanhe a data de lançamento, trailer e atualizações de Solasta 2.",
+  "video": {
+    "video_id": "yFWkOnzGZCA",
+    "title": "Trailer Oficial",
+    "channel_title": "",
+    "published_at": "",
+    "url": "https://www.youtube.com/watch?v=yFWkOnzGZCA",
+    "embed_url": "https://www.youtube.com/embed/yFWkOnzGZCA",
+    "duration_seconds": null,
+    "view_count": 0,
+    "confidence": "manual",
+    "search_query": "manual"
+  },
+  "news": [],
+  "reviews": [],
+  "source": {
+    "type": "manual"
+  },
+  "days_left": 0,
+  "api_url": "https://faltapoco.com.br/api/v1/games/solasta-2.json",
+  "page_url": "https://faltapoco.com.br/jogos/solasta-2/",
+  "updated_at": "2026-03-15T15:39:14.802213+00:00"
+}

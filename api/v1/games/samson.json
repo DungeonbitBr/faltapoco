@@ -1,0 +1,36 @@
+{
+  "slug": "samson",
+  "name": "Samson",
+  "release": "2026-04-08",
+  "release_display": "8 de abril de 2026",
+  "status": "confirmed",
+  "confidence_date": "media",
+  "developer": "",
+  "publisher": "",
+  "platforms": [
+    "PC"
+  ],
+  "background_image": "bg.jpg",
+  "description": "Acompanhe a data de lançamento, trailer e atualizações de Samson.",
+  "video": {
+    "video_id": "4Kj0VgwD4Mo",
+    "title": "Trailer Oficial",
+    "channel_title": "",
+    "published_at": "",
+    "url": "https://www.youtube.com/watch?v=4Kj0VgwD4Mo",
+    "embed_url": "https://www.youtube.com/embed/4Kj0VgwD4Mo",
+    "duration_seconds": null,
+    "view_count": 0,
+    "confidence": "manual",
+    "search_query": "manual"
+  },
+  "news": [],
+  "reviews": [],
+  "source": {
+    "type": "manual"
+  },
+  "days_left": 24,
+  "api_url": "https://faltapoco.com.br/api/v1/games/samson.json",
+  "page_url": "https://faltapoco.com.br/jogos/samson/",
+  "updated_at": "2026-03-15T15:39:14.808900+00:00"
+}

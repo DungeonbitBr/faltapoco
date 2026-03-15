@@ -1,0 +1,38 @@
+{
+  "slug": "control-resonant",
+  "name": "Control Resonant",
+  "release": "",
+  "release_display": "Sem data confirmada",
+  "status": "unknown",
+  "confidence_date": "media",
+  "developer": "",
+  "publisher": "",
+  "platforms": [
+    "PS5",
+    "Xbox Series X|S",
+    "PC"
+  ],
+  "background_image": "bg.jpg",
+  "description": "Acompanhe a data de lançamento, trailer e atualizações de Control Resonant.",
+  "video": {
+    "video_id": "ZYUcFbVa23U",
+    "title": "Trailer Oficial",
+    "channel_title": "",
+    "published_at": "",
+    "url": "https://www.youtube.com/watch?v=ZYUcFbVa23U",
+    "embed_url": "https://www.youtube.com/embed/ZYUcFbVa23U",
+    "duration_seconds": null,
+    "view_count": 0,
+    "confidence": "manual",
+    "search_query": "manual"
+  },
+  "news": [],
+  "reviews": [],
+  "source": {
+    "type": "manual"
+  },
+  "days_left": null,
+  "api_url": "https://faltapoco.com.br/api/v1/games/control-resonant.json",
+  "page_url": "https://faltapoco.com.br/jogos/control-resonant/",
+  "updated_at": "2026-03-15T15:39:14.823272+00:00"
+}

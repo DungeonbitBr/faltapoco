@@ -1,0 +1,38 @@
+{
+  "slug": "tomb-raider-legend-of-atlantis",
+  "name": "Tomb Raider: Legend of Atlantis",
+  "release": "",
+  "release_display": "Sem data confirmada",
+  "status": "unknown",
+  "confidence_date": "media",
+  "developer": "",
+  "publisher": "",
+  "platforms": [
+    "PS5",
+    "Xbox Series X|S",
+    "PC"
+  ],
+  "background_image": "bg.jpg",
+  "description": "Acompanhe a data de lançamento, trailer e atualizações de Tomb Raider: Legend of Atlantis.",
+  "video": {
+    "video_id": "n6JxVxSHjqE",
+    "title": "Trailer Oficial",
+    "channel_title": "",
+    "published_at": "",
+    "url": "https://www.youtube.com/watch?v=n6JxVxSHjqE",
+    "embed_url": "https://www.youtube.com/embed/n6JxVxSHjqE",
+    "duration_seconds": null,
+    "view_count": 0,
+    "confidence": "manual",
+    "search_query": "manual"
+  },
+  "news": [],
+  "reviews": [],
+  "source": {
+    "type": "manual"
+  },
+  "days_left": null,
+  "api_url": "https://faltapoco.com.br/api/v1/games/tomb-raider-legend-of-atlantis.json",
+  "page_url": "https://faltapoco.com.br/jogos/tomb-raider-legend-of-atlantis/",
+  "updated_at": "2026-03-15T15:39:14.824530+00:00"
+}

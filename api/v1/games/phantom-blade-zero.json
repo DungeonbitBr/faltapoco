@@ -1,0 +1,37 @@
+{
+  "slug": "phantom-blade-zero",
+  "name": "Phantom Blade Zero",
+  "release": "2026-09-09",
+  "release_display": "9 de setembro de 2026",
+  "status": "confirmed",
+  "confidence_date": "media",
+  "developer": "",
+  "publisher": "",
+  "platforms": [
+    "PS5",
+    "PC"
+  ],
+  "background_image": "bg.jpg",
+  "description": "Acompanhe a data de lançamento, trailer e atualizações de Phantom Blade Zero.",
+  "video": {
+    "video_id": "v432HBr6lgU",
+    "title": "Trailer Oficial",
+    "channel_title": "",
+    "published_at": "",
+    "url": "https://www.youtube.com/watch?v=v432HBr6lgU",
+    "embed_url": "https://www.youtube.com/embed/v432HBr6lgU",
+    "duration_seconds": null,
+    "view_count": 0,
+    "confidence": "manual",
+    "search_query": "manual"
+  },
+  "news": [],
+  "reviews": [],
+  "source": {
+    "type": "manual"
+  },
+  "days_left": 178,
+  "api_url": "https://faltapoco.com.br/api/v1/games/phantom-blade-zero.json",
+  "page_url": "https://faltapoco.com.br/jogos/phantom-blade-zero/",
+  "updated_at": "2026-03-15T15:39:14.818095+00:00"
+}

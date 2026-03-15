@@ -1,0 +1,37 @@
+{
+  "slug": "gta-6",
+  "name": "Grand Theft Auto VI",
+  "release": "2026-11-19",
+  "release_display": "19 de novembro de 2026",
+  "status": "confirmed",
+  "confidence_date": "media",
+  "developer": "Rockstar Games",
+  "publisher": "Rockstar Games",
+  "platforms": [
+    "PS5",
+    "Xbox Series X|S"
+  ],
+  "background_image": "bg.jpg",
+  "description": "Grand Theft Auto VI é o mais novo capítulo da aclamada franquia da Rockstar Games. Ambientado em Leonida, o estado ficcional que engloba Vice City e arredores, o jogo promete ser a experiência open-world mais ambiciosa já criada, com uma protagonista feminina pela primeira vez na série principal.",
+  "video": {
+    "video_id": "QdBZExpgErs",
+    "title": "Trailer Oficial",
+    "channel_title": "",
+    "published_at": "",
+    "url": "https://www.youtube.com/watch?v=QdBZExpgErs",
+    "embed_url": "https://www.youtube.com/embed/QdBZExpgErs",
+    "duration_seconds": null,
+    "view_count": 0,
+    "confidence": "manual",
+    "search_query": "manual"
+  },
+  "news": [],
+  "reviews": [],
+  "source": {
+    "type": "manual"
+  },
+  "days_left": 249,
+  "api_url": "https://faltapoco.com.br/api/v1/games/gta-6.json",
+  "page_url": "https://faltapoco.com.br/jogos/gta-6/",
+  "updated_at": "2026-03-15T15:39:14.820610+00:00"
+}

@@ -1,0 +1,39 @@
+{
+  "slug": "pragmata",
+  "name": "Pragmata",
+  "release": "2026-04-17",
+  "release_display": "17 de abril de 2026",
+  "status": "confirmed",
+  "confidence_date": "media",
+  "developer": "",
+  "publisher": "",
+  "platforms": [
+    "PS5",
+    "Xbox Series X|S",
+    "PC",
+    "Switch 2"
+  ],
+  "background_image": "bg.jpg",
+  "description": "Acompanhe a data de lançamento, trailer e atualizações de Pragmata.",
+  "video": {
+    "video_id": "C6tqmUCslo4",
+    "title": "Trailer Oficial",
+    "channel_title": "",
+    "published_at": "",
+    "url": "https://www.youtube.com/watch?v=C6tqmUCslo4",
+    "embed_url": "https://www.youtube.com/embed/C6tqmUCslo4",
+    "duration_seconds": null,
+    "view_count": 0,
+    "confidence": "manual",
+    "search_query": "manual"
+  },
+  "news": [],
+  "reviews": [],
+  "source": {
+    "type": "manual"
+  },
+  "days_left": 33,
+  "api_url": "https://faltapoco.com.br/api/v1/games/pragmata.json",
+  "page_url": "https://faltapoco.com.br/jogos/pragmata/",
+  "updated_at": "2026-03-15T15:39:14.812940+00:00"
+}

@@ -1,0 +1,39 @@
+{
+  "slug": "resident-evil-requiem",
+  "name": "Resident Evil Requiem",
+  "release": "2026-02-27",
+  "release_display": "27 de fevereiro de 2026",
+  "status": "released",
+  "confidence_date": "media",
+  "developer": "",
+  "publisher": "",
+  "platforms": [
+    "PS5",
+    "Xbox Series X|S",
+    "PC",
+    "Switch 2"
+  ],
+  "background_image": "bg.jpg",
+  "description": "Acompanhe a data de lançamento, trailer e atualizações de Resident Evil Requiem.",
+  "video": {
+    "video_id": "H7w9wKigMw",
+    "title": "Trailer Oficial",
+    "channel_title": "",
+    "published_at": "",
+    "url": "https://www.youtube.com/watch?v=H7w9wKigMw",
+    "embed_url": "https://www.youtube.com/embed/H7w9wKigMw",
+    "duration_seconds": null,
+    "view_count": 0,
+    "confidence": "manual",
+    "search_query": "manual"
+  },
+  "news": [],
+  "reviews": [],
+  "source": {
+    "type": "manual"
+  },
+  "days_left": 0,
+  "api_url": "https://faltapoco.com.br/api/v1/games/resident-evil-requiem.json",
+  "page_url": "https://faltapoco.com.br/jogos/resident-evil-requiem/",
+  "updated_at": "2026-03-15T15:39:14.793892+00:00"
+}

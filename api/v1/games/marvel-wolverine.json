@@ -1,0 +1,36 @@
+{
+  "slug": "marvel-wolverine",
+  "name": "Marvel's Wolverine",
+  "release": "2026-09-15",
+  "release_display": "15 de setembro de 2026",
+  "status": "confirmed",
+  "confidence_date": "media",
+  "developer": "",
+  "publisher": "",
+  "platforms": [
+    "PS5"
+  ],
+  "background_image": "bg.jpg",
+  "description": "Acompanhe a data de lançamento, trailer e atualizações de Marvel's Wolverine.",
+  "video": {
+    "video_id": "BMU9iACrRO8",
+    "title": "Trailer Oficial",
+    "channel_title": "",
+    "published_at": "",
+    "url": "https://www.youtube.com/watch?v=BMU9iACrRO8",
+    "embed_url": "https://www.youtube.com/embed/BMU9iACrRO8",
+    "duration_seconds": null,
+    "view_count": 0,
+    "confidence": "manual",
+    "search_query": "manual"
+  },
+  "news": [],
+  "reviews": [],
+  "source": {
+    "type": "manual"
+  },
+  "days_left": 184,
+  "api_url": "https://faltapoco.com.br/api/v1/games/marvel-wolverine.json",
+  "page_url": "https://faltapoco.com.br/jogos/marvel-wolverine/",
+  "updated_at": "2026-03-15T15:39:14.819377+00:00"
+}

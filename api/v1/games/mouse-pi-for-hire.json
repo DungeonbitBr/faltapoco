@@ -1,0 +1,40 @@
+{
+  "slug": "mouse-pi-for-hire",
+  "name": "Mouse: PI for Hire",
+  "release": "2026-04-16",
+  "release_display": "16 de abril de 2026",
+  "status": "confirmed",
+  "confidence_date": "media",
+  "developer": "",
+  "publisher": "",
+  "platforms": [
+    "PS5",
+    "Xbox Series X|S",
+    "PC",
+    "Switch 1",
+    "Switch 2"
+  ],
+  "background_image": "bg.jpg",
+  "description": "Acompanhe a data de lançamento, trailer e atualizações de Mouse: PI for Hire.",
+  "video": {
+    "video_id": "X20fYa7-XtE",
+    "title": "Trailer Oficial",
+    "channel_title": "",
+    "published_at": "",
+    "url": "https://www.youtube.com/watch?v=X20fYa7-XtE",
+    "embed_url": "https://www.youtube.com/embed/X20fYa7-XtE",
+    "duration_seconds": null,
+    "view_count": 0,
+    "confidence": "manual",
+    "search_query": "manual"
+  },
+  "news": [],
+  "reviews": [],
+  "source": {
+    "type": "manual"
+  },
+  "days_left": 32,
+  "api_url": "https://faltapoco.com.br/api/v1/games/mouse-pi-for-hire.json",
+  "page_url": "https://faltapoco.com.br/jogos/mouse-pi-for-hire/",
+  "updated_at": "2026-03-15T15:39:14.811485+00:00"
+}

@@ -1,0 +1,27 @@
+{
+  "slug": "hell-let-loose-vietnam",
+  "name": "Hell Let Loose: Vietnam",
+  "release": "",
+  "release_display": "Sem data confirmada",
+  "status": "unknown",
+  "confidence_date": "media",
+  "developer": "",
+  "publisher": "",
+  "platforms": [
+    "PS5",
+    "Xbox Series X|S",
+    "PC"
+  ],
+  "background_image": "bg.jpg",
+  "description": "Acompanhe a data de lançamento, trailer e atualizações de Hell Let Loose: Vietnam.",
+  "video": null,
+  "news": [],
+  "reviews": [],
+  "source": {
+    "type": "manual"
+  },
+  "days_left": null,
+  "api_url": "https://faltapoco.com.br/api/v1/games/hell-let-loose-vietnam.json",
+  "page_url": "https://faltapoco.com.br/jogos/hell-let-loose-vietnam/",
+  "updated_at": "2026-03-15T15:39:14.856562+00:00"
+}

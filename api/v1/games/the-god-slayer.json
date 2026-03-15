@@ -1,0 +1,38 @@
+{
+  "slug": "the-god-slayer",
+  "name": "The God Slayer",
+  "release": "",
+  "release_display": "Sem data confirmada",
+  "status": "unknown",
+  "confidence_date": "media",
+  "developer": "",
+  "publisher": "",
+  "platforms": [
+    "PS5",
+    "Xbox Series X|S",
+    "PC"
+  ],
+  "background_image": "bg.jpg",
+  "description": "Acompanhe a data de lançamento, trailer e atualizações de The God Slayer.",
+  "video": {
+    "video_id": "KKzVxkTCsmI",
+    "title": "Trailer Oficial",
+    "channel_title": "",
+    "published_at": "",
+    "url": "https://www.youtube.com/watch?v=KKzVxkTCsmI",
+    "embed_url": "https://www.youtube.com/embed/KKzVxkTCsmI",
+    "duration_seconds": null,
+    "view_count": 0,
+    "confidence": "manual",
+    "search_query": "manual"
+  },
+  "news": [],
+  "reviews": [],
+  "source": {
+    "type": "manual"
+  },
+  "days_left": null,
+  "api_url": "https://faltapoco.com.br/api/v1/games/the-god-slayer.json",
+  "page_url": "https://faltapoco.com.br/jogos/the-god-slayer/",
+  "updated_at": "2026-03-15T15:39:14.831359+00:00"
+}

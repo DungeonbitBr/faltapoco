@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://faltapoco.com.br/sitemap.xml

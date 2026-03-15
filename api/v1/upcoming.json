@@ -1,0 +1,456 @@
+{
+  "games": [
+    {
+      "slug": "crimson-desert",
+      "name": "Crimson Desert",
+      "release": "2026-03-19",
+      "release_display": "19 de março de 2026",
+      "status": "confirmed",
+      "confidence_date": "media",
+      "developer": "",
+      "publisher": "",
+      "platforms": [
+        "PS5",
+        "Xbox Series X|S",
+        "PC",
+        "Mac"
+      ],
+      "background_image": "bg.jpg",
+      "description": "Acompanhe a data de lançamento, trailer e atualizações de Crimson Desert.",
+      "video": {
+        "video_id": "VWIw_f8e9Pg",
+        "title": "Trailer Oficial",
+        "channel_title": "",
+        "published_at": "",
+        "url": "https://www.youtube.com/watch?v=VWIw_f8e9Pg",
+        "embed_url": "https://www.youtube.com/embed/VWIw_f8e9Pg",
+        "duration_seconds": null,
+        "view_count": 0,
+        "confidence": "manual",
+        "search_query": "manual"
+      },
+      "news": [],
+      "reviews": [],
+      "source": {
+        "type": "manual"
+      },
+      "days_left": 4,
+      "api_url": "https://faltapoco.com.br/api/v1/games/crimson-desert.json",
+      "page_url": "https://faltapoco.com.br/jogos/crimson-desert/",
+      "updated_at": "2026-03-15T15:39:14.807515+00:00"
+    },
+    {
+      "slug": "samson",
+      "name": "Samson",
+      "release": "2026-04-08",
+      "release_display": "8 de abril de 2026",
+      "status": "confirmed",
+      "confidence_date": "media",
+      "developer": "",
+      "publisher": "",
+      "platforms": [
+        "PC"
+      ],
+      "background_image": "bg.jpg",
+      "description": "Acompanhe a data de lançamento, trailer e atualizações de Samson.",
+      "video": {
+        "video_id": "4Kj0VgwD4Mo",
+        "title": "Trailer Oficial",
+        "channel_title": "",
+        "published_at": "",
+        "url": "https://www.youtube.com/watch?v=4Kj0VgwD4Mo",
+        "embed_url": "https://www.youtube.com/embed/4Kj0VgwD4Mo",
+        "duration_seconds": null,
+        "view_count": 0,
+        "confidence": "manual",
+        "search_query": "manual"
+      },
+      "news": [],
+      "reviews": [],
+      "source": {
+        "type": "manual"
+      },
+      "days_left": 24,
+      "api_url": "https://faltapoco.com.br/api/v1/games/samson.json",
+      "page_url": "https://faltapoco.com.br/jogos/samson/",
+      "updated_at": "2026-03-15T15:39:14.808900+00:00"
+    },
+    {
+      "slug": "replaced",
+      "name": "Replaced",
+      "release": "2026-04-14",
+      "release_display": "14 de abril de 2026",
+      "status": "confirmed",
+      "confidence_date": "media",
+      "developer": "",
+      "publisher": "",
+      "platforms": [
+        "Xbox Series X|S",
+        "PC"
+      ],
+      "background_image": "bg.jpg",
+      "description": "Acompanhe a data de lançamento, trailer e atualizações de Replaced.",
+      "video": {
+        "video_id": "ADghaDOzbsk",
+        "title": "Trailer Oficial",
+        "channel_title": "",
+        "published_at": "",
+        "url": "https://www.youtube.com/watch?v=ADghaDOzbsk",
+        "embed_url": "https://www.youtube.com/embed/ADghaDOzbsk",
+        "duration_seconds": null,
+        "view_count": 0,
+        "confidence": "manual",
+        "search_query": "manual"
+      },
+      "news": [],
+      "reviews": [],
+      "source": {
+        "type": "manual"
+      },
+      "days_left": 30,
+      "api_url": "https://faltapoco.com.br/api/v1/games/replaced.json",
+      "page_url": "https://faltapoco.com.br/jogos/replaced/",
+      "updated_at": "2026-03-15T15:39:14.810242+00:00"
+    },
+    {
+      "slug": "mouse-pi-for-hire",
+      "name": "Mouse: PI for Hire",
+      "release": "2026-04-16",
+      "release_display": "16 de abril de 2026",
+      "status": "confirmed",
+      "confidence_date": "media",
+      "developer": "",
+      "publisher": "",
+      "platforms": [
+        "PS5",
+        "Xbox Series X|S",
+        "PC",
+        "Switch 1",
+        "Switch 2"
+      ],
+      "background_image": "bg.jpg",
+      "description": "Acompanhe a data de lançamento, trailer e atualizações de Mouse: PI for Hire.",
+      "video": {
+        "video_id": "X20fYa7-XtE",
+        "title": "Trailer Oficial",
+        "channel_title": "",
+        "published_at": "",
+        "url": "https://www.youtube.com/watch?v=X20fYa7-XtE",
+        "embed_url": "https://www.youtube.com/embed/X20fYa7-XtE",
+        "duration_seconds": null,
+        "view_count": 0,
+        "confidence": "manual",
+        "search_query": "manual"
+      },
+      "news": [],
+      "reviews": [],
+      "source": {
+        "type": "manual"
+      },
+      "days_left": 32,
+      "api_url": "https://faltapoco.com.br/api/v1/games/mouse-pi-for-hire.json",
+      "page_url": "https://faltapoco.com.br/jogos/mouse-pi-for-hire/",
+      "updated_at": "2026-03-15T15:39:14.811485+00:00"
+    },
+    {
+      "slug": "pragmata",
+      "name": "Pragmata",
+      "release": "2026-04-17",
+      "release_display": "17 de abril de 2026",
+      "status": "confirmed",
+      "confidence_date": "media",
+      "developer": "",
+      "publisher": "",
+      "platforms": [
+        "PS5",
+        "Xbox Series X|S",
+        "PC",
+        "Switch 2"
+      ],
+      "background_image": "bg.jpg",
+      "description": "Acompanhe a data de lançamento, trailer e atualizações de Pragmata.",
+      "video": {
+        "video_id": "C6tqmUCslo4",
+        "title": "Trailer Oficial",
+        "channel_title": "",
+        "published_at": "",
+        "url": "https://www.youtube.com/watch?v=C6tqmUCslo4",
+        "embed_url": "https://www.youtube.com/embed/C6tqmUCslo4",
+        "duration_seconds": null,
+        "view_count": 0,
+        "confidence": "manual",
+        "search_query": "manual"
+      },
+      "news": [],
+      "reviews": [],
+      "source": {
+        "type": "manual"
+      },
+      "days_left": 33,
+      "api_url": "https://faltapoco.com.br/api/v1/games/pragmata.json",
+      "page_url": "https://faltapoco.com.br/jogos/pragmata/",
+      "updated_at": "2026-03-15T15:39:14.812940+00:00"
+    },
+    {
+      "slug": "saros",
+      "name": "Saros",
+      "release": "2026-04-30",
+      "release_display": "30 de abril de 2026",
+      "status": "confirmed",
+      "confidence_date": "media",
+      "developer": "",
+      "publisher": "",
+      "platforms": [
+        "PS5"
+      ],
+      "background_image": "bg.jpg",
+      "description": "Acompanhe a data de lançamento, trailer e atualizações de Saros.",
+      "video": {
+        "video_id": "rK4W-hBrSZs",
+        "title": "Trailer Oficial",
+        "channel_title": "",
+        "published_at": "",
+        "url": "https://www.youtube.com/watch?v=rK4W-hBrSZs",
+        "embed_url": "https://www.youtube.com/embed/rK4W-hBrSZs",
+        "duration_seconds": null,
+        "view_count": 0,
+        "confidence": "manual",
+        "search_query": "manual"
+      },
+      "news": [],
+      "reviews": [],
+      "source": {
+        "type": "manual"
+      },
+      "days_left": 46,
+      "api_url": "https://faltapoco.com.br/api/v1/games/saros.json",
+      "page_url": "https://faltapoco.com.br/jogos/saros/",
+      "updated_at": "2026-03-15T15:39:14.814277+00:00"
+    },
+    {
+      "slug": "007-first-light",
+      "name": "007 First Light",
+      "release": "2026-05-27",
+      "release_display": "27 de maio de 2026",
+      "status": "confirmed",
+      "confidence_date": "media",
+      "developer": "",
+      "publisher": "",
+      "platforms": [
+        "PS5",
+        "Xbox Series X|S",
+        "PC",
+        "Switch 2"
+      ],
+      "background_image": "bg.jpg",
+      "description": "Acompanhe a data de lançamento, trailer e atualizações de 007 First Light.",
+      "video": {
+        "video_id": "03dh9Y0wtnY",
+        "title": "Trailer Oficial",
+        "channel_title": "",
+        "published_at": "",
+        "url": "https://www.youtube.com/watch?v=03dh9Y0wtnY",
+        "embed_url": "https://www.youtube.com/embed/03dh9Y0wtnY",
+        "duration_seconds": null,
+        "view_count": 0,
+        "confidence": "manual",
+        "search_query": "manual"
+      },
+      "news": [],
+      "reviews": [],
+      "source": {
+        "type": "manual"
+      },
+      "days_left": 73,
+      "api_url": "https://faltapoco.com.br/api/v1/games/007-first-light.json",
+      "page_url": "https://faltapoco.com.br/jogos/007-first-light/",
+      "updated_at": "2026-03-15T15:39:14.815512+00:00"
+    },
+    {
+      "slug": "beast-of-reincarnation",
+      "name": "Beast of Reincarnation",
+      "release": "2026-08-04",
+      "release_display": "4 de agosto de 2026",
+      "status": "confirmed",
+      "confidence_date": "media",
+      "developer": "",
+      "publisher": "",
+      "platforms": [
+        "PS5",
+        "Xbox Series X|S",
+        "PC"
+      ],
+      "background_image": "bg.jpg",
+      "description": "Acompanhe a data de lançamento, trailer e atualizações de Beast of Reincarnation.",
+      "video": {
+        "video_id": "5v_4nnrBqSo",
+        "title": "Trailer Oficial",
+        "channel_title": "",
+        "published_at": "",
+        "url": "https://www.youtube.com/watch?v=5v_4nnrBqSo",
+        "embed_url": "https://www.youtube.com/embed/5v_4nnrBqSo",
+        "duration_seconds": null,
+        "view_count": 0,
+        "confidence": "manual",
+        "search_query": "manual"
+      },
+      "news": [],
+      "reviews": [],
+      "source": {
+        "type": "manual"
+      },
+      "days_left": 142,
+      "api_url": "https://faltapoco.com.br/api/v1/games/beast-of-reincarnation.json",
+      "page_url": "https://faltapoco.com.br/jogos/beast-of-reincarnation/",
+      "updated_at": "2026-03-15T15:39:14.816777+00:00"
+    },
+    {
+      "slug": "phantom-blade-zero",
+      "name": "Phantom Blade Zero",
+      "release": "2026-09-09",
+      "release_display": "9 de setembro de 2026",
+      "status": "confirmed",
+      "confidence_date": "media",
+      "developer": "",
+      "publisher": "",
+      "platforms": [
+        "PS5",
+        "PC"
+      ],
+      "background_image": "bg.jpg",
+      "description": "Acompanhe a data de lançamento, trailer e atualizações de Phantom Blade Zero.",
+      "video": {
+        "video_id": "v432HBr6lgU",
+        "title": "Trailer Oficial",
+        "channel_title": "",
+        "published_at": "",
+        "url": "https://www.youtube.com/watch?v=v432HBr6lgU",
+        "embed_url": "https://www.youtube.com/embed/v432HBr6lgU",
+        "duration_seconds": null,
+        "view_count": 0,
+        "confidence": "manual",
+        "search_query": "manual"
+      },
+      "news": [],
+      "reviews": [],
+      "source": {
+        "type": "manual"
+      },
+      "days_left": 178,
+      "api_url": "https://faltapoco.com.br/api/v1/games/phantom-blade-zero.json",
+      "page_url": "https://faltapoco.com.br/jogos/phantom-blade-zero/",
+      "updated_at": "2026-03-15T15:39:14.818095+00:00"
+    },
+    {
+      "slug": "marvel-wolverine",
+      "name": "Marvel's Wolverine",
+      "release": "2026-09-15",
+      "release_display": "15 de setembro de 2026",
+      "status": "confirmed",
+      "confidence_date": "media",
+      "developer": "",
+      "publisher": "",
+      "platforms": [
+        "PS5"
+      ],
+      "background_image": "bg.jpg",
+      "description": "Acompanhe a data de lançamento, trailer e atualizações de Marvel's Wolverine.",
+      "video": {
+        "video_id": "BMU9iACrRO8",
+        "title": "Trailer Oficial",
+        "channel_title": "",
+        "published_at": "",
+        "url": "https://www.youtube.com/watch?v=BMU9iACrRO8",
+        "embed_url": "https://www.youtube.com/embed/BMU9iACrRO8",
+        "duration_seconds": null,
+        "view_count": 0,
+        "confidence": "manual",
+        "search_query": "manual"
+      },
+      "news": [],
+      "reviews": [],
+      "source": {
+        "type": "manual"
+      },
+      "days_left": 184,
+      "api_url": "https://faltapoco.com.br/api/v1/games/marvel-wolverine.json",
+      "page_url": "https://faltapoco.com.br/jogos/marvel-wolverine/",
+      "updated_at": "2026-03-15T15:39:14.819377+00:00"
+    },
+    {
+      "slug": "gta-6",
+      "name": "Grand Theft Auto VI",
+      "release": "2026-11-19",
+      "release_display": "19 de novembro de 2026",
+      "status": "confirmed",
+      "confidence_date": "media",
+      "developer": "Rockstar Games",
+      "publisher": "Rockstar Games",
+      "platforms": [
+        "PS5",
+        "Xbox Series X|S"
+      ],
+      "background_image": "bg.jpg",
+      "description": "Grand Theft Auto VI é o mais novo capítulo da aclamada franquia da Rockstar Games. Ambientado em Leonida, o estado ficcional que engloba Vice City e arredores, o jogo promete ser a experiência open-world mais ambiciosa já criada, com uma protagonista feminina pela primeira vez na série principal.",
+      "video": {
+        "video_id": "QdBZExpgErs",
+        "title": "Trailer Oficial",
+        "channel_title": "",
+        "published_at": "",
+        "url": "https://www.youtube.com/watch?v=QdBZExpgErs",
+        "embed_url": "https://www.youtube.com/embed/QdBZExpgErs",
+        "duration_seconds": null,
+        "view_count": 0,
+        "confidence": "manual",
+        "search_query": "manual"
+      },
+      "news": [],
+      "reviews": [],
+      "source": {
+        "type": "manual"
+      },
+      "days_left": 249,
+      "api_url": "https://faltapoco.com.br/api/v1/games/gta-6.json",
+      "page_url": "https://faltapoco.com.br/jogos/gta-6/",
+      "updated_at": "2026-03-15T15:39:14.820610+00:00"
+    },
+    {
+      "slug": "fable-4",
+      "name": "Fable 4",
+      "release": "",
+      "release_display": "Sem data confirmada",
+      "status": "window",
+      "confidence_date": "media",
+      "developer": "",
+      "publisher": "",
+      "platforms": [
+        "PS5",
+        "Xbox Series X|S",
+        "PC"
+      ],
+      "background_image": "bg.jpg",
+      "description": "Acompanhe a data de lançamento, trailer e atualizações de Fable 4.",
+      "video": {
+        "video_id": "yPSVHiMP-cc",
+        "title": "Trailer Oficial",
+        "channel_title": "",
+        "published_at": "",
+        "url": "https://www.youtube.com/watch?v=yPSVHiMP-cc",
+        "embed_url": "https://www.youtube.com/embed/yPSVHiMP-cc",
+        "duration_seconds": null,
+        "view_count": 0,
+        "confidence": "manual",
+        "search_query": "manual"
+      },
+      "news": [],
+      "reviews": [],
+      "source": {
+        "type": "manual"
+      },
+      "days_left": null,
+      "api_url": "https://faltapoco.com.br/api/v1/games/fable-4.json",
+      "page_url": "https://faltapoco.com.br/jogos/fable-4/",
+      "updated_at": "2026-03-15T15:39:14.821936+00:00"
+    }
+  ]
+}

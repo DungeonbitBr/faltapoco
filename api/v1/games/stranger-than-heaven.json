@@ -1,0 +1,27 @@
+{
+  "slug": "stranger-than-heaven",
+  "name": "Stranger Than Heaven",
+  "release": "",
+  "release_display": "Sem data confirmada",
+  "status": "unknown",
+  "confidence_date": "media",
+  "developer": "",
+  "publisher": "",
+  "platforms": [
+    "PS5",
+    "Xbox Series X|S",
+    "PC"
+  ],
+  "background_image": "bg.jpg",
+  "description": "Acompanhe a data de lançamento, trailer e atualizações de Stranger Than Heaven.",
+  "video": null,
+  "news": [],
+  "reviews": [],
+  "source": {
+    "type": "manual"
+  },
+  "days_left": null,
+  "api_url": "https://faltapoco.com.br/api/v1/games/stranger-than-heaven.json",
+  "page_url": "https://faltapoco.com.br/jogos/stranger-than-heaven/",
+  "updated_at": "2026-03-15T15:39:14.862798+00:00"
+}
