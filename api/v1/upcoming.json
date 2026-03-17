@@ -71,7 +71,7 @@
       "days_left": 3,
       "api_url": "https://faltapoco.com.br/api/v1/games/crimson-desert.json",
       "page_url": "https://faltapoco.com.br/jogos/crimson-desert/",
-      "updated_at": "2026-03-17T02:02:26.071170+00:00"
+      "updated_at": "2026-03-17T02:30:08.875554+00:00"
     },
     {
       "slug": "samson",
@@ -112,7 +112,7 @@
       "days_left": 23,
       "api_url": "https://faltapoco.com.br/api/v1/games/samson.json",
       "page_url": "https://faltapoco.com.br/jogos/samson/",
-      "updated_at": "2026-03-17T02:02:26.072602+00:00"
+      "updated_at": "2026-03-17T02:30:08.877274+00:00"
     },
     {
       "slug": "replaced",
@@ -154,7 +154,7 @@
       "days_left": 29,
       "api_url": "https://faltapoco.com.br/api/v1/games/replaced.json",
       "page_url": "https://faltapoco.com.br/jogos/replaced/",
-      "updated_at": "2026-03-17T02:02:26.073985+00:00"
+      "updated_at": "2026-03-17T02:30:08.879140+00:00"
     },
     {
       "slug": "mouse-pi-for-hire",
@@ -198,7 +198,7 @@
       "days_left": 31,
       "api_url": "https://faltapoco.com.br/api/v1/games/mouse-pi-for-hire.json",
       "page_url": "https://faltapoco.com.br/jogos/mouse-pi-for-hire/",
-      "updated_at": "2026-03-17T02:02:26.075335+00:00"
+      "updated_at": "2026-03-17T02:30:08.880786+00:00"
     },
     {
       "slug": "pragmata",
@@ -242,7 +242,7 @@
       "days_left": 32,
       "api_url": "https://faltapoco.com.br/api/v1/games/pragmata.json",
       "page_url": "https://faltapoco.com.br/jogos/pragmata/",
-      "updated_at": "2026-03-17T02:02:26.076647+00:00"
+      "updated_at": "2026-03-17T02:30:08.882276+00:00"
     },
     {
       "slug": "saros",
@@ -283,7 +283,7 @@
       "days_left": 45,
       "api_url": "https://faltapoco.com.br/api/v1/games/saros.json",
       "page_url": "https://faltapoco.com.br/jogos/saros/",
-      "updated_at": "2026-03-17T02:02:26.078027+00:00"
+      "updated_at": "2026-03-17T02:30:08.883720+00:00"
     },
     {
       "slug": "007-first-light",
@@ -327,7 +327,7 @@
       "days_left": 72,
       "api_url": "https://faltapoco.com.br/api/v1/games/007-first-light.json",
       "page_url": "https://faltapoco.com.br/jogos/007-first-light/",
-      "updated_at": "2026-03-17T02:02:26.079527+00:00"
+      "updated_at": "2026-03-17T02:30:08.885127+00:00"
     },
     {
       "slug": "beast-of-reincarnation",
@@ -370,7 +370,7 @@
       "days_left": 141,
       "api_url": "https://faltapoco.com.br/api/v1/games/beast-of-reincarnation.json",
       "page_url": "https://faltapoco.com.br/jogos/beast-of-reincarnation/",
-      "updated_at": "2026-03-17T02:02:26.080913+00:00"
+      "updated_at": "2026-03-17T02:30:08.886540+00:00"
     },
     {
       "slug": "phantom-blade-zero",
@@ -412,7 +412,7 @@
       "days_left": 177,
       "api_url": "https://faltapoco.com.br/api/v1/games/phantom-blade-zero.json",
       "page_url": "https://faltapoco.com.br/jogos/phantom-blade-zero/",
-      "updated_at": "2026-03-17T02:02:26.082300+00:00"
+      "updated_at": "2026-03-17T02:30:08.888045+00:00"
     },
     {
       "slug": "marvel-wolverine",
@@ -453,7 +453,7 @@
       "days_left": 183,
       "api_url": "https://faltapoco.com.br/api/v1/games/marvel-wolverine.json",
       "page_url": "https://faltapoco.com.br/jogos/marvel-wolverine/",
-      "updated_at": "2026-03-17T02:02:26.083642+00:00"
+      "updated_at": "2026-03-17T02:30:08.889469+00:00"
     },
     {
       "slug": "gta-6",
@@ -495,7 +495,7 @@
       "days_left": 248,
       "api_url": "https://faltapoco.com.br/api/v1/games/gta-6.json",
       "page_url": "https://faltapoco.com.br/jogos/gta-6/",
-      "updated_at": "2026-03-17T02:02:26.085016+00:00"
+      "updated_at": "2026-03-17T02:30:08.890938+00:00"
     },
     {
       "slug": "fable-4",
@@ -538,7 +538,7 @@
       "days_left": null,
       "api_url": "https://faltapoco.com.br/api/v1/games/fable-4.json",
       "page_url": "https://faltapoco.com.br/jogos/fable-4/",
-      "updated_at": "2026-03-17T02:02:26.086383+00:00"
+      "updated_at": "2026-03-17T02:30:08.892646+00:00"
     }
   ]
 }

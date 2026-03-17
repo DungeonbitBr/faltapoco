@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": "1.0",
-    "generated_at": "2026-03-17T02:02:30.202406+00:00",
+    "generated_at": "2026-03-17T02:30:13.106350+00:00",
     "count": 52,
     "base_url": "https://faltapoco.com.br"
   },
@@ -47,7 +47,7 @@
       "days_left": 0,
       "api_url": "https://faltapoco.com.br/api/v1/games/i-hate-this-place.json",
       "page_url": "https://faltapoco.com.br/jogos/i-hate-this-place/",
-      "updated_at": "2026-03-17T02:02:26.060769+00:00"
+      "updated_at": "2026-03-17T02:30:08.865407+00:00"
     },
     {
       "slug": "nioh-3",
@@ -89,7 +89,7 @@
       "days_left": 0,
       "api_url": "https://faltapoco.com.br/api/v1/games/nioh-3.json",
       "page_url": "https://faltapoco.com.br/jogos/nioh-3/",
-      "updated_at": "2026-03-17T02:02:26.058000+00:00"
+      "updated_at": "2026-03-17T02:30:08.862183+00:00"
     },
     {
       "slug": "hordes-of-hunger",
@@ -130,7 +130,7 @@
       "days_left": 0,
       "api_url": "https://faltapoco.com.br/api/v1/games/hordes-of-hunger.json",
       "page_url": "https://faltapoco.com.br/jogos/hordes-of-hunger/",
-      "updated_at": "2026-03-17T02:02:26.063966+00:00"
+      "updated_at": "2026-03-17T02:30:08.868396+00:00"
     },
     {
       "slug": "reanimal",
@@ -174,7 +174,7 @@
       "days_left": 0,
       "api_url": "https://faltapoco.com.br/api/v1/games/reanimal.json",
       "page_url": "https://faltapoco.com.br/jogos/reanimal/",
-      "updated_at": "2026-03-17T02:02:26.059428+00:00"
+      "updated_at": "2026-03-17T02:30:08.863665+00:00"
     },
     {
       "slug": "resident-evil-requiem",
@@ -218,7 +218,7 @@
       "days_left": 0,
       "api_url": "https://faltapoco.com.br/api/v1/games/resident-evil-requiem.json",
       "page_url": "https://faltapoco.com.br/jogos/resident-evil-requiem/",
-      "updated_at": "2026-03-17T02:02:26.056291+00:00"
+      "updated_at": "2026-03-17T02:30:08.860189+00:00"
     },
     {
       "slug": "legend-of-khiimori",
@@ -259,7 +259,7 @@
       "days_left": 0,
       "api_url": "https://faltapoco.com.br/api/v1/games/legend-of-khiimori.json",
       "page_url": "https://faltapoco.com.br/jogos/legend-of-khiimori/",
-      "updated_at": "2026-03-17T02:02:26.062444+00:00"
+      "updated_at": "2026-03-17T02:30:08.866969+00:00"
     },
     {
       "slug": "marathon-2026",
@@ -302,7 +302,7 @@
       "days_left": 0,
       "api_url": "https://faltapoco.com.br/api/v1/games/marathon-2026.json",
       "page_url": "https://faltapoco.com.br/jogos/marathon-2026/",
-      "updated_at": "2026-03-17T02:02:26.068261+00:00"
+      "updated_at": "2026-03-17T02:30:08.872692+00:00"
     },
     {
       "slug": "fatal-frame-2-remake",
@@ -346,7 +346,7 @@
       "days_left": 0,
       "api_url": "https://faltapoco.com.br/api/v1/games/fatal-frame-2-remake.json",
       "page_url": "https://faltapoco.com.br/jogos/fatal-frame-2-remake/",
-      "updated_at": "2026-03-17T02:02:26.069734+00:00"
+      "updated_at": "2026-03-17T02:30:08.874081+00:00"
     },
     {
       "slug": "solasta-2",
@@ -387,7 +387,7 @@
       "days_left": 0,
       "api_url": "https://faltapoco.com.br/api/v1/games/solasta-2.json",
       "page_url": "https://faltapoco.com.br/jogos/solasta-2/",
-      "updated_at": "2026-03-17T02:02:26.065395+00:00"
+      "updated_at": "2026-03-17T02:30:08.869893+00:00"
     },
     {
       "slug": "toxic-commando",
@@ -430,7 +430,7 @@
       "days_left": 0,
       "api_url": "https://faltapoco.com.br/api/v1/games/toxic-commando.json",
       "page_url": "https://faltapoco.com.br/jogos/toxic-commando/",
-      "updated_at": "2026-03-17T02:02:26.066845+00:00"
+      "updated_at": "2026-03-17T02:30:08.871282+00:00"
     },
     {
       "slug": "crimson-desert",
@@ -503,7 +503,7 @@
       "days_left": 3,
       "api_url": "https://faltapoco.com.br/api/v1/games/crimson-desert.json",
       "page_url": "https://faltapoco.com.br/jogos/crimson-desert/",
-      "updated_at": "2026-03-17T02:02:26.071170+00:00"
+      "updated_at": "2026-03-17T02:30:08.875554+00:00"
     },
     {
       "slug": "samson",
@@ -544,7 +544,7 @@
       "days_left": 23,
       "api_url": "https://faltapoco.com.br/api/v1/games/samson.json",
       "page_url": "https://faltapoco.com.br/jogos/samson/",
-      "updated_at": "2026-03-17T02:02:26.072602+00:00"
+      "updated_at": "2026-03-17T02:30:08.877274+00:00"
     },
     {
       "slug": "replaced",
@@ -586,7 +586,7 @@
       "days_left": 29,
       "api_url": "https://faltapoco.com.br/api/v1/games/replaced.json",
       "page_url": "https://faltapoco.com.br/jogos/replaced/",
-      "updated_at": "2026-03-17T02:02:26.073985+00:00"
+      "updated_at": "2026-03-17T02:30:08.879140+00:00"
     },
     {
       "slug": "mouse-pi-for-hire",
@@ -630,7 +630,7 @@
       "days_left": 31,
       "api_url": "https://faltapoco.com.br/api/v1/games/mouse-pi-for-hire.json",
       "page_url": "https://faltapoco.com.br/jogos/mouse-pi-for-hire/",
-      "updated_at": "2026-03-17T02:02:26.075335+00:00"
+      "updated_at": "2026-03-17T02:30:08.880786+00:00"
     },
     {
       "slug": "pragmata",
@@ -674,7 +674,7 @@
       "days_left": 32,
       "api_url": "https://faltapoco.com.br/api/v1/games/pragmata.json",
       "page_url": "https://faltapoco.com.br/jogos/pragmata/",
-      "updated_at": "2026-03-17T02:02:26.076647+00:00"
+      "updated_at": "2026-03-17T02:30:08.882276+00:00"
     },
     {
       "slug": "saros",
@@ -715,7 +715,7 @@
       "days_left": 45,
       "api_url": "https://faltapoco.com.br/api/v1/games/saros.json",
       "page_url": "https://faltapoco.com.br/jogos/saros/",
-      "updated_at": "2026-03-17T02:02:26.078027+00:00"
+      "updated_at": "2026-03-17T02:30:08.883720+00:00"
     },
     {
       "slug": "007-first-light",
@@ -759,7 +759,7 @@
       "days_left": 72,
       "api_url": "https://faltapoco.com.br/api/v1/games/007-first-light.json",
       "page_url": "https://faltapoco.com.br/jogos/007-first-light/",
-      "updated_at": "2026-03-17T02:02:26.079527+00:00"
+      "updated_at": "2026-03-17T02:30:08.885127+00:00"
     },
     {
       "slug": "beast-of-reincarnation",
@@ -802,7 +802,7 @@
       "days_left": 141,
       "api_url": "https://faltapoco.com.br/api/v1/games/beast-of-reincarnation.json",
       "page_url": "https://faltapoco.com.br/jogos/beast-of-reincarnation/",
-      "updated_at": "2026-03-17T02:02:26.080913+00:00"
+      "updated_at": "2026-03-17T02:30:08.886540+00:00"
     },
     {
       "slug": "phantom-blade-zero",
@@ -844,7 +844,7 @@
       "days_left": 177,
       "api_url": "https://faltapoco.com.br/api/v1/games/phantom-blade-zero.json",
       "page_url": "https://faltapoco.com.br/jogos/phantom-blade-zero/",
-      "updated_at": "2026-03-17T02:02:26.082300+00:00"
+      "updated_at": "2026-03-17T02:30:08.888045+00:00"
     },
     {
       "slug": "marvel-wolverine",
@@ -885,7 +885,7 @@
       "days_left": 183,
       "api_url": "https://faltapoco.com.br/api/v1/games/marvel-wolverine.json",
       "page_url": "https://faltapoco.com.br/jogos/marvel-wolverine/",
-      "updated_at": "2026-03-17T02:02:26.083642+00:00"
+      "updated_at": "2026-03-17T02:30:08.889469+00:00"
     },
     {
       "slug": "gta-6",
@@ -927,7 +927,7 @@
       "days_left": 248,
       "api_url": "https://faltapoco.com.br/api/v1/games/gta-6.json",
       "page_url": "https://faltapoco.com.br/jogos/gta-6/",
-      "updated_at": "2026-03-17T02:02:26.085016+00:00"
+      "updated_at": "2026-03-17T02:30:08.890938+00:00"
     },
     {
       "slug": "ace-combat-8",
@@ -959,7 +959,7 @@
       "days_left": null,
       "api_url": "https://faltapoco.com.br/api/v1/games/ace-combat-8.json",
       "page_url": "https://faltapoco.com.br/jogos/ace-combat-8/",
-      "updated_at": "2026-03-17T02:02:26.973683+00:00"
+      "updated_at": "2026-03-17T02:30:09.858233+00:00"
     },
     {
       "slug": "animal-use-protocol",
@@ -989,7 +989,7 @@
       "days_left": null,
       "api_url": "https://faltapoco.com.br/api/v1/games/animal-use-protocol.json",
       "page_url": "https://faltapoco.com.br/jogos/animal-use-protocol/",
-      "updated_at": "2026-03-17T02:02:28.686640+00:00"
+      "updated_at": "2026-03-17T02:30:11.568067+00:00"
     },
     {
       "slug": "atomic-heart-2",
@@ -1032,7 +1032,7 @@
       "days_left": null,
       "api_url": "https://faltapoco.com.br/api/v1/games/atomic-heart-2.json",
       "page_url": "https://faltapoco.com.br/jogos/atomic-heart-2/",
-      "updated_at": "2026-03-17T02:02:26.095233+00:00"
+      "updated_at": "2026-03-17T02:30:08.901983+00:00"
     },
     {
       "slug": "blood-message",
@@ -1064,7 +1064,7 @@
       "days_left": null,
       "api_url": "https://faltapoco.com.br/api/v1/games/blood-message.json",
       "page_url": "https://faltapoco.com.br/jogos/blood-message/",
-      "updated_at": "2026-03-17T02:02:27.537278+00:00"
+      "updated_at": "2026-03-17T02:30:10.437003+00:00"
     },
     {
       "slug": "chronicles-medieval",
@@ -1094,7 +1094,7 @@
       "days_left": null,
       "api_url": "https://faltapoco.com.br/api/v1/games/chronicles-medieval.json",
       "page_url": "https://faltapoco.com.br/jogos/chronicles-medieval/",
-      "updated_at": "2026-03-17T02:02:28.298118+00:00"
+      "updated_at": "2026-03-17T02:30:11.185298+00:00"
     },
     {
       "slug": "control-resonant",
@@ -1137,7 +1137,7 @@
       "days_left": null,
       "api_url": "https://faltapoco.com.br/api/v1/games/control-resonant.json",
       "page_url": "https://faltapoco.com.br/jogos/control-resonant/",
-      "updated_at": "2026-03-17T02:02:26.087674+00:00"
+      "updated_at": "2026-03-17T02:30:08.894225+00:00"
     },
     {
       "slug": "decapolice",
@@ -1169,7 +1169,7 @@
       "days_left": null,
       "api_url": "https://faltapoco.com.br/api/v1/games/decapolice.json",
       "page_url": "https://faltapoco.com.br/jogos/decapolice/",
-      "updated_at": "2026-03-17T02:02:28.873279+00:00"
+      "updated_at": "2026-03-17T02:30:11.757452+00:00"
     },
     {
       "slug": "divinity-new",
@@ -1201,7 +1201,7 @@
       "days_left": null,
       "api_url": "https://faltapoco.com.br/api/v1/games/divinity-new.json",
       "page_url": "https://faltapoco.com.br/jogos/divinity-new/",
-      "updated_at": "2026-03-17T02:02:26.582435+00:00"
+      "updated_at": "2026-03-17T02:30:09.448581+00:00"
     },
     {
       "slug": "fable-4",
@@ -1244,7 +1244,7 @@
       "days_left": null,
       "api_url": "https://faltapoco.com.br/api/v1/games/fable-4.json",
       "page_url": "https://faltapoco.com.br/jogos/fable-4/",
-      "updated_at": "2026-03-17T02:02:26.086383+00:00"
+      "updated_at": "2026-03-17T02:30:08.892646+00:00"
     },
     {
       "slug": "fatekeeper",
@@ -1274,7 +1274,7 @@
       "days_left": null,
       "api_url": "https://faltapoco.com.br/api/v1/games/fatekeeper.json",
       "page_url": "https://faltapoco.com.br/jogos/fatekeeper/",
-      "updated_at": "2026-03-17T02:02:27.912935+00:00"
+      "updated_at": "2026-03-17T02:30:10.819853+00:00"
     },
     {
       "slug": "gang-of-dragon",
@@ -1306,7 +1306,7 @@
       "days_left": null,
       "api_url": "https://faltapoco.com.br/api/v1/games/gang-of-dragon.json",
       "page_url": "https://faltapoco.com.br/jogos/gang-of-dragon/",
-      "updated_at": "2026-03-17T02:02:27.350891+00:00"
+      "updated_at": "2026-03-17T02:30:10.240191+00:00"
     },
     {
       "slug": "gears-of-war-eday",
@@ -1348,7 +1348,7 @@
       "days_left": null,
       "api_url": "https://faltapoco.com.br/api/v1/games/gears-of-war-eday.json",
       "page_url": "https://faltapoco.com.br/jogos/gears-of-war-eday/",
-      "updated_at": "2026-03-17T02:02:26.090789+00:00"
+      "updated_at": "2026-03-17T02:30:08.897449+00:00"
     },
     {
       "slug": "halo-campaign-evolved",
@@ -1391,7 +1391,7 @@
       "days_left": null,
       "api_url": "https://faltapoco.com.br/api/v1/games/halo-campaign-evolved.json",
       "page_url": "https://faltapoco.com.br/jogos/halo-campaign-evolved/",
-      "updated_at": "2026-03-17T02:02:26.092403+00:00"
+      "updated_at": "2026-03-17T02:30:08.899111+00:00"
     },
     {
       "slug": "hell-let-loose-vietnam",
@@ -1423,7 +1423,7 @@
       "days_left": null,
       "api_url": "https://faltapoco.com.br/api/v1/games/hell-let-loose-vietnam.json",
       "page_url": "https://faltapoco.com.br/jogos/hell-let-loose-vietnam/",
-      "updated_at": "2026-03-17T02:02:28.492723+00:00"
+      "updated_at": "2026-03-17T02:30:11.368245+00:00"
     },
     {
       "slug": "ill",
@@ -1464,7 +1464,7 @@
       "days_left": null,
       "api_url": "https://faltapoco.com.br/api/v1/games/ill.json",
       "page_url": "https://faltapoco.com.br/jogos/ill/",
-      "updated_at": "2026-03-17T02:02:26.097925+00:00"
+      "updated_at": "2026-03-17T02:30:08.904768+00:00"
     },
     {
       "slug": "lords-of-the-fallen-2",
@@ -1496,7 +1496,7 @@
       "days_left": null,
       "api_url": "https://faltapoco.com.br/api/v1/games/lords-of-the-fallen-2.json",
       "page_url": "https://faltapoco.com.br/jogos/lords-of-the-fallen-2/",
-      "updated_at": "2026-03-17T02:02:26.779775+00:00"
+      "updated_at": "2026-03-17T02:30:09.655355+00:00"
     },
     {
       "slug": "mudang-two-hearts",
@@ -1528,7 +1528,7 @@
       "days_left": null,
       "api_url": "https://faltapoco.com.br/api/v1/games/mudang-two-hearts.json",
       "page_url": "https://faltapoco.com.br/jogos/mudang-two-hearts/",
-      "updated_at": "2026-03-17T02:02:29.068920+00:00"
+      "updated_at": "2026-03-17T02:30:11.953525+00:00"
     },
     {
       "slug": "no-law",
@@ -1560,7 +1560,7 @@
       "days_left": null,
       "api_url": "https://faltapoco.com.br/api/v1/games/no-law.json",
       "page_url": "https://faltapoco.com.br/jogos/no-law/",
-      "updated_at": "2026-03-17T02:02:27.157152+00:00"
+      "updated_at": "2026-03-17T02:30:10.047188+00:00"
     },
     {
       "slug": "onimusha-way-of-the-sword",
@@ -1603,7 +1603,7 @@
       "days_left": null,
       "api_url": "https://faltapoco.com.br/api/v1/games/onimusha-way-of-the-sword.json",
       "page_url": "https://faltapoco.com.br/jogos/onimusha-way-of-the-sword/",
-      "updated_at": "2026-03-17T02:02:26.093851+00:00"
+      "updated_at": "2026-03-17T02:30:08.900545+00:00"
     },
     {
       "slug": "ontos",
@@ -1635,7 +1635,7 @@
       "days_left": null,
       "api_url": "https://faltapoco.com.br/api/v1/games/ontos.json",
       "page_url": "https://faltapoco.com.br/jogos/ontos/",
-      "updated_at": "2026-03-17T02:02:27.727504+00:00"
+      "updated_at": "2026-03-17T02:30:10.623298+00:00"
     },
     {
       "slug": "orbitals",
@@ -1678,7 +1678,7 @@
       "days_left": null,
       "api_url": "https://faltapoco.com.br/api/v1/games/orbitals.json",
       "page_url": "https://faltapoco.com.br/jogos/orbitals/",
-      "updated_at": "2026-03-17T02:02:26.099554+00:00"
+      "updated_at": "2026-03-17T02:30:08.906144+00:00"
     },
     {
       "slug": "persona-4-revival",
@@ -1710,7 +1710,7 @@
       "days_left": null,
       "api_url": "https://faltapoco.com.br/api/v1/games/persona-4-revival.json",
       "page_url": "https://faltapoco.com.br/jogos/persona-4-revival/",
-      "updated_at": "2026-03-17T02:02:29.256260+00:00"
+      "updated_at": "2026-03-17T02:30:12.143113+00:00"
     },
     {
       "slug": "plague-tale-resonance",
@@ -1742,7 +1742,7 @@
       "days_left": null,
       "api_url": "https://faltapoco.com.br/api/v1/games/plague-tale-resonance.json",
       "page_url": "https://faltapoco.com.br/jogos/plague-tale-resonance/",
-      "updated_at": "2026-03-17T02:02:28.107637+00:00"
+      "updated_at": "2026-03-17T02:30:11.000597+00:00"
     },
     {
       "slug": "star-wars-fate-old-republic",
@@ -1774,7 +1774,7 @@
       "days_left": null,
       "api_url": "https://faltapoco.com.br/api/v1/games/star-wars-fate-old-republic.json",
       "page_url": "https://faltapoco.com.br/jogos/star-wars-fate-old-republic/",
-      "updated_at": "2026-03-17T02:02:26.391410+00:00"
+      "updated_at": "2026-03-17T02:30:09.241998+00:00"
     },
     {
       "slug": "stranger-than-heaven",
@@ -1806,7 +1806,7 @@
       "days_left": null,
       "api_url": "https://faltapoco.com.br/api/v1/games/stranger-than-heaven.json",
       "page_url": "https://faltapoco.com.br/jogos/stranger-than-heaven/",
-      "updated_at": "2026-03-17T02:02:29.448029+00:00"
+      "updated_at": "2026-03-17T02:30:12.341378+00:00"
     },
     {
       "slug": "blood-of-dawnwalker",
@@ -1838,7 +1838,7 @@
       "days_left": null,
       "api_url": "https://faltapoco.com.br/api/v1/games/blood-of-dawnwalker.json",
       "page_url": "https://faltapoco.com.br/jogos/blood-of-dawnwalker/",
-      "updated_at": "2026-03-17T02:02:30.200837+00:00"
+      "updated_at": "2026-03-17T02:30:13.104354+00:00"
     },
     {
       "slug": "the-god-slayer",
@@ -1881,7 +1881,7 @@
       "days_left": null,
       "api_url": "https://faltapoco.com.br/api/v1/games/the-god-slayer.json",
       "page_url": "https://faltapoco.com.br/jogos/the-god-slayer/",
-      "updated_at": "2026-03-17T02:02:26.096527+00:00"
+      "updated_at": "2026-03-17T02:30:08.903382+00:00"
     },
     {
       "slug": "sinking-city-2",
@@ -1913,7 +1913,7 @@
       "days_left": null,
       "api_url": "https://faltapoco.com.br/api/v1/games/sinking-city-2.json",
       "page_url": "https://faltapoco.com.br/jogos/sinking-city-2/",
-      "updated_at": "2026-03-17T02:02:29.636557+00:00"
+      "updated_at": "2026-03-17T02:30:12.526321+00:00"
     },
     {
       "slug": "tides-of-annihilation",
@@ -1945,7 +1945,7 @@
       "days_left": null,
       "api_url": "https://faltapoco.com.br/api/v1/games/tides-of-annihilation.json",
       "page_url": "https://faltapoco.com.br/jogos/tides-of-annihilation/",
-      "updated_at": "2026-03-17T02:02:30.022967+00:00"
+      "updated_at": "2026-03-17T02:30:12.912038+00:00"
     },
     {
       "slug": "tomb-raider-legend-of-atlantis",
@@ -1988,7 +1988,7 @@
       "days_left": null,
       "api_url": "https://faltapoco.com.br/api/v1/games/tomb-raider-legend-of-atlantis.json",
       "page_url": "https://faltapoco.com.br/jogos/tomb-raider-legend-of-atlantis/",
-      "updated_at": "2026-03-17T02:02:26.089025+00:00"
+      "updated_at": "2026-03-17T02:30:08.895789+00:00"
     },
     {
       "slug": "valor-mortis",
@@ -2020,7 +2020,7 @@
       "days_left": null,
       "api_url": "https://faltapoco.com.br/api/v1/games/valor-mortis.json",
       "page_url": "https://faltapoco.com.br/jogos/valor-mortis/",
-      "updated_at": "2026-03-17T02:02:29.825469+00:00"
+      "updated_at": "2026-03-17T02:30:12.728534+00:00"
     }
   ]
 }
