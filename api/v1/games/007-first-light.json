@@ -3,6 +3,8 @@
   "name": "007 First Light",
   "release": "2026-05-27",
   "release_display": "27 de maio de 2026",
+  "release_time": "",
+  "release_time_display": "",
   "status": "confirmed",
   "confidence_date": "media",
   "developer": "",
@@ -29,11 +31,14 @@
   },
   "news": [],
   "reviews": [],
+  "sys_req": {},
+  "affiliate_ml": "",
+  "affiliate_amz": "",
   "source": {
     "type": "manual"
   },
-  "days_left": 73,
+  "days_left": 72,
   "api_url": "https://faltapoco.com.br/api/v1/games/007-first-light.json",
   "page_url": "https://faltapoco.com.br/jogos/007-first-light/",
-  "updated_at": "2026-03-15T15:39:14.815512+00:00"
+  "updated_at": "2026-03-17T02:02:26.079527+00:00"
 }

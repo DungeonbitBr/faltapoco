@@ -3,6 +3,8 @@
   "name": "Fatal Frame II Remake",
   "release": "2026-03-12",
   "release_display": "12 de março de 2026",
+  "release_time": "",
+  "release_time_display": "",
   "status": "released",
   "confidence_date": "media",
   "developer": "",
@@ -29,11 +31,14 @@
   },
   "news": [],
   "reviews": [],
+  "sys_req": {},
+  "affiliate_ml": "",
+  "affiliate_amz": "",
   "source": {
     "type": "manual"
   },
   "days_left": 0,
   "api_url": "https://faltapoco.com.br/api/v1/games/fatal-frame-2-remake.json",
   "page_url": "https://faltapoco.com.br/jogos/fatal-frame-2-remake/",
-  "updated_at": "2026-03-15T15:39:14.806150+00:00"
+  "updated_at": "2026-03-17T02:02:26.069734+00:00"
 }

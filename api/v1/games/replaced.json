@@ -3,6 +3,8 @@
   "name": "Replaced",
   "release": "2026-04-14",
   "release_display": "14 de abril de 2026",
+  "release_time": "",
+  "release_time_display": "",
   "status": "confirmed",
   "confidence_date": "media",
   "developer": "",
@@ -27,11 +29,14 @@
   },
   "news": [],
   "reviews": [],
+  "sys_req": {},
+  "affiliate_ml": "",
+  "affiliate_amz": "",
   "source": {
     "type": "manual"
   },
-  "days_left": 30,
+  "days_left": 29,
   "api_url": "https://faltapoco.com.br/api/v1/games/replaced.json",
   "page_url": "https://faltapoco.com.br/jogos/replaced/",
-  "updated_at": "2026-03-15T15:39:14.810242+00:00"
+  "updated_at": "2026-03-17T02:02:26.073985+00:00"
 }

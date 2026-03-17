@@ -3,6 +3,8 @@
   "name": "I Hate This Place",
   "release": "2026-01-29",
   "release_display": "29 de janeiro de 2026",
+  "release_time": "",
+  "release_time_display": "",
   "status": "released",
   "confidence_date": "media",
   "developer": "",
@@ -28,11 +30,14 @@
   },
   "news": [],
   "reviews": [],
+  "sys_req": {},
+  "affiliate_ml": "",
+  "affiliate_amz": "",
   "source": {
     "type": "manual"
   },
   "days_left": 0,
   "api_url": "https://faltapoco.com.br/api/v1/games/i-hate-this-place.json",
   "page_url": "https://faltapoco.com.br/jogos/i-hate-this-place/",
-  "updated_at": "2026-03-15T15:39:14.798131+00:00"
+  "updated_at": "2026-03-17T02:02:26.060769+00:00"
 }

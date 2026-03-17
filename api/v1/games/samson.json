@@ -3,6 +3,8 @@
   "name": "Samson",
   "release": "2026-04-08",
   "release_display": "8 de abril de 2026",
+  "release_time": "",
+  "release_time_display": "",
   "status": "confirmed",
   "confidence_date": "media",
   "developer": "",
@@ -26,11 +28,14 @@
   },
   "news": [],
   "reviews": [],
+  "sys_req": {},
+  "affiliate_ml": "",
+  "affiliate_amz": "",
   "source": {
     "type": "manual"
   },
-  "days_left": 24,
+  "days_left": 23,
   "api_url": "https://faltapoco.com.br/api/v1/games/samson.json",
   "page_url": "https://faltapoco.com.br/jogos/samson/",
-  "updated_at": "2026-03-15T15:39:14.808900+00:00"
+  "updated_at": "2026-03-17T02:02:26.072602+00:00"
 }

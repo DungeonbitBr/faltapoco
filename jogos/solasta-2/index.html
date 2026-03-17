@@ -3,16 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Solasta 2 — FaltaPouco</title>
+<title>Solasta 2 — Data de Lançamento, Trailer e Countdown | FaltaPouco</title>
 <meta name="description" content="Acompanhe a data de lançamento, trailer e atualizações de Solasta 2.">
+<meta name="keywords" content="Solasta 2, data de lançamento Solasta 2, quando sai Solasta 2, trailer Solasta 2, PC, lançamento jogos 2026, faltapoco">
 <link rel="canonical" href="https://faltapoco.com.br/jogos/solasta-2/">
-<meta property="og:title" content="Solasta 2 — FaltaPouco">
+<link rel="sitemap" type="application/xml" href="https://faltapoco.com.br/sitemap.xml">
+<meta property="og:site_name" content="FaltaPouco">
+<meta property="og:title" content="Solasta 2 — Data de Lançamento e Countdown">
 <meta property="og:description" content="Acompanhe a data de lançamento, trailer e atualizações de Solasta 2.">
-<meta property="og:type" content="website">
+<meta property="og:type" content="game">
 <meta property="og:url" content="https://faltapoco.com.br/jogos/solasta-2/">
+<meta property="og:image" content="https://faltapoco.com.br/jogos/solasta-2/bg.jpg">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="720">
+<meta property="og:image:alt" content="Capa de Solasta 2">
+<meta property="og:locale" content="pt_BR">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@faltapoco">
+<meta name="twitter:title" content="Solasta 2 — FaltaPouco">
+<meta name="twitter:description" content="Acompanhe a data de lançamento, trailer e atualizações de Solasta 2.">
+<meta name="twitter:image" content="https://faltapoco.com.br/jogos/solasta-2/bg.jpg">
+<meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="alternate" type="application/json" href="https://faltapoco.com.br/api/v1/games/solasta-2.json">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoGame", "name": "Solasta 2", "description": "Acompanhe a data de lançamento, trailer e atualizações de Solasta 2.", "datePublished": "2026-03-12", "gamePlatform": ["PC"], "url": "https://faltapoco.com.br/jogos/solasta-2/", "trailer": "https://www.youtube.com/watch?v=yFWkOnzGZCA"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoGame", "name": "Solasta 2", "description": "Acompanhe a data de lançamento, trailer e atualizações de Solasta 2.", "url": "https://faltapoco.com.br/jogos/solasta-2/", "image": "https://faltapoco.com.br/jogos/solasta-2/bg.jpg", "datePublished": "2026-03-12", "gamePlatform": ["PC"], "applicationCategory": "Game", "operatingSystem": "PlayStation 5, Xbox Series X|S, PC, Nintendo Switch 2", "trailer": {"@type": "VideoObject", "name": "Trailer oficial de Solasta 2", "embedUrl": "https://www.youtube.com/embed/yFWkOnzGZCA", "url": "https://www.youtube.com/watch?v=yFWkOnzGZCA", "thumbnailUrl": "https://img.youtube.com/vi/yFWkOnzGZCA/maxresdefault.jpg"}, "potentialAction": {"@type": "WatchAction", "target": "https://www.youtube.com/watch?v=yFWkOnzGZCA"}, "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "FaltaPouco", "item": "https://faltapoco.com.br"}, {"@type": "ListItem", "position": 2, "name": "Jogos", "item": "https://faltapoco.com.br/jogos/"}, {"@type": "ListItem", "position": 3, "name": "Solasta 2", "item": "https://faltapoco.com.br/jogos/solasta-2/"}]}}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;0,700;1,300&family=Sora:wght@300;400;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -68,23 +81,32 @@
 
   /* HERO */
   .hero {
-    position: relative; overflow: hidden; min-height: 460px;
+    position: relative; overflow: hidden; min-height: 520px;
     display: flex; flex-direction: column;
     align-items: center; justify-content: flex-end;
     padding: 5rem 2rem 3.5rem; text-align: center;
   }
+  /* bg fica fixed atrás da hero — preenche a viewport inteira,
+     overflow:hidden no .hero a clippa corretamente */
   .hero-bg {
     position: absolute; inset: 0; z-index: 0; background: var(--bg);
   }
   .hero-bg img {
-    width: 100%; height: 100%;
-    object-fit: cover; object-position: center top; opacity: 0.5;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    opacity: 0.55;
+    /* parallax via transform — desce mais devagar que o scroll */
+    will-change: transform;
   }
   .hero-vignette {
     position: absolute; inset: 0; z-index: 1;
     background:
-      radial-gradient(ellipse at 50% 30%, transparent 15%, rgba(8,8,9,0.6) 65%, rgba(8,8,9,0.97) 100%),
-      linear-gradient(to bottom, rgba(8,8,9,0.35) 0%, transparent 25%, transparent 50%, rgba(8,8,9,1) 100%);
+      radial-gradient(ellipse at 50% 30%, transparent 10%, rgba(8,8,9,0.55) 60%, rgba(8,8,9,0.98) 100%),
+      linear-gradient(to bottom, rgba(8,8,9,0.3) 0%, transparent 20%, transparent 45%, rgba(8,8,9,1) 100%);
   }
   .hero > * { position: relative; z-index: 2; }
 
@@ -338,8 +360,45 @@
     .hero { padding: 4rem 1.2rem 3rem; }
     .page-wrap { padding: 0 1rem 4rem; }
     .news-thumb { width: 64px; height: 42px; }
+    .sr-two-col { grid-template-columns: 1fr; }
   }
+
+  /* SYS REQ — tabela multi-tier */
+  .sr-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 8px; border: 1px solid var(--border); }
+  .sr-full { width: 100%; border-collapse: collapse; font-size: 0.76rem; min-width: 520px; }
+  .sr-full thead th { padding: 0.55rem 0.9rem; font-size: 0.62rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-align: center; white-space: nowrap; }
+  .sr-corner { width: 130px; min-width: 110px; background: var(--surface2); }
+  .sr-row-label { font-size: 0.65rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted2); padding: 0.65rem 0.9rem; background: var(--surface2); border-right: 1px solid var(--border); white-space: nowrap; vertical-align: top; }
+  .sr-td { padding: 0.65rem 0.9rem; color: var(--text); border-left: 1px solid var(--border); vertical-align: top; line-height: 1.55; text-align: center; }
+  .sr-shared { text-align: center; color: var(--muted); font-style: italic; }
+  .sr-full tbody tr { border-top: 1px solid var(--border); transition: background 0.1s; }
+  .sr-full tbody tr:hover { background: rgba(255,255,255,0.025); }
+  .sr-notes { font-size: 0.68rem; color: var(--muted2); margin-top: 0.75rem; line-height: 1.6; }
+  .sr-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .sr-col { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+  .sr-tier-badge { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); padding: 0.5rem 0.9rem; }
+
+  /* AFFILIATE */
+  .aff-disclaimer { font-size: 0.68rem; color: var(--muted2); margin-bottom: 1rem; letter-spacing: 0.03em; }
+  .aff-grid { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+  .aff-btn { display: inline-flex; align-items: center; gap: 0.8rem; padding: 0.9rem 1.5rem; border-radius: 10px; min-width: 190px; text-decoration: none; border: 1px solid transparent; transition: transform 0.15s, box-shadow 0.15s; }
+  .aff-btn:hover { transform: translateY(-2px); }
+  .aff-btn span { display: flex; flex-direction: column; gap: 0.1rem; }
+  .aff-btn strong { font-size: 0.9rem; font-weight: 700; font-family: 'Sora',sans-serif; letter-spacing: -0.01em; }
+  .aff-btn small { font-size: 0.68rem; opacity: 0.75; letter-spacing: 0.04em; }
+  .aff-ml { background: linear-gradient(135deg,#ffe600,#f5d000); color: #1a1200; border-color: #e8c800; }
+  .aff-ml:hover { box-shadow: 0 6px 20px rgba(255,230,0,0.35); }
+  .aff-amz { background: linear-gradient(135deg,#ff9900,#e68a00); color: #1a0800; border-color: #cc7700; }
+  .aff-amz:hover { box-shadow: 0 6px 20px rgba(255,153,0,0.35); }
 </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YJ2GY5FM9B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-YJ2GY5FM9B');
+</script>
 </head>
 <body>
 
@@ -359,7 +418,7 @@
   
 
   <div class="hero-platforms">
-    <span style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px"><span style="display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:999px;background:#c8a400;color:#000000;font-size:12px;font-weight:700;letter-spacing:.03em;line-height:1"><svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" style="height:14px;vertical-align:middle"><rect x="2" y="3" width="16" height="11" rx="1.5" fill="none" stroke="#000" stroke-width="1.5"/><path d="M7 14v2M13 14v2M5 16h10" stroke="#000" stroke-width="1.5" stroke-linecap="round"/><path d="M5 6l3 2.5L5 11M10 11h5" stroke="#000" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>PC</span></span>
+    <div style="display:flex;flex-wrap:wrap;gap:7px;margin-top:10px"><span style="display:inline-flex;align-items:center;gap:7px;padding:6px 13px 6px 10px;border-radius:7px;font-family:'Space Grotesk',Arial,sans-serif;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;line-height:1;white-space:nowrap;border:1px solid #FFB300;background:linear-gradient(135deg,#7a5500,#c8860a);color:#ffffff;box-shadow:0 2px 12px rgba(255,179,0,0.55),0 1px 3px rgba(0,0,0,0.6);"><svg viewBox="0 0 16 22" xmlns="http://www.w3.org/2000/svg" style="height:17px;flex-shrink:0"><rect x="0" y="0" width="16" height="22" rx="2" fill="#b8720a"/><rect x="0" y="0" width="16" height="22" rx="2" fill="none" stroke="#FFB300" stroke-width=".8"/><rect x="2" y="2" width="12" height="7" rx="1" fill="rgba(255,179,0,0.2)"/><rect x="2" y="11" width="12" height="2.5" rx=".5" fill="#FFB300" opacity=".7"/><rect x="2" y="15" width="12" height="2.5" rx=".5" fill="#FFB300" opacity=".4"/><circle cx="5" cy="19.5" r="1.5" fill="none" stroke="#FFB300" stroke-width=".7"/><circle cx="5" cy="19.5" r=".7" fill="#FFB300"/><circle cx="9" cy="19.5" r=".9" fill="#00e676" opacity=".9"/></svg><span>PC</span></span></div>
   </div>
 
   <div class="gold-line"></div>
@@ -391,6 +450,7 @@
 
   <div class="launch-date-label">
     Lançamento: <strong>12 de março de 2026</strong>
+    
   </div>
 
   <div class="progress-wrap">
@@ -454,6 +514,8 @@
     <a href="https://www.youtube.com/watch?v=yFWkOnzGZCA" target="_blank" rel="noopener">▶ Ver no YouTube</a>
   </p>
 </section>
+  
+  
   
   
 
@@ -542,6 +604,18 @@
   tick();
   setInterval(tick, 1000);
   setTimeout(updateProgress, 300);
+
+  // Parallax suave na imagem de fundo
+  (function() {
+    const img = document.querySelector('.hero-bg img');
+    if (!img) return;
+    function onScroll() {
+      const scrollY = window.scrollY;
+      // Move a imagem a 40% da velocidade do scroll — efeito parallax
+      img.style.transform = 'translateY(' + (scrollY * 0.4) + 'px)';
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+  })();
 </script>
 </body>
 </html>

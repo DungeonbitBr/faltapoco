@@ -3,9 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="FaltaPouco — Countdowns e datas de lançamento dos jogos mais aguardados. Base de dados pública para o mercado gamer brasileiro.">
-<title>FaltaPouco — Countdowns de Jogos</title>
+<title>FaltaPouco — Datas de Lançamento e Countdowns de Jogos 2026</title>
+<meta name="description" content="Countdowns em tempo real, datas de lançamento confirmadas e trailers dos jogos mais aguardados de 2026. GTA VI, Crimson Desert, Wolverine e muito mais.">
+<meta name="keywords" content="data de lançamento jogos 2026, countdown jogos, GTA 6 data lançamento, jogos mais aguardados 2026, lançamentos PS5 Xbox PC, faltapoco">
 <link rel="canonical" href="https://faltapoco.com.br/">
+<link rel="sitemap" type="application/xml" href="https://faltapoco.com.br/sitemap.xml">
+<meta property="og:site_name" content="FaltaPouco">
+<meta property="og:title" content="FaltaPouco — Datas de Lançamento e Countdowns de Jogos 2026">
+<meta property="og:description" content="Countdowns em tempo real e datas confirmadas dos jogos mais aguardados de 2026. GTA VI, Crimson Desert, Wolverine e mais 52 jogos monitorados.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://faltapoco.com.br/">
+<meta property="og:image" content="https://faltapoco.com.br/og-home.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@faltapoco">
+<meta name="twitter:title" content="FaltaPouco — Countdowns de Jogos 2026">
+<meta name="twitter:description" content="Datas de lançamento em tempo real. GTA VI, Crimson Desert e mais 52 jogos.">
+<meta name="twitter:image" content="https://faltapoco.com.br/og-home.jpg">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "FaltaPouco", "alternateName": "faltapoco.com.br", "url": "https://faltapoco.com.br", "description": "Countdowns e datas de lançamento dos jogos mais aguardados. Base de dados pública para o mercado gamer brasileiro.", "inLanguage": "pt-BR", "potentialAction": {"@type": "SearchAction", "target": {"@type": "EntryPoint", "urlTemplate": "https://faltapoco.com.br/?q={search_term_string}"}, "query-input": "required name=search_term_string"}, "about": {"@type": "ItemList", "name": "Jogos monitorados", "numberOfItems": 52}}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -420,6 +438,14 @@
     .wrap { padding: 0 1.1rem; }
   }
 </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YJ2GY5FM9B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-YJ2GY5FM9B');
+</script>
 </head>
 <body>
 
@@ -490,12 +516,12 @@
       <span class="section-count" id="grid-count">—</span>
     </div>
 
-    <div class="featured-card">
+    <a class="featured-card" href="/jogos/gta-6/" style="text-decoration:none;color:inherit">
       <div>
         <div class="badge badge-confirmed">Data confirmada</div>
         <div class="fc-name">Grand Theft Auto VI</div>
         <div class="fc-meta">
-          <span>📅 19 de novembro de 2026</span>
+          <span>📅 19 de novembro de 2026 às 00:01 (Brasília)</span>
           <span><span class="platform-tag">PS5</span><span class="platform-tag">Xbox Series X|S</span></span>
         </div>
       </div>
@@ -508,7 +534,7 @@
         <div class="mini-sep">:</div>
         <div class="mini-block"><span class="mini-num" id="f-s">—</span><span class="mini-lbl">Seg</span></div>
       </div>
-    </div>
+    </a>
 
     <div class="games-grid" id="gamesGrid"></div>
   </section>
@@ -565,14 +591,14 @@
       <span class="c-key">"releaseDate"</span>: <span class="c-str">"2026-11-19"</span>,
       <span class="c-key">"status"</span>:      <span class="c-str">"confirmed"</span>,
       <span class="c-key">"platforms"</span>:   [<span class="c-str">"PS5"</span>, <span class="c-str">"Xbox"</span>, <span class="c-str">"PC"</span>],
-      <span class="c-key">"daysLeft"</span>:    <span class="c-num" id="apiDays">249</span>,
+      <span class="c-key">"daysLeft"</span>:    <span class="c-num" id="apiDays">248</span>,
       <span class="c-key">"hype"</span>:        <span class="c-num" id="apiHype">...</span>
     }
   ],
   <span class="c-key">"meta"</span>: {
     <span class="c-key">"total"</span>:     <span class="c-num" id="apiTotal">52</span>,
     <span class="c-key">"version"</span>:   <span class="c-str">"1.0"</span>,
-    <span class="c-key">"updatedAt"</span>: <span class="c-str">"2026-03-15"</span>
+    <span class="c-key">"updatedAt"</span>: <span class="c-str">"2026-03-16"</span>
   }
 }
       </div>
@@ -595,10 +621,10 @@
 <script>
   const games = [
     { id:"gta-6", name:"Grand Theft Auto VI", date:"2026-11-19", status:"confirmed", platforms:["PS5", "Xbox Series X|S"], featured:true, launched:false },
-    { id:"crimson-desert", name:"Crimson Desert", date:"2026-03-19", status:"confirmed", platforms:["PS5", "Xbox Series X|S", "PC", "Mac"], featured:false, launched:false },
+    { id:"crimson-desert", name:"Crimson Desert", date:"2026-03-19", status:"confirmed", platforms:["PS5", "Xbox Series X|S", "PC"], featured:false, launched:false },
     { id:"samson", name:"Samson", date:"2026-04-08", status:"confirmed", platforms:["PC"], featured:false, launched:false },
     { id:"replaced", name:"Replaced", date:"2026-04-14", status:"confirmed", platforms:["Xbox Series X|S", "PC"], featured:false, launched:false },
-    { id:"mouse-pi-for-hire", name:"Mouse: PI for Hire", date:"2026-04-16", status:"confirmed", platforms:["PS5", "Xbox Series X|S", "PC", "Switch 1", "Switch 2"], featured:false, launched:false },
+    { id:"mouse-pi-for-hire", name:"Mouse: PI for Hire", date:"2026-04-16", status:"confirmed", platforms:["PS5", "Xbox Series X|S", "PC", "Switch 2"], featured:false, launched:false },
     { id:"pragmata", name:"Pragmata", date:"2026-04-17", status:"confirmed", platforms:["PS5", "Xbox Series X|S", "PC", "Switch 2"], featured:false, launched:false },
     { id:"saros", name:"Saros", date:"2026-04-30", status:"confirmed", platforms:["PS5"], featured:false, launched:false },
     { id:"007-first-light", name:"007 First Light", date:"2026-05-27", status:"confirmed", platforms:["PS5", "Xbox Series X|S", "PC", "Switch 2"], featured:false, launched:false },

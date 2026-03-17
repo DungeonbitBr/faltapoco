@@ -3,6 +3,8 @@
   "name": "Saros",
   "release": "2026-04-30",
   "release_display": "30 de abril de 2026",
+  "release_time": "",
+  "release_time_display": "",
   "status": "confirmed",
   "confidence_date": "media",
   "developer": "",
@@ -26,11 +28,14 @@
   },
   "news": [],
   "reviews": [],
+  "sys_req": {},
+  "affiliate_ml": "",
+  "affiliate_amz": "",
   "source": {
     "type": "manual"
   },
-  "days_left": 46,
+  "days_left": 45,
   "api_url": "https://faltapoco.com.br/api/v1/games/saros.json",
   "page_url": "https://faltapoco.com.br/jogos/saros/",
-  "updated_at": "2026-03-15T15:39:14.814277+00:00"
+  "updated_at": "2026-03-17T02:02:26.078027+00:00"
 }

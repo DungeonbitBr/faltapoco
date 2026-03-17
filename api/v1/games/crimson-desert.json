@@ -2,7 +2,9 @@
   "slug": "crimson-desert",
   "name": "Crimson Desert",
   "release": "2026-03-19",
-  "release_display": "19 de março de 2026",
+  "release_display": "19 de março de 2026 às 19:00 (Brasília)",
+  "release_time": "19:00",
+  "release_time_display": "19:00 (horário de Brasília)",
   "status": "confirmed",
   "confidence_date": "media",
   "developer": "",
@@ -10,8 +12,7 @@
   "platforms": [
     "PS5",
     "Xbox Series X|S",
-    "PC",
-    "Mac"
+    "PC"
   ],
   "background_image": "bg.jpg",
   "description": "Acompanhe a data de lançamento, trailer e atualizações de Crimson Desert.",
@@ -29,11 +30,44 @@
   },
   "news": [],
   "reviews": [],
+  "sys_req": {
+    "minimum": {
+      "performance": "1080p (upscaling de 900p) 30 FPS",
+      "gpu": "AMD Radeon RX 5500 XT / NVIDIA GeForce GTX 1060",
+      "cpu": "AMD Ryzen 5 2600X / Intel Core i5-8500",
+      "ram": "16 GB",
+      "os": "Windows 10 64-bit 22H2 ou mais recente",
+      "storage": "150 GB SSD",
+      "directx": "DirectX 12"
+    },
+    "low": {
+      "performance": "1080p 30 FPS",
+      "gpu": "AMD Radeon RX 6500 XT / NVIDIA GeForce GTX 1660",
+      "cpu": "AMD Ryzen 5 2600X / Intel Core i5-8500"
+    },
+    "medium": {
+      "performance": "1080p 60 FPS / 4K 30 FPS",
+      "gpu": "AMD Radeon RX 6700 XT / NVIDIA GeForce RTX 2080",
+      "cpu": "AMD Ryzen 5 5600 / Intel Core i5-11600K"
+    },
+    "high": {
+      "performance": "1440p 60 FPS",
+      "gpu": "AMD Radeon RX 7700 XT / NVIDIA GeForce RTX 4070",
+      "cpu": "AMD Ryzen 5 7600X / Intel Core i5-12600K"
+    },
+    "ultra": {
+      "performance": "4K 60 FPS",
+      "gpu": "AMD Radeon RX 9070 XT / NVIDIA GeForce RTX 5070 Ti",
+      "cpu": "AMD Ryzen 7 7700X / Intel Core i5-13600K"
+    }
+  },
+  "affiliate_ml": "https://mercadolivre.com.br/afiliados/SEULINK",
+  "affiliate_amz": "https://amazon.com.br/afiliados/SEULINK",
   "source": {
     "type": "manual"
   },
-  "days_left": 4,
+  "days_left": 3,
   "api_url": "https://faltapoco.com.br/api/v1/games/crimson-desert.json",
   "page_url": "https://faltapoco.com.br/jogos/crimson-desert/",
-  "updated_at": "2026-03-15T15:39:14.807515+00:00"
+  "updated_at": "2026-03-17T02:02:26.071170+00:00"
 }

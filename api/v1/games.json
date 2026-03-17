@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": "1.0",
-    "generated_at": "2026-03-15T15:39:14.869187+00:00",
+    "generated_at": "2026-03-17T02:02:30.202406+00:00",
     "count": 52,
     "base_url": "https://faltapoco.com.br"
   },
@@ -11,6 +11,8 @@
       "name": "I Hate This Place",
       "release": "2026-01-29",
       "release_display": "29 de janeiro de 2026",
+      "release_time": "",
+      "release_time_display": "",
       "status": "released",
       "confidence_date": "media",
       "developer": "",
@@ -36,19 +38,24 @@
       },
       "news": [],
       "reviews": [],
+      "sys_req": {},
+      "affiliate_ml": "",
+      "affiliate_amz": "",
       "source": {
         "type": "manual"
       },
       "days_left": 0,
       "api_url": "https://faltapoco.com.br/api/v1/games/i-hate-this-place.json",
       "page_url": "https://faltapoco.com.br/jogos/i-hate-this-place/",
-      "updated_at": "2026-03-15T15:39:14.798131+00:00"
+      "updated_at": "2026-03-17T02:02:26.060769+00:00"
     },
     {
       "slug": "nioh-3",
       "name": "Nioh 3",
       "release": "2026-02-06",
       "release_display": "6 de fevereiro de 2026",
+      "release_time": "",
+      "release_time_display": "",
       "status": "released",
       "confidence_date": "media",
       "developer": "",
@@ -73,19 +80,24 @@
       },
       "news": [],
       "reviews": [],
+      "sys_req": {},
+      "affiliate_ml": "",
+      "affiliate_amz": "",
       "source": {
         "type": "manual"
       },
       "days_left": 0,
       "api_url": "https://faltapoco.com.br/api/v1/games/nioh-3.json",
       "page_url": "https://faltapoco.com.br/jogos/nioh-3/",
-      "updated_at": "2026-03-15T15:39:14.795418+00:00"
+      "updated_at": "2026-03-17T02:02:26.058000+00:00"
     },
     {
       "slug": "hordes-of-hunger",
       "name": "Hordes of Hunger",
       "release": "2026-02-12",
       "release_display": "12 de fevereiro de 2026",
+      "release_time": "",
+      "release_time_display": "",
       "status": "released",
       "confidence_date": "media",
       "developer": "",
@@ -109,19 +121,24 @@
       },
       "news": [],
       "reviews": [],
+      "sys_req": {},
+      "affiliate_ml": "",
+      "affiliate_amz": "",
       "source": {
         "type": "manual"
       },
       "days_left": 0,
       "api_url": "https://faltapoco.com.br/api/v1/games/hordes-of-hunger.json",
       "page_url": "https://faltapoco.com.br/jogos/hordes-of-hunger/",
-      "updated_at": "2026-03-15T15:39:14.800858+00:00"
+      "updated_at": "2026-03-17T02:02:26.063966+00:00"
     },
     {
       "slug": "reanimal",
       "name": "Reanimal",
       "release": "2026-02-13",
       "release_display": "13 de fevereiro de 2026",
+      "release_time": "",
+      "release_time_display": "",
       "status": "released",
       "confidence_date": "media",
       "developer": "",
@@ -148,19 +165,24 @@
       },
       "news": [],
       "reviews": [],
+      "sys_req": {},
+      "affiliate_ml": "",
+      "affiliate_amz": "",
       "source": {
         "type": "manual"
       },
       "days_left": 0,
       "api_url": "https://faltapoco.com.br/api/v1/games/reanimal.json",
       "page_url": "https://faltapoco.com.br/jogos/reanimal/",
-      "updated_at": "2026-03-15T15:39:14.796814+00:00"
+      "updated_at": "2026-03-17T02:02:26.059428+00:00"
     },
     {
       "slug": "resident-evil-requiem",
       "name": "Resident Evil Requiem",
       "release": "2026-02-27",
       "release_display": "27 de fevereiro de 2026",
+      "release_time": "",
+      "release_time_display": "",
       "status": "released",
       "confidence_date": "media",
       "developer": "",
@@ -187,19 +209,24 @@
       },
       "news": [],
       "reviews": [],
+      "sys_req": {},
+      "affiliate_ml": "",
+      "affiliate_amz": "",
       "source": {
         "type": "manual"
       },
       "days_left": 0,
       "api_url": "https://faltapoco.com.br/api/v1/games/resident-evil-requiem.json",
       "page_url": "https://faltapoco.com.br/jogos/resident-evil-requiem/",
-      "updated_at": "2026-03-15T15:39:14.793892+00:00"
+      "updated_at": "2026-03-17T02:02:26.056291+00:00"
     },
     {
       "slug": "legend-of-khiimori",
       "name": "The Legend of Khiimori",
       "release": "2026-03-03",
       "release_display": "3 de março de 2026",
+      "release_time": "",
+      "release_time_display": "",
       "status": "released",
       "confidence_date": "media",
       "developer": "",
@@ -223,19 +250,24 @@
       },
       "news": [],
       "reviews": [],
+      "sys_req": {},
+      "affiliate_ml": "",
+      "affiliate_amz": "",
       "source": {
         "type": "manual"
       },
       "days_left": 0,
       "api_url": "https://faltapoco.com.br/api/v1/games/legend-of-khiimori.json",
       "page_url": "https://faltapoco.com.br/jogos/legend-of-khiimori/",
-      "updated_at": "2026-03-15T15:39:14.799501+00:00"
+      "updated_at": "2026-03-17T02:02:26.062444+00:00"
     },
     {
       "slug": "marathon-2026",
       "name": "Marathon",
       "release": "2026-03-05",
       "release_display": "5 de março de 2026",
+      "release_time": "",
+      "release_time_display": "",
       "status": "released",
       "confidence_date": "media",
       "developer": "",
@@ -261,19 +293,24 @@
       },
       "news": [],
       "reviews": [],
+      "sys_req": {},
+      "affiliate_ml": "",
+      "affiliate_amz": "",
       "source": {
         "type": "manual"
       },
       "days_left": 0,
       "api_url": "https://faltapoco.com.br/api/v1/games/marathon-2026.json",
       "page_url": "https://faltapoco.com.br/jogos/marathon-2026/",
-      "updated_at": "2026-03-15T15:39:14.804812+00:00"
+      "updated_at": "2026-03-17T02:02:26.068261+00:00"
     },
     {
       "slug": "fatal-frame-2-remake",
       "name": "Fatal Frame II Remake",
       "release": "2026-03-12",
       "release_display": "12 de março de 2026",
+      "release_time": "",
+      "release_time_display": "",
       "status": "released",
       "confidence_date": "media",
       "developer": "",
@@ -300,19 +337,24 @@
       },
       "news": [],
       "reviews": [],
+      "sys_req": {},
+      "affiliate_ml": "",
+      "affiliate_amz": "",
       "source": {
         "type": "manual"
       },
       "days_left": 0,
       "api_url": "https://faltapoco.com.br/api/v1/games/fatal-frame-2-remake.json",
       "page_url": "https://faltapoco.com.br/jogos/fatal-frame-2-remake/",
-      "updated_at": "2026-03-15T15:39:14.806150+00:00"
+      "updated_at": "2026-03-17T02:02:26.069734+00:00"
     },
     {
       "slug": "solasta-2",
       "name": "Solasta 2",
       "release": "2026-03-12",
       "release_display": "12 de março de 2026",
+      "release_time": "",
+      "release_time_display": "",
       "status": "released",
       "confidence_date": "media",
       "developer": "",
@@ -336,19 +378,24 @@
       },
       "news": [],
       "reviews": [],
+      "sys_req": {},
+      "affiliate_ml": "",
+      "affiliate_amz": "",
       "source": {
         "type": "manual"
       },
       "days_left": 0,
       "api_url": "https://faltapoco.com.br/api/v1/games/solasta-2.json",
       "page_url": "https://faltapoco.com.br/jogos/solasta-2/",
-      "updated_at": "2026-03-15T15:39:14.802213+00:00"
+      "updated_at": "2026-03-17T02:02:26.065395+00:00"
     },
     {
       "slug": "toxic-commando",
       "name": "Toxic Commando",
       "release": "2026-03-12",
       "release_display": "12 de março de 2026",
+      "release_time": "",
+      "release_time_display": "",
       "status": "released",
       "confidence_date": "media",
       "developer": "",
@@ -374,19 +421,24 @@
       },
       "news": [],
       "reviews": [],
+      "sys_req": {},
+      "affiliate_ml": "",
+      "affiliate_amz": "",
       "source": {
         "type": "manual"
       },
       "days_left": 0,
       "api_url": "https://faltapoco.com.br/api/v1/games/toxic-commando.json",
       "page_url": "https://faltapoco.com.br/jogos/toxic-commando/",
-      "updated_at": "2026-03-15T15:39:14.803468+00:00"
+      "updated_at": "2026-03-17T02:02:26.066845+00:00"
     },
     {
       "slug": "crimson-desert",
       "name": "Crimson Desert",
       "release": "2026-03-19",
-      "release_display": "19 de março de 2026",
+      "release_display": "19 de março de 2026 às 19:00 (Brasília)",
+      "release_time": "19:00",
+      "release_time_display": "19:00 (horário de Brasília)",
       "status": "confirmed",
       "confidence_date": "media",
       "developer": "",
@@ -394,8 +446,7 @@
       "platforms": [
         "PS5",
         "Xbox Series X|S",
-        "PC",
-        "Mac"
+        "PC"
       ],
       "background_image": "bg.jpg",
       "description": "Acompanhe a data de lançamento, trailer e atualizações de Crimson Desert.",
@@ -413,19 +464,54 @@
       },
       "news": [],
       "reviews": [],
+      "sys_req": {
+        "minimum": {
+          "performance": "1080p (upscaling de 900p) 30 FPS",
+          "gpu": "AMD Radeon RX 5500 XT / NVIDIA GeForce GTX 1060",
+          "cpu": "AMD Ryzen 5 2600X / Intel Core i5-8500",
+          "ram": "16 GB",
+          "os": "Windows 10 64-bit 22H2 ou mais recente",
+          "storage": "150 GB SSD",
+          "directx": "DirectX 12"
+        },
+        "low": {
+          "performance": "1080p 30 FPS",
+          "gpu": "AMD Radeon RX 6500 XT / NVIDIA GeForce GTX 1660",
+          "cpu": "AMD Ryzen 5 2600X / Intel Core i5-8500"
+        },
+        "medium": {
+          "performance": "1080p 60 FPS / 4K 30 FPS",
+          "gpu": "AMD Radeon RX 6700 XT / NVIDIA GeForce RTX 2080",
+          "cpu": "AMD Ryzen 5 5600 / Intel Core i5-11600K"
+        },
+        "high": {
+          "performance": "1440p 60 FPS",
+          "gpu": "AMD Radeon RX 7700 XT / NVIDIA GeForce RTX 4070",
+          "cpu": "AMD Ryzen 5 7600X / Intel Core i5-12600K"
+        },
+        "ultra": {
+          "performance": "4K 60 FPS",
+          "gpu": "AMD Radeon RX 9070 XT / NVIDIA GeForce RTX 5070 Ti",
+          "cpu": "AMD Ryzen 7 7700X / Intel Core i5-13600K"
+        }
+      },
+      "affiliate_ml": "https://mercadolivre.com.br/afiliados/SEULINK",
+      "affiliate_amz": "https://amazon.com.br/afiliados/SEULINK",
       "source": {
         "type": "manual"
       },
-      "days_left": 4,
+      "days_left": 3,
       "api_url": "https://faltapoco.com.br/api/v1/games/crimson-desert.json",
       "page_url": "https://faltapoco.com.br/jogos/crimson-desert/",
-      "updated_at": "2026-03-15T15:39:14.807515+00:00"
+      "updated_at": "2026-03-17T02:02:26.071170+00:00"
     },
     {
       "slug": "samson",
       "name": "Samson",
       "release": "2026-04-08",
       "release_display": "8 de abril de 2026",
+      "release_time": "",
+      "release_time_display": "",
       "status": "confirmed",
       "confidence_date": "media",
       "developer": "",
@@ -449,19 +535,24 @@
       },
       "news": [],
       "reviews": [],
+      "sys_req": {},
+      "affiliate_ml": "",
+      "affiliate_amz": "",
       "source": {
         "type": "manual"
       },
-      "days_left": 24,
+      "days_left": 23,
       "api_url": "https://faltapoco.com.br/api/v1/games/samson.json",
       "page_url": "https://faltapoco.com.br/jogos/samson/",
-      "updated_at": "2026-03-15T15:39:14.808900+00:00"
+      "updated_at": "2026-03-17T02:02:26.072602+00:00"
     },
     {
       "slug": "replaced",
       "name": "Replaced",
       "release": "2026-04-14",
       "release_display": "14 de abril de 2026",
+      "release_time": "",
+      "release_time_display": "",
       "status": "confirmed",
       "confidence_date": "media",
       "developer": "",
@@ -486,19 +577,24 @@
       },
       "news": [],
       "reviews": [],
+      "sys_req": {},
+      "affiliate_ml": "",
+      "affiliate_amz": "",
       "source": {
         "type": "manual"
       },
-      "days_left": 30,
+      "days_left": 29,
       "api_url": "https://faltapoco.com.br/api/v1/games/replaced.json",
       "page_url": "https://faltapoco.com.br/jogos/replaced/",
-      "updated_at": "2026-03-15T15:39:14.810242+00:00"
+      "updated_at": "2026-03-17T02:02:26.073985+00:00"
     },
     {
       "slug": "mouse-pi-for-hire",
       "name": "Mouse: PI for Hire",
       "release": "2026-04-16",
       "release_display": "16 de abril de 2026",
+      "release_time": "",
+      "release_time_display": "",
       "status": "confirmed",
       "confidence_date": "media",
       "developer": "",
@@ -507,7 +603,6 @@
         "PS5",
         "Xbox Series X|S",
         "PC",
-        "Switch 1",
         "Switch 2"
       ],
       "background_image": "bg.jpg",
@@ -526,19 +621,24 @@
       },
       "news": [],
       "reviews": [],
+      "sys_req": {},
+      "affiliate_ml": "",
+      "affiliate_amz": "",
       "source": {
         "type": "manual"
       },
-      "days_left": 32,
+      "days_left": 31,
       "api_url": "https://faltapoco.com.br/api/v1/games/mouse-pi-for-hire.json",
       "page_url": "https://faltapoco.com.br/jogos/mouse-pi-for-hire/",
-      "updated_at": "2026-03-15T15:39:14.811485+00:00"
+      "updated_at": "2026-03-17T02:02:26.075335+00:00"
     },
     {
       "slug": "pragmata",
       "name": "Pragmata",
       "release": "2026-04-17",
       "release_display": "17 de abril de 2026",
+      "release_time": "",
+      "release_time_display": "",
       "status": "confirmed",
       "confidence_date": "media",
       "developer": "",
@@ -565,19 +665,24 @@
       },
       "news": [],
       "reviews": [],
+      "sys_req": {},
+      "affiliate_ml": "",
+      "affiliate_amz": "",
       "source": {
         "type": "manual"
       },
-      "days_left": 33,
+      "days_left": 32,
       "api_url": "https://faltapoco.com.br/api/v1/games/pragmata.json",
       "page_url": "https://faltapoco.com.br/jogos/pragmata/",
-      "updated_at": "2026-03-15T15:39:14.812940+00:00"
+      "updated_at": "2026-03-17T02:02:26.076647+00:00"
     },
     {
       "slug": "saros",
       "name": "Saros",
       "release": "2026-04-30",
       "release_display": "30 de abril de 2026",
+      "release_time": "",
+      "release_time_display": "",
       "status": "confirmed",
       "confidence_date": "media",
       "developer": "",
@@ -601,19 +706,24 @@
       },
       "news": [],
       "reviews": [],
+      "sys_req": {},
+      "affiliate_ml": "",
+      "affiliate_amz": "",
       "source": {
         "type": "manual"
       },
-      "days_left": 46,
+      "days_left": 45,
       "api_url": "https://faltapoco.com.br/api/v1/games/saros.json",
       "page_url": "https://faltapoco.com.br/jogos/saros/",
-      "updated_at": "2026-03-15T15:39:14.814277+00:00"
+      "updated_at": "2026-03-17T02:02:26.078027+00:00"
     },
     {
       "slug": "007-first-light",
       "name": "007 First Light",
       "release": "2026-05-27",
       "release_display": "27 de maio de 2026",
+      "release_time": "",
+      "release_time_display": "",
       "status": "confirmed",
       "confidence_date": "media",
       "developer": "",
@@ -640,19 +750,24 @@
       },
       "news": [],
       "reviews": [],
+      "sys_req": {},
+      "affiliate_ml": "",
+      "affiliate_amz": "",
       "source": {
         "type": "manual"
       },
-      "days_left": 73,
+      "days_left": 72,
       "api_url": "https://faltapoco.com.br/api/v1/games/007-first-light.json",
       "page_url": "https://faltapoco.com.br/jogos/007-first-light/",
-      "updated_at": "2026-03-15T15:39:14.815512+00:00"
+      "updated_at": "2026-03-17T02:02:26.079527+00:00"
     },
     {
       "slug": "beast-of-reincarnation",
       "name": "Beast of Reincarnation",
       "release": "2026-08-04",
       "release_display": "4 de agosto de 2026",
+      "release_time": "",
+      "release_time_display": "",
       "status": "confirmed",
       "confidence_date": "media",
       "developer": "",
@@ -678,19 +793,24 @@
       },
       "news": [],
       "reviews": [],
+      "sys_req": {},
+      "affiliate_ml": "",
+      "affiliate_amz": "",
       "source": {
         "type": "manual"
       },
-      "days_left": 142,
+      "days_left": 141,
       "api_url": "https://faltapoco.com.br/api/v1/games/beast-of-reincarnation.json",
       "page_url": "https://faltapoco.com.br/jogos/beast-of-reincarnation/",
-      "updated_at": "2026-03-15T15:39:14.816777+00:00"
+      "updated_at": "2026-03-17T02:02:26.080913+00:00"
     },
     {
       "slug": "phantom-blade-zero",
       "name": "Phantom Blade Zero",
       "release": "2026-09-09",
       "release_display": "9 de setembro de 2026",
+      "release_time": "",
+      "release_time_display": "",
       "status": "confirmed",
       "confidence_date": "media",
       "developer": "",
@@ -715,19 +835,24 @@
       },
       "news": [],
       "reviews": [],
+      "sys_req": {},
+      "affiliate_ml": "",
+      "affiliate_amz": "",
       "source": {
         "type": "manual"
       },
-      "days_left": 178,
+      "days_left": 177,
       "api_url": "https://faltapoco.com.br/api/v1/games/phantom-blade-zero.json",
       "page_url": "https://faltapoco.com.br/jogos/phantom-blade-zero/",
-      "updated_at": "2026-03-15T15:39:14.818095+00:00"
+      "updated_at": "2026-03-17T02:02:26.082300+00:00"
     },
     {
       "slug": "marvel-wolverine",
       "name": "Marvel's Wolverine",
       "release": "2026-09-15",
       "release_display": "15 de setembro de 2026",
+      "release_time": "",
+      "release_time_display": "",
       "status": "confirmed",
       "confidence_date": "media",
       "developer": "",
@@ -751,19 +876,24 @@
       },
       "news": [],
       "reviews": [],
+      "sys_req": {},
+      "affiliate_ml": "",
+      "affiliate_amz": "",
       "source": {
         "type": "manual"
       },
-      "days_left": 184,
+      "days_left": 183,
       "api_url": "https://faltapoco.com.br/api/v1/games/marvel-wolverine.json",
       "page_url": "https://faltapoco.com.br/jogos/marvel-wolverine/",
-      "updated_at": "2026-03-15T15:39:14.819377+00:00"
+      "updated_at": "2026-03-17T02:02:26.083642+00:00"
     },
     {
       "slug": "gta-6",
       "name": "Grand Theft Auto VI",
       "release": "2026-11-19",
-      "release_display": "19 de novembro de 2026",
+      "release_display": "19 de novembro de 2026 às 00:01 (Brasília)",
+      "release_time": "00:01",
+      "release_time_display": "00:01 (horário de Brasília)",
       "status": "confirmed",
       "confidence_date": "media",
       "developer": "Rockstar Games",
@@ -788,19 +918,24 @@
       },
       "news": [],
       "reviews": [],
+      "sys_req": {},
+      "affiliate_ml": "https://mercadolivre.com.br/afiliados/SEULINK",
+      "affiliate_amz": "https://amazon.com.br/afiliados/SEULINK",
       "source": {
         "type": "manual"
       },
-      "days_left": 249,
+      "days_left": 248,
       "api_url": "https://faltapoco.com.br/api/v1/games/gta-6.json",
       "page_url": "https://faltapoco.com.br/jogos/gta-6/",
-      "updated_at": "2026-03-15T15:39:14.820610+00:00"
+      "updated_at": "2026-03-17T02:02:26.085016+00:00"
     },
     {
       "slug": "ace-combat-8",
       "name": "Ace Combat 8: Wings of the Raven",
       "release": "",
       "release_display": "Sem data confirmada",
+      "release_time": "",
+      "release_time_display": "",
       "status": "unknown",
       "confidence_date": "media",
       "developer": "",
@@ -815,19 +950,24 @@
       "video": null,
       "news": [],
       "reviews": [],
+      "sys_req": {},
+      "affiliate_ml": "",
+      "affiliate_amz": "",
       "source": {
         "type": "manual"
       },
       "days_left": null,
       "api_url": "https://faltapoco.com.br/api/v1/games/ace-combat-8.json",
       "page_url": "https://faltapoco.com.br/jogos/ace-combat-8/",
-      "updated_at": "2026-03-15T15:39:14.839518+00:00"
+      "updated_at": "2026-03-17T02:02:26.973683+00:00"
     },
     {
       "slug": "animal-use-protocol",
       "name": "Animal Use Protocol",
       "release": "",
       "release_display": "Sem data confirmada",
+      "release_time": "",
+      "release_time_display": "",
       "status": "unknown",
       "confidence_date": "media",
       "developer": "",
@@ -840,19 +980,24 @@
       "video": null,
       "news": [],
       "reviews": [],
+      "sys_req": {},
+      "affiliate_ml": "",
+      "affiliate_amz": "",
       "source": {
         "type": "manual"
       },
       "days_left": null,
       "api_url": "https://faltapoco.com.br/api/v1/games/animal-use-protocol.json",
       "page_url": "https://faltapoco.com.br/jogos/animal-use-protocol/",
-      "updated_at": "2026-03-15T15:39:14.857850+00:00"
+      "updated_at": "2026-03-17T02:02:28.686640+00:00"
     },
     {
       "slug": "atomic-heart-2",
       "name": "Atomic Heart 2",
       "release": "",
       "release_display": "Sem data confirmada",
+      "release_time": "",
+      "release_time_display": "",
       "status": "unknown",
       "confidence_date": "media",
       "developer": "",
@@ -878,19 +1023,24 @@
       },
       "news": [],
       "reviews": [],
+      "sys_req": {},
+      "affiliate_ml": "",
+      "affiliate_amz": "",
       "source": {
         "type": "manual"
       },
       "days_left": null,
       "api_url": "https://faltapoco.com.br/api/v1/games/atomic-heart-2.json",
       "page_url": "https://faltapoco.com.br/jogos/atomic-heart-2/",
-      "updated_at": "2026-03-15T15:39:14.830056+00:00"
+      "updated_at": "2026-03-17T02:02:26.095233+00:00"
     },
     {
       "slug": "blood-message",
       "name": "Blood Message",
       "release": "",
       "release_display": "Sem data confirmada",
+      "release_time": "",
+      "release_time_display": "",
       "status": "unknown",
       "confidence_date": "media",
       "developer": "",
@@ -905,19 +1055,24 @@
       "video": null,
       "news": [],
       "reviews": [],
+      "sys_req": {},
+      "affiliate_ml": "",
+      "affiliate_amz": "",
       "source": {
         "type": "manual"
       },
       "days_left": null,
       "api_url": "https://faltapoco.com.br/api/v1/games/blood-message.json",
       "page_url": "https://faltapoco.com.br/jogos/blood-message/",
-      "updated_at": "2026-03-15T15:39:14.843171+00:00"
+      "updated_at": "2026-03-17T02:02:27.537278+00:00"
     },
     {
       "slug": "chronicles-medieval",
       "name": "Chronicles: Medieval",
       "release": "",
       "release_display": "Sem data confirmada",
+      "release_time": "",
+      "release_time_display": "",
       "status": "unknown",
       "confidence_date": "media",
       "developer": "",
@@ -930,19 +1085,24 @@
       "video": null,
       "news": [],
       "reviews": [],
+      "sys_req": {},
+      "affiliate_ml": "",
+      "affiliate_amz": "",
       "source": {
         "type": "manual"
       },
       "days_left": null,
       "api_url": "https://faltapoco.com.br/api/v1/games/chronicles-medieval.json",
       "page_url": "https://faltapoco.com.br/jogos/chronicles-medieval/",
-      "updated_at": "2026-03-15T15:39:14.855343+00:00"
+      "updated_at": "2026-03-17T02:02:28.298118+00:00"
     },
     {
       "slug": "control-resonant",
       "name": "Control Resonant",
       "release": "",
       "release_display": "Sem data confirmada",
+      "release_time": "",
+      "release_time_display": "",
       "status": "unknown",
       "confidence_date": "media",
       "developer": "",
@@ -968,19 +1128,24 @@
       },
       "news": [],
       "reviews": [],
+      "sys_req": {},
+      "affiliate_ml": "",
+      "affiliate_amz": "",
       "source": {
         "type": "manual"
       },
       "days_left": null,
       "api_url": "https://faltapoco.com.br/api/v1/games/control-resonant.json",
       "page_url": "https://faltapoco.com.br/jogos/control-resonant/",
-      "updated_at": "2026-03-15T15:39:14.823272+00:00"
+      "updated_at": "2026-03-17T02:02:26.087674+00:00"
     },
     {
       "slug": "decapolice",
       "name": "Decapolice",
       "release": "",
       "release_display": "Sem data confirmada",
+      "release_time": "",
+      "release_time_display": "",
       "status": "unknown",
       "confidence_date": "media",
       "developer": "",
@@ -995,19 +1160,24 @@
       "video": null,
       "news": [],
       "reviews": [],
+      "sys_req": {},
+      "affiliate_ml": "",
+      "affiliate_amz": "",
       "source": {
         "type": "manual"
       },
       "days_left": null,
       "api_url": "https://faltapoco.com.br/api/v1/games/decapolice.json",
       "page_url": "https://faltapoco.com.br/jogos/decapolice/",
-      "updated_at": "2026-03-15T15:39:14.859105+00:00"
+      "updated_at": "2026-03-17T02:02:28.873279+00:00"
     },
     {
       "slug": "divinity-new",
       "name": "Divinity",
       "release": "",
       "release_display": "Sem data confirmada",
+      "release_time": "",
+      "release_time_display": "",
       "status": "unknown",
       "confidence_date": "media",
       "developer": "",
@@ -1022,19 +1192,24 @@
       "video": null,
       "news": [],
       "reviews": [],
+      "sys_req": {},
+      "affiliate_ml": "",
+      "affiliate_amz": "",
       "source": {
         "type": "manual"
       },
       "days_left": null,
       "api_url": "https://faltapoco.com.br/api/v1/games/divinity-new.json",
       "page_url": "https://faltapoco.com.br/jogos/divinity-new/",
-      "updated_at": "2026-03-15T15:39:14.836449+00:00"
+      "updated_at": "2026-03-17T02:02:26.582435+00:00"
     },
     {
       "slug": "fable-4",
       "name": "Fable 4",
       "release": "",
       "release_display": "Sem data confirmada",
+      "release_time": "",
+      "release_time_display": "",
       "status": "window",
       "confidence_date": "media",
       "developer": "",
@@ -1060,19 +1235,24 @@
       },
       "news": [],
       "reviews": [],
+      "sys_req": {},
+      "affiliate_ml": "",
+      "affiliate_amz": "",
       "source": {
         "type": "manual"
       },
       "days_left": null,
       "api_url": "https://faltapoco.com.br/api/v1/games/fable-4.json",
       "page_url": "https://faltapoco.com.br/jogos/fable-4/",
-      "updated_at": "2026-03-15T15:39:14.821936+00:00"
+      "updated_at": "2026-03-17T02:02:26.086383+00:00"
     },
     {
       "slug": "fatekeeper",
       "name": "Fatekeeper",
       "release": "",
       "release_display": "Sem data confirmada",
+      "release_time": "",
+      "release_time_display": "",
       "status": "unknown",
       "confidence_date": "media",
       "developer": "",
@@ -1085,19 +1265,24 @@
       "video": null,
       "news": [],
       "reviews": [],
+      "sys_req": {},
+      "affiliate_ml": "",
+      "affiliate_amz": "",
       "source": {
         "type": "manual"
       },
       "days_left": null,
       "api_url": "https://faltapoco.com.br/api/v1/games/fatekeeper.json",
       "page_url": "https://faltapoco.com.br/jogos/fatekeeper/",
-      "updated_at": "2026-03-15T15:39:14.852731+00:00"
+      "updated_at": "2026-03-17T02:02:27.912935+00:00"
     },
     {
       "slug": "gang-of-dragon",
       "name": "Gang of Dragon",
       "release": "",
       "release_display": "Sem data confirmada",
+      "release_time": "",
+      "release_time_display": "",
       "status": "unknown",
       "confidence_date": "media",
       "developer": "",
@@ -1112,19 +1297,24 @@
       "video": null,
       "news": [],
       "reviews": [],
+      "sys_req": {},
+      "affiliate_ml": "",
+      "affiliate_amz": "",
       "source": {
         "type": "manual"
       },
       "days_left": null,
       "api_url": "https://faltapoco.com.br/api/v1/games/gang-of-dragon.json",
       "page_url": "https://faltapoco.com.br/jogos/gang-of-dragon/",
-      "updated_at": "2026-03-15T15:39:14.841993+00:00"
+      "updated_at": "2026-03-17T02:02:27.350891+00:00"
     },
     {
       "slug": "gears-of-war-eday",
       "name": "Gears of War: E-Day",
       "release": "",
       "release_display": "Sem data confirmada",
+      "release_time": "",
+      "release_time_display": "",
       "status": "unknown",
       "confidence_date": "media",
       "developer": "",
@@ -1149,19 +1339,24 @@
       },
       "news": [],
       "reviews": [],
+      "sys_req": {},
+      "affiliate_ml": "",
+      "affiliate_amz": "",
       "source": {
         "type": "manual"
       },
       "days_left": null,
       "api_url": "https://faltapoco.com.br/api/v1/games/gears-of-war-eday.json",
       "page_url": "https://faltapoco.com.br/jogos/gears-of-war-eday/",
-      "updated_at": "2026-03-15T15:39:14.825881+00:00"
+      "updated_at": "2026-03-17T02:02:26.090789+00:00"
     },
     {
       "slug": "halo-campaign-evolved",
       "name": "Halo Campaign Evolved",
       "release": "",
       "release_display": "Sem data confirmada",
+      "release_time": "",
+      "release_time_display": "",
       "status": "unknown",
       "confidence_date": "media",
       "developer": "",
@@ -1187,19 +1382,24 @@
       },
       "news": [],
       "reviews": [],
+      "sys_req": {},
+      "affiliate_ml": "",
+      "affiliate_amz": "",
       "source": {
         "type": "manual"
       },
       "days_left": null,
       "api_url": "https://faltapoco.com.br/api/v1/games/halo-campaign-evolved.json",
       "page_url": "https://faltapoco.com.br/jogos/halo-campaign-evolved/",
-      "updated_at": "2026-03-15T15:39:14.827123+00:00"
+      "updated_at": "2026-03-17T02:02:26.092403+00:00"
     },
     {
       "slug": "hell-let-loose-vietnam",
       "name": "Hell Let Loose: Vietnam",
       "release": "",
       "release_display": "Sem data confirmada",
+      "release_time": "",
+      "release_time_display": "",
       "status": "unknown",
       "confidence_date": "media",
       "developer": "",
@@ -1214,19 +1414,24 @@
       "video": null,
       "news": [],
       "reviews": [],
+      "sys_req": {},
+      "affiliate_ml": "",
+      "affiliate_amz": "",
       "source": {
         "type": "manual"
       },
       "days_left": null,
       "api_url": "https://faltapoco.com.br/api/v1/games/hell-let-loose-vietnam.json",
       "page_url": "https://faltapoco.com.br/jogos/hell-let-loose-vietnam/",
-      "updated_at": "2026-03-15T15:39:14.856562+00:00"
+      "updated_at": "2026-03-17T02:02:28.492723+00:00"
     },
     {
       "slug": "ill",
       "name": "ILL",
       "release": "",
       "release_display": "Sem data confirmada",
+      "release_time": "",
+      "release_time_display": "",
       "status": "unknown",
       "confidence_date": "media",
       "developer": "",
@@ -1250,19 +1455,24 @@
       },
       "news": [],
       "reviews": [],
+      "sys_req": {},
+      "affiliate_ml": "",
+      "affiliate_amz": "",
       "source": {
         "type": "manual"
       },
       "days_left": null,
       "api_url": "https://faltapoco.com.br/api/v1/games/ill.json",
       "page_url": "https://faltapoco.com.br/jogos/ill/",
-      "updated_at": "2026-03-15T15:39:14.832638+00:00"
+      "updated_at": "2026-03-17T02:02:26.097925+00:00"
     },
     {
       "slug": "lords-of-the-fallen-2",
       "name": "Lords of the Fallen 2",
       "release": "",
       "release_display": "Sem data confirmada",
+      "release_time": "",
+      "release_time_display": "",
       "status": "unknown",
       "confidence_date": "media",
       "developer": "",
@@ -1277,19 +1487,24 @@
       "video": null,
       "news": [],
       "reviews": [],
+      "sys_req": {},
+      "affiliate_ml": "",
+      "affiliate_amz": "",
       "source": {
         "type": "manual"
       },
       "days_left": null,
       "api_url": "https://faltapoco.com.br/api/v1/games/lords-of-the-fallen-2.json",
       "page_url": "https://faltapoco.com.br/jogos/lords-of-the-fallen-2/",
-      "updated_at": "2026-03-15T15:39:14.838137+00:00"
+      "updated_at": "2026-03-17T02:02:26.779775+00:00"
     },
     {
       "slug": "mudang-two-hearts",
       "name": "Mudang: Two Hearts",
       "release": "",
       "release_display": "Sem data confirmada",
+      "release_time": "",
+      "release_time_display": "",
       "status": "unknown",
       "confidence_date": "media",
       "developer": "",
@@ -1304,19 +1519,24 @@
       "video": null,
       "news": [],
       "reviews": [],
+      "sys_req": {},
+      "affiliate_ml": "",
+      "affiliate_amz": "",
       "source": {
         "type": "manual"
       },
       "days_left": null,
       "api_url": "https://faltapoco.com.br/api/v1/games/mudang-two-hearts.json",
       "page_url": "https://faltapoco.com.br/jogos/mudang-two-hearts/",
-      "updated_at": "2026-03-15T15:39:14.860309+00:00"
+      "updated_at": "2026-03-17T02:02:29.068920+00:00"
     },
     {
       "slug": "no-law",
       "name": "No Law",
       "release": "",
       "release_display": "Sem data confirmada",
+      "release_time": "",
+      "release_time_display": "",
       "status": "unknown",
       "confidence_date": "media",
       "developer": "",
@@ -1331,19 +1551,24 @@
       "video": null,
       "news": [],
       "reviews": [],
+      "sys_req": {},
+      "affiliate_ml": "",
+      "affiliate_amz": "",
       "source": {
         "type": "manual"
       },
       "days_left": null,
       "api_url": "https://faltapoco.com.br/api/v1/games/no-law.json",
       "page_url": "https://faltapoco.com.br/jogos/no-law/",
-      "updated_at": "2026-03-15T15:39:14.840713+00:00"
+      "updated_at": "2026-03-17T02:02:27.157152+00:00"
     },
     {
       "slug": "onimusha-way-of-the-sword",
       "name": "Onimusha: Way of the Sword",
       "release": "",
       "release_display": "Sem data confirmada",
+      "release_time": "",
+      "release_time_display": "",
       "status": "unknown",
       "confidence_date": "media",
       "developer": "",
@@ -1369,19 +1594,24 @@
       },
       "news": [],
       "reviews": [],
+      "sys_req": {},
+      "affiliate_ml": "",
+      "affiliate_amz": "",
       "source": {
         "type": "manual"
       },
       "days_left": null,
       "api_url": "https://faltapoco.com.br/api/v1/games/onimusha-way-of-the-sword.json",
       "page_url": "https://faltapoco.com.br/jogos/onimusha-way-of-the-sword/",
-      "updated_at": "2026-03-15T15:39:14.828703+00:00"
+      "updated_at": "2026-03-17T02:02:26.093851+00:00"
     },
     {
       "slug": "ontos",
       "name": "Ontos",
       "release": "",
       "release_display": "Sem data confirmada",
+      "release_time": "",
+      "release_time_display": "",
       "status": "unknown",
       "confidence_date": "media",
       "developer": "",
@@ -1396,19 +1626,24 @@
       "video": null,
       "news": [],
       "reviews": [],
+      "sys_req": {},
+      "affiliate_ml": "",
+      "affiliate_amz": "",
       "source": {
         "type": "manual"
       },
       "days_left": null,
       "api_url": "https://faltapoco.com.br/api/v1/games/ontos.json",
       "page_url": "https://faltapoco.com.br/jogos/ontos/",
-      "updated_at": "2026-03-15T15:39:14.851353+00:00"
+      "updated_at": "2026-03-17T02:02:27.727504+00:00"
     },
     {
       "slug": "orbitals",
       "name": "Orbitals",
       "release": "",
       "release_display": "Sem data confirmada",
+      "release_time": "",
+      "release_time_display": "",
       "status": "unknown",
       "confidence_date": "media",
       "developer": "",
@@ -1434,19 +1669,24 @@
       },
       "news": [],
       "reviews": [],
+      "sys_req": {},
+      "affiliate_ml": "",
+      "affiliate_amz": "",
       "source": {
         "type": "manual"
       },
       "days_left": null,
       "api_url": "https://faltapoco.com.br/api/v1/games/orbitals.json",
       "page_url": "https://faltapoco.com.br/jogos/orbitals/",
-      "updated_at": "2026-03-15T15:39:14.833934+00:00"
+      "updated_at": "2026-03-17T02:02:26.099554+00:00"
     },
     {
       "slug": "persona-4-revival",
       "name": "Persona 4 Revival",
       "release": "",
       "release_display": "Sem data confirmada",
+      "release_time": "",
+      "release_time_display": "",
       "status": "unknown",
       "confidence_date": "media",
       "developer": "",
@@ -1461,19 +1701,24 @@
       "video": null,
       "news": [],
       "reviews": [],
+      "sys_req": {},
+      "affiliate_ml": "",
+      "affiliate_amz": "",
       "source": {
         "type": "manual"
       },
       "days_left": null,
       "api_url": "https://faltapoco.com.br/api/v1/games/persona-4-revival.json",
       "page_url": "https://faltapoco.com.br/jogos/persona-4-revival/",
-      "updated_at": "2026-03-15T15:39:14.861563+00:00"
+      "updated_at": "2026-03-17T02:02:29.256260+00:00"
     },
     {
       "slug": "plague-tale-resonance",
       "name": "Resonance: A Plague Tale Legacy",
       "release": "",
       "release_display": "Sem data confirmada",
+      "release_time": "",
+      "release_time_display": "",
       "status": "unknown",
       "confidence_date": "media",
       "developer": "",
@@ -1488,19 +1733,24 @@
       "video": null,
       "news": [],
       "reviews": [],
+      "sys_req": {},
+      "affiliate_ml": "",
+      "affiliate_amz": "",
       "source": {
         "type": "manual"
       },
       "days_left": null,
       "api_url": "https://faltapoco.com.br/api/v1/games/plague-tale-resonance.json",
       "page_url": "https://faltapoco.com.br/jogos/plague-tale-resonance/",
-      "updated_at": "2026-03-15T15:39:14.854034+00:00"
+      "updated_at": "2026-03-17T02:02:28.107637+00:00"
     },
     {
       "slug": "star-wars-fate-old-republic",
       "name": "Star Wars: Fate of the Old Republic",
       "release": "",
       "release_display": "Sem data confirmada",
+      "release_time": "",
+      "release_time_display": "",
       "status": "unknown",
       "confidence_date": "media",
       "developer": "",
@@ -1515,19 +1765,24 @@
       "video": null,
       "news": [],
       "reviews": [],
+      "sys_req": {},
+      "affiliate_ml": "",
+      "affiliate_amz": "",
       "source": {
         "type": "manual"
       },
       "days_left": null,
       "api_url": "https://faltapoco.com.br/api/v1/games/star-wars-fate-old-republic.json",
       "page_url": "https://faltapoco.com.br/jogos/star-wars-fate-old-republic/",
-      "updated_at": "2026-03-15T15:39:14.835191+00:00"
+      "updated_at": "2026-03-17T02:02:26.391410+00:00"
     },
     {
       "slug": "stranger-than-heaven",
       "name": "Stranger Than Heaven",
       "release": "",
       "release_display": "Sem data confirmada",
+      "release_time": "",
+      "release_time_display": "",
       "status": "unknown",
       "confidence_date": "media",
       "developer": "",
@@ -1542,19 +1797,24 @@
       "video": null,
       "news": [],
       "reviews": [],
+      "sys_req": {},
+      "affiliate_ml": "",
+      "affiliate_amz": "",
       "source": {
         "type": "manual"
       },
       "days_left": null,
       "api_url": "https://faltapoco.com.br/api/v1/games/stranger-than-heaven.json",
       "page_url": "https://faltapoco.com.br/jogos/stranger-than-heaven/",
-      "updated_at": "2026-03-15T15:39:14.862798+00:00"
+      "updated_at": "2026-03-17T02:02:29.448029+00:00"
     },
     {
       "slug": "blood-of-dawnwalker",
       "name": "The Blood of Dawnwalker",
       "release": "",
       "release_display": "Sem data confirmada",
+      "release_time": "",
+      "release_time_display": "",
       "status": "unknown",
       "confidence_date": "media",
       "developer": "",
@@ -1569,19 +1829,24 @@
       "video": null,
       "news": [],
       "reviews": [],
+      "sys_req": {},
+      "affiliate_ml": "",
+      "affiliate_amz": "",
       "source": {
         "type": "manual"
       },
       "days_left": null,
       "api_url": "https://faltapoco.com.br/api/v1/games/blood-of-dawnwalker.json",
       "page_url": "https://faltapoco.com.br/jogos/blood-of-dawnwalker/",
-      "updated_at": "2026-03-15T15:39:14.867862+00:00"
+      "updated_at": "2026-03-17T02:02:30.200837+00:00"
     },
     {
       "slug": "the-god-slayer",
       "name": "The God Slayer",
       "release": "",
       "release_display": "Sem data confirmada",
+      "release_time": "",
+      "release_time_display": "",
       "status": "unknown",
       "confidence_date": "media",
       "developer": "",
@@ -1607,19 +1872,24 @@
       },
       "news": [],
       "reviews": [],
+      "sys_req": {},
+      "affiliate_ml": "",
+      "affiliate_amz": "",
       "source": {
         "type": "manual"
       },
       "days_left": null,
       "api_url": "https://faltapoco.com.br/api/v1/games/the-god-slayer.json",
       "page_url": "https://faltapoco.com.br/jogos/the-god-slayer/",
-      "updated_at": "2026-03-15T15:39:14.831359+00:00"
+      "updated_at": "2026-03-17T02:02:26.096527+00:00"
     },
     {
       "slug": "sinking-city-2",
       "name": "The Sinking City 2",
       "release": "",
       "release_display": "Sem data confirmada",
+      "release_time": "",
+      "release_time_display": "",
       "status": "unknown",
       "confidence_date": "media",
       "developer": "",
@@ -1634,19 +1904,24 @@
       "video": null,
       "news": [],
       "reviews": [],
+      "sys_req": {},
+      "affiliate_ml": "",
+      "affiliate_amz": "",
       "source": {
         "type": "manual"
       },
       "days_left": null,
       "api_url": "https://faltapoco.com.br/api/v1/games/sinking-city-2.json",
       "page_url": "https://faltapoco.com.br/jogos/sinking-city-2/",
-      "updated_at": "2026-03-15T15:39:14.864086+00:00"
+      "updated_at": "2026-03-17T02:02:29.636557+00:00"
     },
     {
       "slug": "tides-of-annihilation",
       "name": "Tides of Annihilation",
       "release": "",
       "release_display": "Sem data confirmada",
+      "release_time": "",
+      "release_time_display": "",
       "status": "unknown",
       "confidence_date": "media",
       "developer": "",
@@ -1661,19 +1936,24 @@
       "video": null,
       "news": [],
       "reviews": [],
+      "sys_req": {},
+      "affiliate_ml": "",
+      "affiliate_amz": "",
       "source": {
         "type": "manual"
       },
       "days_left": null,
       "api_url": "https://faltapoco.com.br/api/v1/games/tides-of-annihilation.json",
       "page_url": "https://faltapoco.com.br/jogos/tides-of-annihilation/",
-      "updated_at": "2026-03-15T15:39:14.866585+00:00"
+      "updated_at": "2026-03-17T02:02:30.022967+00:00"
     },
     {
       "slug": "tomb-raider-legend-of-atlantis",
       "name": "Tomb Raider: Legend of Atlantis",
       "release": "",
       "release_display": "Sem data confirmada",
+      "release_time": "",
+      "release_time_display": "",
       "status": "unknown",
       "confidence_date": "media",
       "developer": "",
@@ -1699,19 +1979,24 @@
       },
       "news": [],
       "reviews": [],
+      "sys_req": {},
+      "affiliate_ml": "",
+      "affiliate_amz": "",
       "source": {
         "type": "manual"
       },
       "days_left": null,
       "api_url": "https://faltapoco.com.br/api/v1/games/tomb-raider-legend-of-atlantis.json",
       "page_url": "https://faltapoco.com.br/jogos/tomb-raider-legend-of-atlantis/",
-      "updated_at": "2026-03-15T15:39:14.824530+00:00"
+      "updated_at": "2026-03-17T02:02:26.089025+00:00"
     },
     {
       "slug": "valor-mortis",
       "name": "Valor Mortis",
       "release": "",
       "release_display": "Sem data confirmada",
+      "release_time": "",
+      "release_time_display": "",
       "status": "unknown",
       "confidence_date": "media",
       "developer": "",
@@ -1726,13 +2011,16 @@
       "video": null,
       "news": [],
       "reviews": [],
+      "sys_req": {},
+      "affiliate_ml": "",
+      "affiliate_amz": "",
       "source": {
         "type": "manual"
       },
       "days_left": null,
       "api_url": "https://faltapoco.com.br/api/v1/games/valor-mortis.json",
       "page_url": "https://faltapoco.com.br/jogos/valor-mortis/",
-      "updated_at": "2026-03-15T15:39:14.865395+00:00"
+      "updated_at": "2026-03-17T02:02:29.825469+00:00"
     }
   ]
 }

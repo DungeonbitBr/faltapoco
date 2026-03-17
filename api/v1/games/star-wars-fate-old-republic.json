@@ -3,6 +3,8 @@
   "name": "Star Wars: Fate of the Old Republic",
   "release": "",
   "release_display": "Sem data confirmada",
+  "release_time": "",
+  "release_time_display": "",
   "status": "unknown",
   "confidence_date": "media",
   "developer": "",
@@ -17,11 +19,14 @@
   "video": null,
   "news": [],
   "reviews": [],
+  "sys_req": {},
+  "affiliate_ml": "",
+  "affiliate_amz": "",
   "source": {
     "type": "manual"
   },
   "days_left": null,
   "api_url": "https://faltapoco.com.br/api/v1/games/star-wars-fate-old-republic.json",
   "page_url": "https://faltapoco.com.br/jogos/star-wars-fate-old-republic/",
-  "updated_at": "2026-03-15T15:39:14.835191+00:00"
+  "updated_at": "2026-03-17T02:02:26.391410+00:00"
 }

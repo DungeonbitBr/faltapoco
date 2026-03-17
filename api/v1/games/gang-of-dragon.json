@@ -3,6 +3,8 @@
   "name": "Gang of Dragon",
   "release": "",
   "release_display": "Sem data confirmada",
+  "release_time": "",
+  "release_time_display": "",
   "status": "unknown",
   "confidence_date": "media",
   "developer": "",
@@ -17,11 +19,14 @@
   "video": null,
   "news": [],
   "reviews": [],
+  "sys_req": {},
+  "affiliate_ml": "",
+  "affiliate_amz": "",
   "source": {
     "type": "manual"
   },
   "days_left": null,
   "api_url": "https://faltapoco.com.br/api/v1/games/gang-of-dragon.json",
   "page_url": "https://faltapoco.com.br/jogos/gang-of-dragon/",
-  "updated_at": "2026-03-15T15:39:14.841993+00:00"
+  "updated_at": "2026-03-17T02:02:27.350891+00:00"
 }
