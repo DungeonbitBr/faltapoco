@@ -1,0 +1,680 @@
+{
+  "games": [
+    {
+      "name": "Resident Evil Requiem",
+      "slug": "resident-evil-requiem",
+      "release_date": "2026-02-27",
+      "status": "released",
+      "platforms": [
+        "PS5",
+        "Xbox Series X|S",
+        "PC",
+        "Switch 2"
+      ],
+      "video_id": "H7w9wKigMw",
+      "background_image": "bg.jpg"
+    },
+    {
+      "name": "Nioh 3",
+      "slug": "nioh-3",
+      "release_date": "2026-02-06",
+      "status": "released",
+      "platforms": [
+        "PS5",
+        "PC"
+      ],
+      "video_id": "30C75tjO3ms",
+      "background_image": "bg.jpg"
+    },
+    {
+      "name": "Reanimal",
+      "slug": "reanimal",
+      "release_date": "2026-02-13",
+      "status": "released",
+      "platforms": [
+        "PS5",
+        "Xbox Series X|S",
+        "PC",
+        "Switch 2"
+      ],
+      "video_id": "wjFCUNXkybw",
+      "background_image": "bg.jpg"
+    },
+    {
+      "name": "I Hate This Place",
+      "slug": "i-hate-this-place",
+      "release_date": "2026-01-29",
+      "status": "released",
+      "platforms": [
+        "PS5",
+        "Xbox Series X|S",
+        "PC"
+      ],
+      "video_id": "CQcDgJoXUXs",
+      "background_image": "bg.jpg"
+    },
+    {
+      "name": "The Legend of Khiimori",
+      "slug": "legend-of-khiimori",
+      "release_date": "2026-03-03",
+      "status": "released",
+      "platforms": [
+        "PC"
+      ],
+      "video_id": "Yo89FHLahQE",
+      "background_image": "bg.jpg"
+    },
+    {
+      "name": "Hordes of Hunger",
+      "slug": "hordes-of-hunger",
+      "release_date": "2026-02-12",
+      "status": "released",
+      "platforms": [
+        "PC"
+      ],
+      "video_id": "uwhvctNNwtY",
+      "background_image": "bg.jpg"
+    },
+    {
+      "name": "Solasta 2",
+      "slug": "solasta-2",
+      "release_date": "2026-03-12",
+      "status": "released",
+      "platforms": [
+        "PC"
+      ],
+      "video_id": "yFWkOnzGZCA",
+      "background_image": "bg.jpg"
+    },
+    {
+      "name": "Toxic Commando",
+      "slug": "toxic-commando",
+      "release_date": "2026-03-12",
+      "status": "released",
+      "platforms": [
+        "PS5",
+        "Xbox Series X|S",
+        "PC"
+      ],
+      "video_id": "y9CBXLVSLB4",
+      "background_image": "bg.jpg"
+    },
+    {
+      "name": "Marathon",
+      "slug": "marathon-2026",
+      "release_date": "2026-03-05",
+      "status": "released",
+      "platforms": [
+        "PS5",
+        "Xbox Series X|S",
+        "PC"
+      ],
+      "video_id": "hWwXSb7dlnQ",
+      "background_image": "bg.jpg"
+    },
+    {
+      "name": "Fatal Frame II Remake",
+      "slug": "fatal-frame-2-remake",
+      "release_date": "2026-03-12",
+      "status": "released",
+      "platforms": [
+        "PS5",
+        "Xbox Series X|S",
+        "PC",
+        "Switch 2"
+      ],
+      "video_id": "V4Xee9SWoiM",
+      "background_image": "bg.jpg"
+    },
+    {
+      "name": "Crimson Desert",
+      "slug": "crimson-desert",
+      "release_date": "2026-03-19",
+      "status": "confirmed",
+      "platforms": [
+        "PS5",
+        "Xbox Series X|S",
+        "PC"
+      ],
+      "video_id": "VWIw_f8e9Pg",
+      "background_image": "bg.jpg",
+      "release_time": "19:00",
+      "sys_req": {
+        "minimum": {
+          "performance": "1080p (upscaling de 900p) 30 FPS",
+          "gpu": "AMD Radeon RX 5500 XT / NVIDIA GeForce GTX 1060",
+          "cpu": "AMD Ryzen 5 2600X / Intel Core i5-8500",
+          "ram": "16 GB",
+          "os": "Windows 10 64-bit 22H2 ou mais recente",
+          "storage": "150 GB SSD",
+          "directx": "DirectX 12"
+        },
+        "low": {
+          "performance": "1080p 30 FPS",
+          "gpu": "AMD Radeon RX 6500 XT / NVIDIA GeForce GTX 1660",
+          "cpu": "AMD Ryzen 5 2600X / Intel Core i5-8500"
+        },
+        "medium": {
+          "performance": "1080p 60 FPS / 4K 30 FPS",
+          "gpu": "AMD Radeon RX 6700 XT / NVIDIA GeForce RTX 2080",
+          "cpu": "AMD Ryzen 5 5600 / Intel Core i5-11600K"
+        },
+        "high": {
+          "performance": "1440p 60 FPS",
+          "gpu": "AMD Radeon RX 7700 XT / NVIDIA GeForce RTX 4070",
+          "cpu": "AMD Ryzen 5 7600X / Intel Core i5-12600K"
+        },
+        "ultra": {
+          "performance": "4K 60 FPS",
+          "gpu": "AMD Radeon RX 9070 XT / NVIDIA GeForce RTX 5070 Ti",
+          "cpu": "AMD Ryzen 7 7700X / Intel Core i5-13600K"
+        }
+      },
+      "affiliate_ml": "https://mercadolivre.com.br/afiliados/SEULINK",
+      "affiliate_amz": "https://amazon.com.br/afiliados/SEULINK"
+    },
+    {
+      "name": "Samson",
+      "slug": "samson",
+      "release_date": "2026-04-08",
+      "status": "confirmed",
+      "platforms": [
+        "PC"
+      ],
+      "video_id": "4Kj0VgwD4Mo",
+      "background_image": "bg.jpg"
+    },
+    {
+      "name": "Replaced",
+      "slug": "replaced",
+      "release_date": "2026-04-14",
+      "status": "confirmed",
+      "platforms": [
+        "Xbox Series X|S",
+        "PC"
+      ],
+      "video_id": "ADghaDOzbsk",
+      "background_image": "bg.jpg"
+    },
+    {
+      "name": "Mouse: PI for Hire",
+      "slug": "mouse-pi-for-hire",
+      "release_date": "2026-04-16",
+      "status": "confirmed",
+      "platforms": [
+        "PS5",
+        "Xbox Series X|S",
+        "PC",
+        "Switch 2"
+      ],
+      "video_id": "X20fYa7-XtE",
+      "background_image": "bg.jpg"
+    },
+    {
+      "name": "Pragmata",
+      "slug": "pragmata",
+      "release_date": "2026-04-17",
+      "status": "confirmed",
+      "platforms": [
+        "PS5",
+        "Xbox Series X|S",
+        "PC",
+        "Switch 2"
+      ],
+      "video_id": "C6tqmUCslo4",
+      "background_image": "bg.jpg"
+    },
+    {
+      "name": "Saros",
+      "slug": "saros",
+      "release_date": "2026-04-30",
+      "status": "confirmed",
+      "platforms": [
+        "PS5"
+      ],
+      "video_id": "rK4W-hBrSZs",
+      "background_image": "bg.jpg"
+    },
+    {
+      "name": "007 First Light",
+      "slug": "007-first-light",
+      "release_date": "2026-05-27",
+      "status": "confirmed",
+      "platforms": [
+        "PS5",
+        "Xbox Series X|S",
+        "PC",
+        "Switch 2"
+      ],
+      "video_id": "03dh9Y0wtnY",
+      "background_image": "bg.jpg"
+    },
+    {
+      "name": "Beast of Reincarnation",
+      "slug": "beast-of-reincarnation",
+      "release_date": "2026-08-04",
+      "status": "confirmed",
+      "platforms": [
+        "PS5",
+        "Xbox Series X|S",
+        "PC"
+      ],
+      "video_id": "5v_4nnrBqSo",
+      "background_image": "bg.jpg"
+    },
+    {
+      "name": "Phantom Blade Zero",
+      "slug": "phantom-blade-zero",
+      "release_date": "2026-09-09",
+      "status": "confirmed",
+      "platforms": [
+        "PS5",
+        "PC"
+      ],
+      "video_id": "v432HBr6lgU",
+      "background_image": "bg.jpg"
+    },
+    {
+      "name": "Marvel's Wolverine",
+      "slug": "marvel-wolverine",
+      "release_date": "2026-09-15",
+      "status": "confirmed",
+      "platforms": [
+        "PS5"
+      ],
+      "video_id": "BMU9iACrRO8",
+      "background_image": "bg.jpg"
+    },
+    {
+      "name": "Grand Theft Auto VI",
+      "slug": "gta-6",
+      "release_date": "2026-11-19",
+      "status": "confirmed",
+      "platforms": [
+        "PS5",
+        "Xbox Series X|S"
+      ],
+      "video_id": "QdBZExpgErs",
+      "background_image": "bg.jpg",
+      "developer": "Rockstar Games",
+      "publisher": "Rockstar Games",
+      "description": "Grand Theft Auto VI é o mais novo capítulo da aclamada franquia da Rockstar Games. Ambientado em Leonida, o estado ficcional que engloba Vice City e arredores, o jogo promete ser a experiência open-world mais ambiciosa já criada, com uma protagonista feminina pela primeira vez na série principal.",
+      "release_time": "00:01",
+      "affiliate_ml": "https://mercadolivre.com.br/afiliados/SEULINK",
+      "affiliate_amz": "https://amazon.com.br/afiliados/SEULINK"
+    },
+    {
+      "name": "Fable 4",
+      "slug": "fable-4",
+      "release_date": null,
+      "status": "window",
+      "platforms": [
+        "PS5",
+        "Xbox Series X|S",
+        "PC"
+      ],
+      "video_id": "yPSVHiMP-cc",
+      "background_image": "bg.jpg"
+    },
+    {
+      "name": "Control Resonant",
+      "slug": "control-resonant",
+      "release_date": null,
+      "status": "unknown",
+      "platforms": [
+        "PS5",
+        "Xbox Series X|S",
+        "PC"
+      ],
+      "video_id": "ZYUcFbVa23U",
+      "background_image": "bg.jpg"
+    },
+    {
+      "name": "Tomb Raider: Legend of Atlantis",
+      "slug": "tomb-raider-legend-of-atlantis",
+      "release_date": null,
+      "status": "unknown",
+      "platforms": [
+        "PS5",
+        "Xbox Series X|S",
+        "PC"
+      ],
+      "video_id": "n6JxVxSHjqE",
+      "background_image": "bg.jpg"
+    },
+    {
+      "name": "Gears of War: E-Day",
+      "slug": "gears-of-war-eday",
+      "release_date": null,
+      "status": "unknown",
+      "platforms": [
+        "Xbox Series X|S",
+        "PC"
+      ],
+      "video_id": "SZVXsNVCGGY",
+      "background_image": "bg.jpg"
+    },
+    {
+      "name": "Halo Campaign Evolved",
+      "slug": "halo-campaign-evolved",
+      "release_date": null,
+      "status": "unknown",
+      "platforms": [
+        "PS5",
+        "Xbox Series X|S",
+        "PC"
+      ],
+      "video_id": "X20fYa7-XtE",
+      "background_image": "bg.jpg"
+    },
+    {
+      "name": "Onimusha: Way of the Sword",
+      "slug": "onimusha-way-of-the-sword",
+      "release_date": null,
+      "status": "unknown",
+      "platforms": [
+        "PS5",
+        "Xbox Series X|S",
+        "PC"
+      ],
+      "video_id": "83jOJWyE-eY",
+      "background_image": "bg.jpg"
+    },
+    {
+      "name": "Atomic Heart 2",
+      "slug": "atomic-heart-2",
+      "release_date": null,
+      "status": "unknown",
+      "platforms": [
+        "PS5",
+        "Xbox Series X|S",
+        "PC"
+      ],
+      "video_id": "syDwTgJqSZo",
+      "background_image": "bg.jpg"
+    },
+    {
+      "name": "The God Slayer",
+      "slug": "the-god-slayer",
+      "release_date": null,
+      "status": "unknown",
+      "platforms": [
+        "PS5",
+        "Xbox Series X|S",
+        "PC"
+      ],
+      "video_id": "KKzVxkTCsmI",
+      "background_image": "bg.jpg"
+    },
+    {
+      "name": "ILL",
+      "slug": "ill",
+      "release_date": null,
+      "status": "unknown",
+      "platforms": [
+        "PC"
+      ],
+      "video_id": "9dBzQfoU_eA",
+      "background_image": "bg.jpg"
+    },
+    {
+      "name": "Orbitals",
+      "slug": "orbitals",
+      "release_date": null,
+      "status": "unknown",
+      "platforms": [
+        "PS5",
+        "Xbox Series X|S",
+        "PC"
+      ],
+      "video_id": "bvMDXtgz1bo",
+      "background_image": "bg.jpg"
+    },
+    {
+      "name": "Star Wars: Fate of the Old Republic",
+      "slug": "star-wars-fate-old-republic",
+      "release_date": null,
+      "status": "unknown",
+      "platforms": [
+        "PS5",
+        "Xbox Series X|S",
+        "PC"
+      ],
+      "background_image": "bg.jpg"
+    },
+    {
+      "name": "Divinity",
+      "slug": "divinity-new",
+      "release_date": null,
+      "status": "unknown",
+      "platforms": [
+        "PS5",
+        "Xbox Series X|S",
+        "PC"
+      ],
+      "background_image": "bg.jpg"
+    },
+    {
+      "name": "Lords of the Fallen 2",
+      "slug": "lords-of-the-fallen-2",
+      "release_date": null,
+      "status": "unknown",
+      "platforms": [
+        "PS5",
+        "Xbox Series X|S",
+        "PC"
+      ],
+      "background_image": "bg.jpg"
+    },
+    {
+      "name": "Ace Combat 8: Wings of the Raven",
+      "slug": "ace-combat-8",
+      "release_date": null,
+      "status": "unknown",
+      "platforms": [
+        "PS5",
+        "Xbox Series X|S",
+        "PC"
+      ],
+      "background_image": "bg.jpg"
+    },
+    {
+      "name": "No Law",
+      "slug": "no-law",
+      "release_date": null,
+      "status": "unknown",
+      "platforms": [
+        "PS5",
+        "Xbox Series X|S",
+        "PC"
+      ],
+      "background_image": "bg.jpg"
+    },
+    {
+      "name": "Gang of Dragon",
+      "slug": "gang-of-dragon",
+      "release_date": null,
+      "status": "unknown",
+      "platforms": [
+        "PS5",
+        "Xbox Series X|S",
+        "PC"
+      ],
+      "background_image": "bg.jpg"
+    },
+    {
+      "name": "Blood Message",
+      "slug": "blood-message",
+      "release_date": null,
+      "status": "unknown",
+      "platforms": [
+        "PS5",
+        "Xbox Series X|S",
+        "PC"
+      ],
+      "background_image": "bg.jpg"
+    },
+    {
+      "name": "Ontos",
+      "slug": "ontos",
+      "release_date": null,
+      "status": "unknown",
+      "platforms": [
+        "PS5",
+        "Xbox Series X|S",
+        "PC"
+      ],
+      "background_image": "bg.jpg"
+    },
+    {
+      "name": "Fatekeeper",
+      "slug": "fatekeeper",
+      "release_date": null,
+      "status": "unknown",
+      "platforms": [
+        "PC"
+      ],
+      "background_image": "bg.jpg"
+    },
+    {
+      "name": "Resonance: A Plague Tale Legacy",
+      "slug": "plague-tale-resonance",
+      "release_date": null,
+      "status": "unknown",
+      "platforms": [
+        "PS5",
+        "Xbox Series X|S",
+        "PC"
+      ],
+      "background_image": "bg.jpg"
+    },
+    {
+      "name": "Chronicles: Medieval",
+      "slug": "chronicles-medieval",
+      "release_date": null,
+      "status": "unknown",
+      "platforms": [
+        "PC"
+      ],
+      "background_image": "bg.jpg"
+    },
+    {
+      "name": "Hell Let Loose: Vietnam",
+      "slug": "hell-let-loose-vietnam",
+      "release_date": null,
+      "status": "unknown",
+      "platforms": [
+        "PS5",
+        "Xbox Series X|S",
+        "PC"
+      ],
+      "background_image": "bg.jpg"
+    },
+    {
+      "name": "Animal Use Protocol",
+      "slug": "animal-use-protocol",
+      "release_date": null,
+      "status": "unknown",
+      "platforms": [
+        "PC"
+      ],
+      "background_image": "bg.jpg"
+    },
+    {
+      "name": "Decapolice",
+      "slug": "decapolice",
+      "release_date": null,
+      "status": "unknown",
+      "platforms": [
+        "PS5",
+        "Xbox Series X|S",
+        "PC"
+      ],
+      "background_image": "bg.jpg"
+    },
+    {
+      "name": "Mudang: Two Hearts",
+      "slug": "mudang-two-hearts",
+      "release_date": null,
+      "status": "unknown",
+      "platforms": [
+        "PS5",
+        "Xbox Series X|S",
+        "PC"
+      ],
+      "background_image": "bg.jpg"
+    },
+    {
+      "name": "Persona 4 Revival",
+      "slug": "persona-4-revival",
+      "release_date": null,
+      "status": "unknown",
+      "platforms": [
+        "PS5",
+        "Xbox Series X|S",
+        "PC"
+      ],
+      "background_image": "bg.jpg"
+    },
+    {
+      "name": "Stranger Than Heaven",
+      "slug": "stranger-than-heaven",
+      "release_date": null,
+      "status": "unknown",
+      "platforms": [
+        "PS5",
+        "Xbox Series X|S",
+        "PC"
+      ],
+      "background_image": "bg.jpg"
+    },
+    {
+      "name": "The Sinking City 2",
+      "slug": "sinking-city-2",
+      "release_date": null,
+      "status": "unknown",
+      "platforms": [
+        "PS5",
+        "Xbox Series X|S",
+        "PC"
+      ],
+      "background_image": "bg.jpg"
+    },
+    {
+      "name": "Valor Mortis",
+      "slug": "valor-mortis",
+      "release_date": null,
+      "status": "unknown",
+      "platforms": [
+        "PS5",
+        "Xbox Series X|S",
+        "PC"
+      ],
+      "background_image": "bg.jpg"
+    },
+    {
+      "name": "Tides of Annihilation",
+      "slug": "tides-of-annihilation",
+      "release_date": null,
+      "status": "unknown",
+      "platforms": [
+        "PS5",
+        "Xbox Series X|S",
+        "PC"
+      ],
+      "background_image": "bg.jpg"
+    },
+    {
+      "name": "The Blood of Dawnwalker",
+      "slug": "blood-of-dawnwalker",
+      "release_date": null,
+      "status": "unknown",
+      "platforms": [
+        "PS5",
+        "Xbox Series X|S",
+        "PC"
+      ],
+      "background_image": "bg.jpg"
+    }
+  ]
+}
