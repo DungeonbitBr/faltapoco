@@ -145,6 +145,62 @@ def safe_json_load(path: Path) -> Any:
         return json.load(f)
 
 
+# ── Detecção de mudanças (updated_at real por jogo) ──────────────────────────
+# Campos que, se mudarem, significam que o jogo foi "atualizado de verdade".
+# Campos derivados (days_left, updated_at, api_url...) ficam de fora de propósito.
+CHANGE_FIELDS = [
+    "name", "release", "release_time", "status", "confidence_date",
+    "developer", "publisher", "platforms", "background_image", "description",
+    "news", "reviews", "sys_req", "affiliate_ml", "affiliate_amz",
+    "priority", "event", "announcement_type", "release_window_raw",
+    "premium", "story", "context", "seo_text", "confirmed_features",
+    "related_games",
+]
+
+
+def change_signature(game_dict: Dict[str, Any]) -> str:
+    """Assinatura estável dos campos relevantes de um jogo, para comparação entre builds."""
+    sig = {}
+    for field in CHANGE_FIELDS:
+        sig[field] = game_dict.get(field)
+    video = game_dict.get("video")
+    sig["video_id"] = (video or {}).get("video_id", "") if isinstance(video, dict) else ""
+    return json.dumps(sig, ensure_ascii=False, sort_keys=True)
+
+
+def load_previous_build() -> Dict[str, Dict[str, Any]]:
+    """Carrega o games.json do build anterior para preservar updated_at de jogos sem mudança.
+
+    Ordem de tentativa:
+      1. FALTAPOCO_PREVIOUS (path local ou URL) — útil para testes e overrides
+      2. {BASE_URL}/api/v1/games.json — o que está publicado no ar
+    Se nada funcionar (ex: primeiro deploy), retorna {} e todos os jogos ganham updated_at de agora.
+    """
+    candidates: List[str] = []
+    override = os.getenv("FALTAPOCO_PREVIOUS", "").strip()
+    if override:
+        candidates.append(override)
+    candidates.append(f"{BASE_URL}/api/v1/games.json")
+
+    for candidate in candidates:
+        try:
+            if candidate.startswith(("http://", "https://")):
+                r = requests.get(candidate, timeout=20)
+                r.raise_for_status()
+                data = r.json()
+            else:
+                data = safe_json_load(Path(candidate))
+            games = data.get("games", []) if isinstance(data, dict) else data
+            prev = {g["slug"]: g for g in games if isinstance(g, dict) and g.get("slug")}
+            if prev:
+                print(f"[INFO] Build anterior carregado de {candidate} ({len(prev)} jogos)")
+                return prev
+        except Exception as e:
+            print(f"[WARN] Não foi possível carregar build anterior de {candidate}: {e}")
+    print("[WARN] Nenhum build anterior encontrado — todos os jogos terão updated_at de agora.")
+    return {}
+
+
 @dataclass
 class TrailerInfo:
     video_id: str
@@ -466,7 +522,7 @@ def render_json_ld(game: GameRecord) -> str:
         "datePublished": release_iso or None,
         "gamePlatform": game.platforms or None,
         "applicationCategory": "Game",
-        "operatingSystem": "PlayStation 5, Xbox Series X|S, PC, Nintendo Switch 2" if game.platforms else None,
+        "operatingSystem": ", ".join(game.platforms) if game.platforms else None,
         "trailer": {
             "@type": "VideoObject",
             "name": f"Trailer oficial de {game.name}",
@@ -478,17 +534,22 @@ def render_json_ld(game: GameRecord) -> str:
             "@type": "WatchAction",
             "target": game.video.url,
         } if game.video else None,
-        # BreadcrumbList para navegação
-        "breadcrumb": {
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-                {"@type": "ListItem", "position": 1, "name": "FaltaPouco", "item": BASE_URL},
-                {"@type": "ListItem", "position": 2, "name": "Jogos", "item": f"{BASE_URL}/jogos/"},
-                {"@type": "ListItem", "position": 3, "name": game.name, "item": game.page_url},
-            ]
-        },
     }
     payload = {k: v for k, v in payload.items() if v not in (None, "", [])}
+    return json.dumps(payload, ensure_ascii=False, indent=None)
+
+
+def render_breadcrumb_jsonld(game: GameRecord) -> str:
+    """BreadcrumbList separado — Google não reconhece 'breadcrumb' como propriedade de VideoGame."""
+    payload = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "FaltaPouco", "item": BASE_URL},
+            {"@type": "ListItem", "position": 2, "name": "Jogos", "item": f"{BASE_URL}/jogos/"},
+            {"@type": "ListItem", "position": 3, "name": game.name, "item": game.page_url},
+        ]
+    }
     return json.dumps(payload, ensure_ascii=False, indent=None)
 
 
@@ -701,7 +762,7 @@ def html_page(game: GameRecord, all_games: Optional[List["GameRecord"]] = None) 
         announced_js = f"new Date({int(y)-1}, {int(m)-1}, {int(d)}, 0, 0, 0)"
 
     # --- background: bg.jpg fica em jogos/<slug>/bg.jpg, mesma pasta do index.html ---
-    bg_html = '<img src="bg.jpg" alt="" onerror="this.style.display=\'none\'">' if game.background_image else ''
+    bg_html = f'<img src="bg.jpg" alt="Capa de {html.escape(game.name)}" onerror="this.style.display=\'none\'">' if game.background_image else ''
 
     # --- video embed ---
     video_block = ""
@@ -885,6 +946,7 @@ def html_page(game: GameRecord, all_games: Optional[List["GameRecord"]] = None) 
 
     # --- JSON-LD ---
     json_ld = render_json_ld(game)
+    breadcrumb_ld = render_breadcrumb_jsonld(game)
 
     return f"""<!DOCTYPE html>
 <html lang="pt-BR">
@@ -914,6 +976,7 @@ def html_page(game: GameRecord, all_games: Optional[List["GameRecord"]] = None) 
 <meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="alternate" type="application/json" href="{html.escape(game.api_url)}">
 <script type="application/ld+json">{json_ld}</script>
+<script type="application/ld+json">{breadcrumb_ld}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;0,700;1,300&family=Sora:wght@300;400;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -2747,11 +2810,8 @@ def render_home(games: List[GameRecord]) -> str:
 </html>"""
 
 
-def render_sitemap(urls: List[str]) -> str:
-    items = []
-    today = date.today().isoformat()
-    for url in urls:
-        items.append(f"<url><loc>{html.escape(url)}</loc><lastmod>{today}</lastmod></url>")
+def render_sitemap(entries: List[Tuple[str, str]]) -> str:
+    items = [f"<url><loc>{html.escape(u)}</loc><lastmod>{lm}</lastmod></url>" for u, lm in entries]
     return "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n" + "\n".join(items) + "\n</urlset>\n"
 
 
@@ -2791,6 +2851,7 @@ def build_site(input_path: Path) -> None:
     raw_games = [normalize_raw_game(g) for g in raw_games]
 
     youtube = YouTubeClient(YOUTUBE_API_KEY) if YOUTUBE_API_KEY else None
+    previous_games = load_previous_build()
 
     jogos_dir = OUTPUT_DIR / "jogos"
     api_games_dir = OUTPUT_DIR / "api" / "v1" / "games"
@@ -2801,6 +2862,14 @@ def build_site(input_path: Path) -> None:
     for raw in raw_games:
         print(f"[INFO] Processando {raw.get('name')}")
         game = build_game_record(raw, youtube)
+
+        # Preserva updated_at do build anterior se nada relevante mudou
+        prev = previous_games.get(game.slug)
+        if prev and prev.get("updated_at"):
+            if change_signature(asdict(game)) == change_signature(prev):
+                game.updated_at = prev["updated_at"]
+            else:
+                print(f"[INFO]   └─ mudança detectada em '{game.name}' — updated_at renovado")
 
         game_dir = jogos_dir / game.slug
         ensure_dir(game_dir)
@@ -2840,9 +2909,11 @@ def build_site(input_path: Path) -> None:
 
     (OUTPUT_DIR / "index.html").write_text(render_home(built_sorted), encoding="utf-8")
 
-    urls = [f"{BASE_URL}/", f"{BASE_URL}/api/v1/games.json"]
-    urls.extend(g.page_url for g in built_sorted)
-    urls.extend(g.api_url for g in built_sorted)
+    today = date.today().isoformat()
+    sitemap_entries: List[Tuple[str, str]] = [(f"{BASE_URL}/", today)]
+    sitemap_entries.extend((g.page_url, (g.updated_at or today)[:10]) for g in built_sorted)
+    # Nota: URLs de /api/v1/*.json foram removidas do sitemap de propósito —
+    # são endpoints de dados, não páginas de conteúdo pra indexar como resultado de busca.
     # ── Páginas de evento (events_input.json) ─────────────────────────────
     events_path = Path(os.getenv("FALTAPOCO_EVENTS", "events_input.json"))
     if events_path.exists():
@@ -2857,12 +2928,12 @@ def build_site(input_path: Path) -> None:
                 ensure_dir(evt_dir)
                 evt_html = render_event_page(evt, built_sorted)
                 (evt_dir / "index.html").write_text(evt_html, encoding="utf-8")
-                urls.append(f"{BASE_URL}/{evt_slug}/")
+                sitemap_entries.append((f"{BASE_URL}/{evt_slug}/", today))
                 print(f"[INFO] Evento gerado: /{evt_slug}/")
         except Exception as e:
             print(f"[WARN] Erro ao gerar eventos: {e}")
 
-    (OUTPUT_DIR / "sitemap.xml").write_text(render_sitemap(urls), encoding="utf-8")
+    (OUTPUT_DIR / "sitemap.xml").write_text(render_sitemap(sitemap_entries), encoding="utf-8")
     (OUTPUT_DIR / "robots.txt").write_text(render_robots(), encoding="utf-8")
 
     print(f"[OK] Build concluído em {OUTPUT_DIR.resolve()}")
