@@ -1,0 +1,57 @@
+# .github/workflows/monitor.yml
+# Radar automático: roda 2x por dia, procura novidades de lançamentos e,
+# se houver mudanças no games_input.json, abre um Pull Request para você revisar.
+# O merge do PR dispara o deploy.yml existente (que observa games_input.json).
+#
+# Requisitos no repositório:
+#   1. Secret YOUTUBE_API_KEY (já existe, usado pelo build)
+#   2. Secret ANTHROPIC_API_KEY (OPCIONAL — liga a extração de jogos novos via IA)
+#   3. Settings → Actions → General → "Allow GitHub Actions to create and
+#      approve pull requests" precisa estar MARCADO.
+
+name: Radar de Lançamentos
+
+on:
+  schedule:
+    - cron: '30 11 * * *'   # 08:30 Brasília
+    - cron: '30 22 * * *'   # 19:30 Brasília
+  workflow_dispatch:         # permite rodar manualmente na aba Actions
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; else pip install requests; fi
+
+      - name: Rodar radar
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python monitor_lancamentos.py
+
+      - name: Abrir Pull Request se houver novidades
+        uses: peter-evans/create-pull-request@v6
+        with:
+          add-paths: games_input.json
+          branch: radar/atualizacoes
+          delete-branch: true
+          commit-message: "radar: atualizações automáticas de lançamentos"
+          title: "🤖 Radar: novidades de lançamentos"
+          body-path: monitor_report.md
+          labels: radar
