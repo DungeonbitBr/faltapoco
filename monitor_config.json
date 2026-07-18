@@ -1,0 +1,10 @@
+{
+  "youtube_channels": ["@Xbox", "@PlayStation", "@RockstarGames", "@NintendoAmerica"],
+  "rss_feeds": [
+    "https://www.eurogamer.net/feed",
+    "https://www.gamespot.com/feeds/game-news/",
+    "https://www.pcgamer.com/rss/"
+  ],
+  "max_videos_per_channel": 15,
+  "max_items_per_feed": 30
+}
