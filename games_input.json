@@ -1094,5 +1094,94 @@
       "news": [],
       "reviews": []
     }
-  ]
+  [
+  {
+    "name": "Tales of Seikyu",
+    "slug": "tales-of-seikyu",
+    "release_date": "2026-06-11",
+    "status": "released",
+    "platforms": [
+      "PC"
+    ],
+    "video_id": "",
+    "background_image": ""
+  },
+  {
+    "name": "Deer & Boy",
+    "slug": "deer-and-boy",
+    "release_date": "2026-06-23",
+    "status": "released",
+    "platforms": [
+      "PC",
+      "Switch 2",
+      "PS5"
+    ],
+    "video_id": "",
+    "background_image": ""
+  },
+  {
+    "name": "Memento",
+    "slug": "memento",
+    "release_date": "2026-06-30",
+    "status": "released",
+    "platforms": [
+      "PC",
+      "PS5",
+      "Xbox Series X|S",
+      "Switch 2"
+    ],
+    "video_id": "",
+    "background_image": ""
+  },
+  {
+    "name": "Cozy Grove: Camp Spirit",
+    "slug": "cozy-grove-camp-spirit",
+    "release_date": "2026-07-15",
+    "status": "confirmed",
+    "platforms": [
+      "PC",
+      "PS5",
+      "Xbox Series X|S",
+      "Switch 2"
+    ],
+    "video_id": "",
+    "background_image": ""
+  },
+  {
+    "name": "Go-Go Town!",
+    "slug": "go-go-town",
+    "release_date": "2026-07-16",
+    "status": "confirmed",
+    "platforms": [
+      "PC",
+      "Switch 2"
+    ],
+    "video_id": "",
+    "background_image": ""
+  },
+  {
+    "name": "Fields of Mistria",
+    "slug": "fields-of-mistria",
+    "release_date": "2026-08-05",
+    "status": "confirmed",
+    "platforms": [
+      "PC"
+    ],
+    "video_id": "",
+    "background_image": ""
+  },
+  {
+    "name": "Planet Zoo 2",
+    "slug": "planet-zoo-2",
+    "release_date": "2026-10-13",
+    "status": "confirmed",
+    "platforms": [
+      "PC",
+      "PS5",
+      "Xbox Series X|S"
+    ],
+    "video_id": "",
+    "background_image": ""
+  }
+]
 }
