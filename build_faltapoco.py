@@ -19,6 +19,13 @@ except ImportError:
 
 BASE_URL = os.getenv("FALTAPOCO_BASE_URL", "https://faltapoco.com.br").rstrip("/")
 YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY", "").strip()
+
+def json_for_script(value: Any) -> str:
+    """json.dumps seguro para embutir dentro de <script>: escapa </ para <\\/
+    impedindo que conteúdo malicioso feche a tag de script (XSS)."""
+    return json.dumps(value, ensure_ascii=False).replace("</", "<\\/")
+
+
 DEFAULT_INPUT = os.getenv("FALTAPOCO_INPUT", "games_input.json")
 OUTPUT_DIR = Path(os.getenv("FALTAPOCO_OUTPUT", "site_build"))
 ANNOUNCEMENT_START = os.getenv("FALTAPOCO_ANNOUNCEMENT_START", "2023-01-01")
@@ -151,7 +158,7 @@ def safe_json_load(path: Path) -> Any:
 CHANGE_FIELDS = [
     "name", "release", "release_time", "status", "confidence_date",
     "developer", "publisher", "platforms", "background_image", "description",
-    "news", "reviews", "sys_req", "affiliate_ml", "affiliate_amz",
+    "news", "reviews", "sys_req", "affiliate_ml", "affiliate_amz", "affiliate_shopee",
     "priority", "event", "announcement_type", "release_window_raw",
     "premium", "story", "context", "seo_text", "confirmed_features",
     "related_games",
@@ -231,11 +238,13 @@ class GameRecord:
     background_image: str
     description: str
     video: Optional[TrailerInfo]
+    extra_trailers: List[TrailerInfo]   # trailers adicionais além do principal (game.video)
     news: List[Dict[str, str]]
     reviews: List[Dict[str, str]]
     sys_req: Dict[str, Any]        # {"minimum": {...}, "recommended": {...}}
     affiliate_ml: str              # link afiliado Mercado Livre
     affiliate_amz: str             # link afiliado Amazon
+    affiliate_shopee: str          # link afiliado Shopee
     source: Dict[str, str]
     days_left: Optional[int]
     api_url: str
@@ -416,9 +425,12 @@ def build_game_record(raw: Dict[str, Any], youtube: Optional[YouTubeClient]) -> 
     # Prioridade 1: video_id direto no JSON (ex: "video_id": "dQw4w9WgXcQ")
     if raw.get("video_id"):
         vid = raw["video_id"].strip()
+        # se o mesmo video_id aparece como 1º item de trailers[], reaproveita o título de lá
+        first_trailer = (raw.get("trailers") or [{}])[0]
+        video_title = first_trailer.get("title") if isinstance(first_trailer, dict) and first_trailer.get("video_id", "").strip() == vid else raw.get("video_title", "Trailer Oficial")
         video = TrailerInfo(
             video_id=vid,
-            title=raw.get("video_title", "Trailer Oficial"),
+            title=video_title or "Trailer Oficial",
             channel_title=raw.get("video_channel", ""),
             published_at="",
             url=f"https://www.youtube.com/watch?v={vid}",
@@ -449,6 +461,33 @@ def build_game_record(raw: Dict[str, Any], youtube: Optional[YouTubeClient]) -> 
     elif youtube and raw.get("video", "auto") == "auto":
         video = find_best_trailer(youtube, name)
 
+    # --- trailers extras: campo opcional "trailers": [{"title":..., "video_id":...}, ...] ---
+    # O primeiro trailer da lista continua sendo o "video" principal (compatibilidade);
+    # os demais viram abas extras na página. Se "video_id" solto já foi usado como principal
+    # e ele também aparece como o 1º item de "trailers", evita duplicar a mesma aba.
+    extra_trailers: List[TrailerInfo] = []
+    for t in raw.get("trailers", []):
+        if not isinstance(t, dict) or not t.get("video_id"):
+            continue
+        vid = t["video_id"].strip()
+        if video and vid == video.video_id:
+            continue  # já é o trailer principal, não duplica como extra
+        extra_trailers.append(TrailerInfo(
+            video_id=vid,
+            title=t.get("title", "Trailer"),
+            channel_title=t.get("channel_title", ""),
+            published_at=t.get("published_at", ""),
+            url=f"https://www.youtube.com/watch?v={vid}",
+            embed_url=f"https://www.youtube.com/embed/{vid}",
+            duration_seconds=None,
+            view_count=0,
+            confidence="manual",
+            search_query="manual",
+        ))
+    # Se não havia video_id/video principal mas existe trailers[], o 1º item vira o principal
+    if video is None and extra_trailers:
+        video = extra_trailers.pop(0)
+
     page_url = f"{BASE_URL}/jogos/{slug}/"
     api_url = f"{BASE_URL}/api/v1/games/{slug}.json"
     return GameRecord(
@@ -466,11 +505,13 @@ def build_game_record(raw: Dict[str, Any], youtube: Optional[YouTubeClient]) -> 
         background_image=raw.get("background_image", ""),
         description=raw.get("description", f"Acompanhe a data de lançamento, trailer e atualizações de {name}."),
         video=video,
+        extra_trailers=extra_trailers,
         news=raw.get("news", []),
         reviews=raw.get("reviews", []),
         sys_req=raw.get("sys_req", {}),
         affiliate_ml=raw.get("affiliate_ml", "").strip(),
         affiliate_amz=raw.get("affiliate_amz", "").strip(),
+        affiliate_shopee=raw.get("affiliate_shopee", "").strip(),
         source=raw.get("source", {"type": "manual"}),
         days_left=days_left(release),
         api_url=api_url,
@@ -526,17 +567,19 @@ def render_json_ld(game: GameRecord) -> str:
         "trailer": {
             "@type": "VideoObject",
             "name": f"Trailer oficial de {game.name}",
+            "description": f"Assista ao trailer oficial de {game.name} e acompanhe o lançamento no FaltaPouco.",
             "embedUrl": game.video.embed_url,
             "url": game.video.url,
             "thumbnailUrl": f"https://img.youtube.com/vi/{game.video.video_id}/maxresdefault.jpg",
-        } if game.video else None,
+            "uploadDate": game.video.published_at,
+        } if game.video and game.video.published_at else None,
         "potentialAction": {
             "@type": "WatchAction",
             "target": game.video.url,
         } if game.video else None,
     }
     payload = {k: v for k, v in payload.items() if v not in (None, "", [])}
-    return json.dumps(payload, ensure_ascii=False, indent=None)
+    return json_for_script(payload)
 
 
 def render_breadcrumb_jsonld(game: GameRecord) -> str:
@@ -550,7 +593,7 @@ def render_breadcrumb_jsonld(game: GameRecord) -> str:
             {"@type": "ListItem", "position": 3, "name": game.name, "item": game.page_url},
         ]
     }
-    return json.dumps(payload, ensure_ascii=False, indent=None)
+    return json_for_script(payload)
 
 
 def render_website_jsonld(total_games: int) -> str:
@@ -577,7 +620,7 @@ def render_website_jsonld(total_games: int) -> str:
             "numberOfItems": total_games,
         }
     }
-    return json.dumps(payload, ensure_ascii=False, indent=None)
+    return json_for_script(payload)
 
 
 # ── SVG PLATFORM ICONS — logos oficiais ──────────────────────────────────────
@@ -764,11 +807,13 @@ def html_page(game: GameRecord, all_games: Optional[List["GameRecord"]] = None) 
     # --- background: bg.jpg fica em jogos/<slug>/bg.jpg, mesma pasta do index.html ---
     bg_html = f'<img src="bg.jpg" alt="Capa de {html.escape(game.name)}" onerror="this.style.display=\'none\'">' if game.background_image else ''
 
-    # --- video embed ---
+    # --- video embed (suporta múltiplos trailers via abas) ---
     video_block = ""
     if game.video:
+        all_trailers = [game.video] + game.extra_trailers
         yt_channel_info = f' · {html.escape(game.video.channel_title)}' if game.video.channel_title else ""
-        video_block = f"""
+        if len(all_trailers) == 1:
+            video_block = f"""
 <section class="content-section" id="trailer">
   <div class="section-eyebrow">🎬 Trailer Oficial</div>
   <div class="video-wrap">
@@ -783,6 +828,49 @@ def html_page(game: GameRecord, all_games: Optional[List["GameRecord"]] = None) 
     <a href="{html.escape(game.video.url)}" target="_blank" rel="noopener">▶ Ver no YouTube</a>{yt_channel_info}
   </p>
 </section>"""
+        else:
+            tabs_html = "".join(
+                f'<button class="trailer-tab{" active" if i == 0 else ""}" data-idx="{i}" onclick="switchTrailer(this,{i})">{html.escape(t.title)}</button>'
+                for i, t in enumerate(all_trailers)
+            )
+            # embeds ficam todos no DOM (display none/block) — evita re-carregar o iframe do YouTube a cada troca
+            embeds_html = "".join(
+                f'''<div class="trailer-embed" data-idx="{i}" style="display:{'block' if i == 0 else 'none'}">
+    <iframe src="{html.escape(t.embed_url)}?rel=0&modestbranding=1&color=white" title="{html.escape(t.title)}" loading="lazy"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>'''
+                for i, t in enumerate(all_trailers)
+            )
+            links_html = " · ".join(
+                f'<a href="{html.escape(t.url)}" target="_blank" rel="noopener" data-idx="{i}" style="display:{"inline" if i == 0 else "none"}" class="trailer-link">▶ Ver no YouTube</a>'
+                for i, t in enumerate(all_trailers)
+            )
+            video_block = f"""
+<section class="content-section" id="trailer">
+  <div class="section-eyebrow">🎬 Trailers ({len(all_trailers)})</div>
+  <div class="trailer-tabs">{tabs_html}</div>
+  <div class="video-wrap">{embeds_html}</div>
+  <p class="video-meta">{links_html}</p>
+</section>
+<script>
+function switchTrailer(btn, idx) {{
+  document.querySelectorAll('.trailer-tab').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.trailer-embed').forEach(el => {{
+    el.style.display = (el.dataset.idx == idx) ? 'block' : 'none';
+  }});
+  document.querySelectorAll('.trailer-link').forEach(el => {{
+    el.style.display = (el.dataset.idx == idx) ? 'inline' : 'none';
+  }});
+}}
+</script>
+<style>
+  .trailer-tabs {{ display:flex; gap:.5rem; flex-wrap:wrap; margin-bottom:1rem; }}
+  .trailer-tab {{ padding:.5rem 1rem; border-radius:8px; border:1px solid rgba(255,255,255,.15);
+    background:rgba(255,255,255,.05); color:inherit; cursor:pointer; font-size:.9rem; transition:.15s; }}
+  .trailer-tab:hover {{ background:rgba(255,255,255,.1); }}
+  .trailer-tab.active {{ background:var(--accent,#6d5dfc); border-color:var(--accent,#6d5dfc); color:#fff; }}
+</style>"""
 
     # --- system requirements (PC only) ---
     # Multi-tier: {"tiers":[{"name":"...","performance":"...","gpu":"...","cpu":"..."},...], "shared":{...}, "notes":"..."}
@@ -860,19 +948,24 @@ def html_page(game: GameRecord, all_games: Optional[List["GameRecord"]] = None) 
     affiliate_block = ""
     has_ml  = bool(game.affiliate_ml)
     has_amz = bool(game.affiliate_amz)
-    if has_ml or has_amz:
+    has_shp = bool(game.affiliate_shopee)
+    if has_ml or has_amz or has_shp:
         icon_cart = '<svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="width:26px;height:26px;flex-shrink:0"><path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM5.2 5H3V3H1v2h2l3.6 7.6L5.25 15A2 2 0 007 18h14v-2H7.42l1.1-2H19a2 2 0 001.76-1.06L23 7H5.2z"/></svg>'
         btn_ml = ""
         btn_amz = ""
+        btn_shp = ""
         if has_ml:
             btn_ml = f'<a class="aff-btn aff-ml" href="{html.escape(game.affiliate_ml)}" target="_blank" rel="noopener nofollow sponsored">{icon_cart}<span><strong>Mercado Livre</strong><small>Ver oferta</small></span></a>'
         if has_amz:
             btn_amz = f'<a class="aff-btn aff-amz" href="{html.escape(game.affiliate_amz)}" target="_blank" rel="noopener nofollow sponsored">{icon_cart}<span><strong>Amazon</strong><small>Ver oferta</small></span></a>'
+        if has_shp:
+            btn_shp = f'<a class="aff-btn aff-shopee" href="{html.escape(game.affiliate_shopee)}" target="_blank" rel="noopener nofollow sponsored">{icon_cart}<span><strong>Shopee</strong><small>Ver oferta</small></span></a>'
+        amz_disclosure = ' Como Associado da Amazon, o faltapoco.com.br ganha com compras qualificadas.' if has_amz else ''
         affiliate_block = f"""
 <section class="content-section" id="comprar">
   <div class="section-eyebrow">\U0001f6d2 Encomende este Jogo</div>
-  <p class="aff-disclaimer">Links de afiliados \u2014 comprando por aqui voc\u00ea apoia o faltapoco.com.br sem custo extra.</p>
-  <div class="aff-grid">{btn_ml}{btn_amz}</div>
+  <p class="aff-disclaimer">Links de afiliados \u2014 comprando por aqui voc\u00ea apoia o faltapoco.com.br sem custo extra.{amz_disclosure}</p>
+  <div class="aff-grid">{btn_ml}{btn_amz}{btn_shp}</div>
 </section>"""
 
     # --- synopsis ---
@@ -1340,6 +1433,7 @@ def html_page(game: GameRecord, all_games: Optional[List["GameRecord"]] = None) 
   .aff-ml {{ background: linear-gradient(135deg,#ffe600,#f5d000); color: #1a1200; border-color: #e8c800; }}
   .aff-ml:hover {{ box-shadow: 0 6px 20px rgba(255,230,0,0.35); }}
   .aff-amz {{ background: linear-gradient(135deg,#ff9900,#e68a00); color: #1a0800; border-color: #cc7700; }}
+  .aff-shopee {{ background: linear-gradient(135deg,#ee4d2d,#d73211); color: #fff; border-color: #b8280a; }}
   .aff-amz:hover {{ box-shadow: 0 6px 20px rgba(255,153,0,0.35); }}
 </style>
 <!-- Google tag (gtag.js) -->
@@ -1459,7 +1553,7 @@ def html_page(game: GameRecord, all_games: Optional[List["GameRecord"]] = None) 
 <script>
   const launch    = {ymd_js};
   const announced = {announced_js};
-  const gameName  = {json.dumps(game.name)};
+  const gameName  = {json_for_script(game.name)};
 
   const elDays   = document.getElementById('cd-days');
   const elH      = document.getElementById('cd-h');
@@ -1593,15 +1687,16 @@ def render_premium_blocks(game: "GameRecord", all_games: List["GameRecord"]) -> 
 </section>""")
 
     # Bloco 4: Prepare seu setup (apenas jogos com PC nas plataformas)
-    if "PC" in game.platforms and (game.affiliate_ml or game.affiliate_amz):
+    if "PC" in game.platforms and (game.affiliate_ml or game.affiliate_amz or game.affiliate_shopee):
         icon_cart = '<svg viewBox="0 0 24 24" fill="currentColor" style="width:22px;height:22px;flex-shrink:0"><path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM5.2 5H3V3H1v2h2l3.6 7.6L5.25 15A2 2 0 007 18h14v-2H7.42l1.1-2H19a2 2 0 001.76-1.06L23 7H5.2z"/></svg>'
         btn_ml  = f'<a class="aff-btn aff-ml" href="{html.escape(game.affiliate_ml)}" target="_blank" rel="noopener nofollow sponsored">{icon_cart}<span><strong>Mercado Livre</strong><small>Pré-venda e lançamento</small></span></a>' if game.affiliate_ml else ""
         btn_amz = f'<a class="aff-btn aff-amz" href="{html.escape(game.affiliate_amz)}" target="_blank" rel="noopener nofollow sponsored">{icon_cart}<span><strong>Amazon</strong><small>Pré-venda e lançamento</small></span></a>' if game.affiliate_amz else ""
+        btn_shp = f'<a class="aff-btn aff-shopee" href="{html.escape(game.affiliate_shopee)}" target="_blank" rel="noopener nofollow sponsored">{icon_cart}<span><strong>Shopee</strong><small>Pré-venda e lançamento</small></span></a>' if game.affiliate_shopee else ""
         blocks.append(f"""
 <section class="content-section" id="setup">
   <div class="section-eyebrow">🖥️ Prepare Seu Setup</div>
   <p class="synopsis-text" style="margin-bottom:1.2rem">Garanta já sua cópia e prepare o hardware para o lançamento.</p>
-  <div class="aff-grid">{btn_ml}{btn_amz}</div>
+  <div class="aff-grid">{btn_ml}{btn_amz}{btn_shp}</div>
 </section>""")
 
     # Bloco 5: Jogos relacionados (linkagem interna)
@@ -1732,7 +1827,7 @@ def render_event_page(event: Dict[str, Any], games: List["GameRecord"]) -> str:
   </a>"""
 
     # JSON-LD Event
-    jsonld = json.dumps({
+    jsonld = json_for_script({
         "@context": "https://schema.org",
         "@type": "Event",
         "name": title,
@@ -1740,7 +1835,7 @@ def render_event_page(event: Dict[str, Any], games: List["GameRecord"]) -> str:
         "organizer": {"@type": "Organization", "name": organizer} if organizer else None,
         "startDate": date_str or None,
         "url": page_url,
-    }, ensure_ascii=False)
+    })
 
     return f"""<!DOCTYPE html>
 <html lang="pt-BR">
@@ -1869,11 +1964,11 @@ def render_home(games: List[GameRecord]) -> str:
         date_val = f'"{g.release}"' if g.release else "null"
         is_featured = "true" if g.slug == "gta-6" else "false"
         is_released = "true" if g.status == "released" else "false"
-        platforms_js = json.dumps(g.platforms)
+        platforms_js = json_for_script(g.platforms)
         status_js = g.status.lower()
         js_games_entries.append(
-            f'    {{ id:{json.dumps(g.slug)}, name:{json.dumps(g.name)}, '
-            f'date:{date_val}, status:{json.dumps(status_js)}, '
+            f'    {{ id:{json_for_script(g.slug)}, name:{json_for_script(g.name)}, '
+            f'date:{date_val}, status:{json_for_script(status_js)}, '
             f'platforms:{platforms_js}, featured:{is_featured}, launched:{is_released} }}'
         )
         # seed hype for known big titles
