@@ -130,7 +130,7 @@
       "name": "Crimson Desert",
       "slug": "crimson-desert",
       "release_date": "2026-03-19",
-      "status": "confirmed",
+      "status": "released",
       "platforms": [
         "PS5",
         "Xbox Series X|S",
@@ -177,7 +177,7 @@
       "name": "Samson",
       "slug": "samson",
       "release_date": "2026-04-08",
-      "status": "confirmed",
+      "status": "released",
       "platforms": [
         "PC"
       ],
@@ -188,7 +188,7 @@
       "name": "Replaced",
       "slug": "replaced",
       "release_date": "2026-04-14",
-      "status": "confirmed",
+      "status": "released",
       "platforms": [
         "Xbox Series X|S",
         "PC"
@@ -200,21 +200,21 @@
       "name": "Mouse: PI for Hire",
       "slug": "mouse-pi-for-hire",
       "release_date": "2026-04-16",
-      "status": "confirmed",
+      "status": "released",
       "platforms": [
         "PS5",
         "Xbox Series X|S",
         "PC",
         "Switch 2"
       ],
-      "video_id": "X20fYa7-XtE",
+      "video_id": "tNh7L-DSuuE",
       "background_image": "bg.jpg"
     },
     {
       "name": "Pragmata",
       "slug": "pragmata",
       "release_date": "2026-04-17",
-      "status": "confirmed",
+      "status": "released",
       "platforms": [
         "PS5",
         "Xbox Series X|S",
@@ -228,7 +228,7 @@
       "name": "Saros",
       "slug": "saros",
       "release_date": "2026-04-30",
-      "status": "confirmed",
+      "status": "released",
       "platforms": [
         "PS5"
       ],
@@ -239,7 +239,7 @@
       "name": "007 First Light",
       "slug": "007-first-light",
       "release_date": "2026-05-27",
-      "status": "confirmed",
+      "status": "released",
       "platforms": [
         "PS5",
         "Xbox Series X|S",
@@ -294,7 +294,7 @@
         "PS5",
         "Xbox Series X|S"
       ],
-      "video_id": "QdBZExpgErs",
+      "video_id": "QdBZY2fkU-0",
       "background_image": "bg.jpg",
       "developer": "Rockstar Games",
       "publisher": "Rockstar Games",
@@ -325,6 +325,16 @@
         "crimson-desert",
         "marvel-wolverine",
         "phantom-blade-zero"
+      ],
+      "trailers": [
+        {
+          "title": "GTA VI — Trailer 1",
+          "video_id": "QdBZY2fkU-0"
+        },
+        {
+          "title": "GTA VI — Trailer 2",
+          "video_id": "IpSDW3Mq-7E"
+        }
       ]
     },
     {
@@ -388,7 +398,7 @@
         "Xbox Series X|S",
         "PC"
       ],
-      "video_id": "X20fYa7-XtE",
+      "video_id": "AMGJ7OMqyvI",
       "background_image": "bg.jpg"
     },
     {
@@ -749,7 +759,7 @@
       "slug": "ascend-to-zero",
       "release_date": "2026-07-13",
       "release_window_raw": "Jul 13th 2026",
-      "status": "confirmed",
+      "status": "released",
       "platforms": [
         "Xbox Series X|S",
         "PC"
@@ -882,7 +892,7 @@
       "slug": "hades-ii",
       "release_date": "2026-04-14",
       "release_window_raw": "Apr 14th 2026",
-      "status": "confirmed",
+      "status": "released",
       "platforms": [
         "PS5",
         "Xbox Series X|S"
@@ -990,7 +1000,7 @@
       "slug": "super-meat-boy-3d",
       "release_date": "2026-03-31",
       "release_window_raw": "Mar 31st 2026",
-      "status": "confirmed",
+      "status": "released",
       "platforms": [
         "PS5",
         "Xbox Series X|S",
@@ -1093,95 +1103,94 @@
       "publisher": "",
       "news": [],
       "reviews": []
+    },
+    {
+      "name": "Tales of Seikyu",
+      "slug": "tales-of-seikyu",
+      "release_date": "2026-06-11",
+      "status": "released",
+      "platforms": [
+        "PC"
+      ],
+      "video_id": "",
+      "background_image": ""
+    },
+    {
+      "name": "Deer & Boy",
+      "slug": "deer-and-boy",
+      "release_date": "2026-06-23",
+      "status": "released",
+      "platforms": [
+        "PC",
+        "Switch 2",
+        "PS5"
+      ],
+      "video_id": "",
+      "background_image": ""
+    },
+    {
+      "name": "Memento",
+      "slug": "memento",
+      "release_date": "2026-06-30",
+      "status": "released",
+      "platforms": [
+        "PC",
+        "PS5",
+        "Xbox Series X|S",
+        "Switch 2"
+      ],
+      "video_id": "",
+      "background_image": ""
+    },
+    {
+      "name": "Cozy Grove: Camp Spirit",
+      "slug": "cozy-grove-camp-spirit",
+      "release_date": "2026-07-15",
+      "status": "released",
+      "platforms": [
+        "PC",
+        "PS5",
+        "Xbox Series X|S",
+        "Switch 2"
+      ],
+      "video_id": "",
+      "background_image": ""
+    },
+    {
+      "name": "Go-Go Town!",
+      "slug": "go-go-town",
+      "release_date": "2026-07-16",
+      "status": "released",
+      "platforms": [
+        "PC",
+        "Switch 2"
+      ],
+      "video_id": "",
+      "background_image": ""
+    },
+    {
+      "name": "Fields of Mistria",
+      "slug": "fields-of-mistria",
+      "release_date": "2026-08-05",
+      "status": "confirmed",
+      "platforms": [
+        "PC"
+      ],
+      "video_id": "",
+      "background_image": ""
+    },
+    {
+      "name": "Planet Zoo 2",
+      "slug": "planet-zoo-2",
+      "release_date": "2026-10-13",
+      "status": "confirmed",
+      "platforms": [
+        "PC",
+        "PS5",
+        "Xbox Series X|S"
+      ],
+      "video_id": "",
+      "background_image": ""
     }
-  [
-  {
-    "name": "Tales of Seikyu",
-    "slug": "tales-of-seikyu",
-    "release_date": "2026-06-11",
-    "status": "released",
-    "platforms": [
-      "PC"
-    ],
-    "video_id": "",
-    "background_image": ""
-  },
-  {
-    "name": "Deer & Boy",
-    "slug": "deer-and-boy",
-    "release_date": "2026-06-23",
-    "status": "released",
-    "platforms": [
-      "PC",
-      "Switch 2",
-      "PS5"
-    ],
-    "video_id": "",
-    "background_image": ""
-  },
-  {
-    "name": "Memento",
-    "slug": "memento",
-    "release_date": "2026-06-30",
-    "status": "released",
-    "platforms": [
-      "PC",
-      "PS5",
-      "Xbox Series X|S",
-      "Switch 2"
-    ],
-    "video_id": "",
-    "background_image": ""
-  },
-  {
-    "name": "Cozy Grove: Camp Spirit",
-    "slug": "cozy-grove-camp-spirit",
-    "release_date": "2026-07-15",
-    "status": "confirmed",
-    "platforms": [
-      "PC",
-      "PS5",
-      "Xbox Series X|S",
-      "Switch 2"
-    ],
-    "video_id": "",
-    "background_image": ""
-  },
-  {
-    "name": "Go-Go Town!",
-    "slug": "go-go-town",
-    "release_date": "2026-07-16",
-    "status": "confirmed",
-    "platforms": [
-      "PC",
-      "Switch 2"
-    ],
-    "video_id": "",
-    "background_image": ""
-  },
-  {
-    "name": "Fields of Mistria",
-    "slug": "fields-of-mistria",
-    "release_date": "2026-08-05",
-    "status": "confirmed",
-    "platforms": [
-      "PC"
-    ],
-    "video_id": "",
-    "background_image": ""
-  },
-  {
-    "name": "Planet Zoo 2",
-    "slug": "planet-zoo-2",
-    "release_date": "2026-10-13",
-    "status": "confirmed",
-    "platforms": [
-      "PC",
-      "PS5",
-      "Xbox Series X|S"
-    ],
-    "video_id": "",
-    "background_image": ""
-  }
-]
+  ]
 }
