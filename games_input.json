@@ -1191,6 +1191,72 @@
       ],
       "video_id": "",
       "background_image": ""
+    },
+    {
+      "name": "Call of Duty: Modern Warfare 4",
+      "slug": "cod-modern-warfare-4",
+      "release_date": "2026-10-23",
+      "status": "confirmed",
+      "platforms": [
+        "PS5",
+        "Xbox Series X|S",
+        "PC",
+        "Switch 2"
+      ],
+      "video_id": "",
+      "background_image": ""
+    },
+    {
+      "name": "Minecraft Dungeons 2",
+      "slug": "minecraft-dungeons-2",
+      "release_date": "2026-09-29",
+      "status": "confirmed",
+      "platforms": [
+        "PS5",
+        "Xbox Series X|S",
+        "PC",
+        "Switch 2"
+      ],
+      "video_id": "",
+      "background_image": ""
+    },
+    {
+      "name": "Star Wars: Galactic Racer",
+      "slug": "star-wars-galactic-racer",
+      "release_date": "2026-10-06",
+      "status": "confirmed",
+      "platforms": [
+        "PS5",
+        "Xbox Series X|S",
+        "PC"
+      ],
+      "video_id": "",
+      "background_image": ""
+    },
+    {
+      "name": "Dune: Awakening",
+      "slug": "dune-awakening",
+      "release_date": "2026-09-22",
+      "status": "confirmed",
+      "platforms": [
+        "PS5",
+        "Xbox Series X|S"
+      ],
+      "video_id": "",
+      "background_image": ""
+    },
+    {
+      "name": "Silent Hill: Townfall",
+      "slug": "silent-hill-townfall",
+      "release_date": "2026-09-24",
+      "status": "confirmed",
+      "platforms": [
+        "PS5",
+        "Xbox Series X|S",
+        "PC"
+      ],
+      "video_id": "",
+      "background_image": ""
     }
   ]
 }
